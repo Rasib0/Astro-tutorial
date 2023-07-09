@@ -1,4 +1,18 @@
 ---
+const pageTitle = "About me";
+
+const identity = {
+  firstName: "Rasib",
+  country: "Pakistan",
+  occupation: "Web Developer",
+  hobbies: ["Reading", "Writing", "Coding"],
+};
+
+const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
+
+const happy = true;
+const finished = false;
+const goal = 3;
 ---
 
 <html lang="en">
@@ -7,15 +21,31 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
     <a href="/">Home</a>
     <a href="/about">About</a>
     <a href="/blog">Blog</a>
 
-    <h1>My Astro Site</h1>
-    <h1>My Astro learning Blog</h1>
-    <p>This is where I will post about my journey learning Astro</p>
+    <h1>{pageTitle}</h1>
+    <h1>... and my new Astro site!</h1>
+    <p>
+      I am working through Astro's introductory tutoiral. This is the second
+      page on my website, and it's the first one I built one I built myself!
+    </p>
+    <p>
+      This site will update as I complete more of the tutorial, so keep checking
+      back and see how my journey is going!
+    </p>
+    <p>Here are a few facts about me:</p>
+    <ul>
+      <li>
+        I live in {identity.country} and I work as a {identity.occupation}.
+      </li>
+      <li>
+        Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
+      </li>
+    </ul>
   </body>
 </html>

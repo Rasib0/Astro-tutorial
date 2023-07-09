@@ -1,27 +1,24 @@
+---
+const pageTitle = "My Astro learning blog";
+---
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Astro</title>
+    <title>{pageTitle}</title>
   </head>
   <body>
-    <a href="/">Home</a>
+    <a href="/">{pageTitle}</a>
     <a href="/about">About</a>
     <a href="/blop">Blog</a>
 
     <h1>My Astro Site</h1>
     <h1>About Me</h1>
     <h3>... and my new Astro site!</h3>
-    <p>
-      I am working on through Astro's introductory tutorial. This is the second
-      page on my website, and it's the first one I built myself!
-    </p>
-    <p>
-      This site will update as I complete more of the tutorial, so keep checking
-      back and see how my journey is going!
-    </p>
+    <p>Down below is a list of my blog posts:</p>
     <ul>
       <li><a href="/posts/post-1">Post 1</a></li>
       <li><a href="/posts/post-2">Post 2</a></li>

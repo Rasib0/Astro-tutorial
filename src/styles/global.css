@@ -15,6 +15,10 @@ body {
   box-sizing: border-box;
 }
 
+*::selection {
+  background: #ff9776; 
+}
+
 h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
@@ -73,7 +77,6 @@ nav {
 .nav-links a:hover, a:focus {
   background-color: #ff9776;
 }
-
 .expanded {
   display: unset;
 }

@@ -1,0 +1,31 @@
+---
+import Social from "./Social.astro";
+
+const platform = "github/Rasib0";
+const username = "withastro";
+---
+
+<style>
+  footer {
+    margin-top: 2rem;
+  }
+  .socials {
+    display: flex;
+    gap: 1rem;
+  }
+</style>
+
+<footer>
+  <p>
+    Learn more about my projects on <a
+      href={`https://www.${platform}.com/${username}`}
+    >
+      {platform}
+    </a>
+  </p>
+  <div class="socials">
+    <Social platform="twitter" username="astrodotbuild" />
+    <Social platform="github" username="withastro" />
+    <Social platform="youtube" username="astrodotbuild" />
+  </div>
+</footer>

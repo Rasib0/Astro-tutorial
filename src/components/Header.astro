@@ -22,7 +22,8 @@
   .hover-underline-animation {
     text-decoration: none !important;
     position: relative;
-    overflow: clip;
+    overflow: hidden;
+    display: inline-block;
     color: var(--nav);
     text-decoration: none;
     font-size: 1.3rem;
@@ -34,7 +35,9 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    overflow: hidden;
     width: 100%;
+    z-index: -1;
     height: 2px;
     background-color: var(--nav);
     transition: transform 300ms ease-in-out 40ms;
@@ -53,24 +56,16 @@
       <span class="line"></span>
     </div>
     <div class="nav-links">
-      <div>
-        <a class="hover-underline-animation" draggable="false" href="/">Home</a>
-      </div>
-      <div>
-        <a class="hover-underline-animation" draggable="false" href="/about"
-          >About</a
-        >
-      </div>
-      <div>
-        <a class="hover-underline-animation" draggable="false" href="/projects"
-          >Projects</a
-        >
-      </div>
-      <div>
-        <a class="hover-underline-animation" draggable="false" href="/blog"
-          >Blog</a
-        >
-      </div>
+      <a class="hover-underline-animation" draggable="false" href="/">Home</a>
+      <a class="hover-underline-animation" draggable="false" href="/about"
+        >About</a
+      >
+      <a class="hover-underline-animation" draggable="false" href="/projects"
+        >Projects</a
+      >
+      <a class="hover-underline-animation" draggable="false" href="/blog"
+        >Blog</a
+      >
     </div>
   </nav>
 </header>

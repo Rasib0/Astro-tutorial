@@ -29,7 +29,13 @@ const newFont = titleFont || "";
     <Header />
     <div class="flex items-center flex-col">
       <main class="max-width flex items-center flex-col">
-        <h1 style={`font-family: ${newFont};`}>{pageTitle}</h1>
+        {
+          newFont ? (
+            <h1 style={`font-family: ${newFont};`}>{pageTitle}</h1>
+          ) : (
+            <h1>{pageTitle}</h1>
+          )
+        }
         <slot />
         <Footer />
       </main>

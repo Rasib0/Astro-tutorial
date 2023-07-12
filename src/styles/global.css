@@ -12,7 +12,6 @@ html {
     overflow-x: hidden; 
 }
 
-
 *::selection {
   background-color: var(--selection);
   color: white;
@@ -33,7 +32,7 @@ header, nav, .nav-links, .nav-links a, .hamburger {
 }
 
 h1 {
-  font-size: 3.5rem;
+  font-size: 2.7rem;
 }
 
 .flex {
@@ -99,10 +98,9 @@ a:hover, a:focus {
   display: none;
 }
 
-.nav-links div {
+.nav-links > a {
   display: block;
-  padding: 6px 16px;
-  /* text-transform: uppercase; */
+  margin: 6px 16px;
 }
 
 
@@ -116,10 +114,12 @@ a:hover, a:focus {
     background: none;
   }
 
-  .nav-links div {
+  .nav-links > a {
     display: inline-block;
-    padding: 12px 18px;
+    margin: 12px 18px;
+    overflow: hidden;
   }
+
 
   .hamburger {
     display: none;

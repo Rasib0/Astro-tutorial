@@ -1,7 +1,7 @@
 ---
 const { platform, username } = Astro.props;
 ---
-<a class="button" href={`https://www.${platform}.com/${username}`}>{platform}</a
+<a class="box-shadow" href={`https://www.${platform}.com/${username}`}>{platform}</a
 >
 
 <style>
@@ -16,10 +16,7 @@ const { platform, username } = Astro.props;
     align-items; center;
    justify-content: center;
    white-space: pre-line;
-    letter-spacing: 0.008px;
-    box-shadow: rgba(0, 0, 0, 0.12) 0px 0.325926px 0.733333px 0px,
-      rgba(0, 0, 0, 0.07) 0px 1.54074px 2.86667px 0px,
-      rgba(0, 0, 0, 0.05) 0px 4px 9px 0px;
+    letter-spacing: 0.009px;
     background-color: rgb(18, 18, 18);
   }
 

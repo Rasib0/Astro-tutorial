@@ -83,18 +83,6 @@ a:hover {
   text-decoration: underline;
 }
 
-.project-card {
- width: 100%;
- padding: 2rem 0rem;
- border: 1px solid #eaeaea;
- border-radius: 10px;
-}
-
-.hamburger {
-  cursor: pointer;
-  padding: 15px;
-}
-
 .line {
   margin-bottom: 10px;
 }

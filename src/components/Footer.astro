@@ -1,16 +1,38 @@
 ---
-import Social from "./Social.astro";
-
-const platform = "github";
 const username = "rasib0";
+const username_linkedin = "muhammad-rasib-nadeem"
 ---
 
 <style>
+  .button {
+    padding: 0.3125rem 0.91rem;
+    border-radius: 0.3125rem;
+    font-weight: bold;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    display: inline-flex;
+    align-items; center;
+    justify-content: center;
+    white-space: pre-line;
+    letter-spacing: 0.009px;
+    background-color: rgb(18, 18, 18);
+  }
+
+  .button:hover {
+    background-color: rgb(38, 38, 38);
+    text-decoration: none;
+
+  }
   footer {
-    margin-top: 2rem;
+    padding: 5px;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
   }
   .socials {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1rem;
   }
@@ -19,14 +41,12 @@ const username = "rasib0";
 <footer>
   <p>
     Learn more about my projects on <a
-      href={`https://www.${platform}.com/${username}`}
-    >
-      {platform}
-    </a>
+      href={`https://www.github.com/${username}`}
+    >github</a>
   </p>
   <div class="socials">
-    <Social platform="twitter" username="rasib0" />
-    <Social platform="github" username="rasib0" />
-    <Social platform="linkedin" username="in/muhammad-rasib-nadeem" />
+  <a class="box-shadow button" href={`https://www.github.com/${username}`}>github</a>
+  <a class="box-shadow button" href={`https://www.twitter.com/${username}`}>twitter</a>
+  <a class="box-shadow button" href={`https://www.linkedin.com/in/${username_linkedin}`}>linkedin</a>
   </div>
 </footer>

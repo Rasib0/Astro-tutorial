@@ -24,17 +24,17 @@ const finished = false;
 const goal = 3;
 
 const pageTitle = "About Me";
-
-const skillColor = "navy";
-const fontWeight = "bold";
-const textCase = "uppercase";
 ---
 
-<style define:vars={{ skillColor, fontWeight, textCase }}>
+<style>
+  * {
+    --hover: rgb(80, 80, 80);
+  }
+
   .skill {
-    color: var(--skillColor);
-    font-weight: var(--fontWeight);
-    text-transform: var(--textCase);
+    color: var(--hover);
+    font-weight: bold;
+    text-transform: uppercase;
   }
 </style>
 

@@ -3,10 +3,12 @@ html {
   --outline: rgb(38 38 38); /* hover neutral */
   --nav: black;
   --main: white; /* gray */
+  --selection: rgb(22 163 74);
 }
 
 *::selection {
-  background-color: var(--outline);
+  background-color: var(--selection);
+  color: white;
 }
 
 body {

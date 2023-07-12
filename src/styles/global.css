@@ -20,7 +20,6 @@ html {
 
 body {
   margin: 0px;
-  overflow-x: scroll;
 }
 
 
@@ -79,7 +78,7 @@ a {
   color: var(--hovered-light);
 }
 
-a:hover {
+a:hover, a:focus {
   text-decoration: underline;
 }
 
@@ -93,19 +92,12 @@ a:hover {
   display: none;
 }
 
-.nav-links a {
+.nav-links div {
   display: block;
   padding: 6px 16px;
-  color: var(--nav);
-  text-decoration: none;
-  font-size: 1.3rem;
-  font-weight: bold;
   /* text-transform: uppercase; */
 }
 
-.nav-links a:hover, a:focus {
-  text-decoration: underline;
-}
 
 .expanded {
   display: unset;
@@ -117,7 +109,7 @@ a:hover {
     background: none;
   }
 
-  .nav-links a {
+  .nav-links div {
     display: inline-block;
     padding: 15px 20px;
   }

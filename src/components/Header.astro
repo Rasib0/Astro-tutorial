@@ -6,15 +6,44 @@
     padding-top: 1rem;
     padding-left: 1rem;
   }
+
   .line {
     margin-bottom: 8px;
   }
+
   .hamburger .line {
     display: block;
     width: 40px;
     height: 5px;
     background-color: black;
     /*background-color: var(--hovered);*/
+  }
+
+  .hover-underline-animation {
+    text-decoration: none !important;
+    position: relative;
+    overflow: clip;
+    color: var(--nav);
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+
+  .hover-underline-animation::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    transition: transform 300ms ease-in-out 50ms;
+    z-index: -1;
+    transform: translateX(-100%);
+  }
+
+  .hover-underline-animation:hover::before {
+    transform: translateX(0);
   }
 </style>
 <header>
@@ -25,10 +54,24 @@
       <span class="line"></span>
     </div>
     <div class="nav-links">
-      <a draggable="false" href="/">Home</a>
-      <a draggable="false" href="/about">About</a>
-      <a draggable="false" href="/projects">Projects</a>
-      <a draggable="false" href="/blog">Blog</a>
+      <div>
+        <a class="hover-underline-animation" draggable="false" href="/">Home</a>
+      </div>
+      <div>
+        <a class="hover-underline-animation" draggable="false" href="/about"
+          >About</a
+        >
+      </div>
+      <div>
+        <a class="hover-underline-animation" draggable="false" href="/projects"
+          >Projects</a
+        >
+      </div>
+      <div>
+        <a class="hover-underline-animation" draggable="false" href="/blog"
+          >Blog</a
+        >
+      </div>
     </div>
   </nav>
 </header>

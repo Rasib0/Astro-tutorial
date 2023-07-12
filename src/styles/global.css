@@ -1,8 +1,6 @@
 html {
-  font-family: 'Roboto', sans-serif;
-  background: #9ca3af;
-  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
-  --outline: red;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  --outline: rgb(38 38 38); /* hover neutral */
   --nav: black;
   --main: white; /* gray */
 }
@@ -39,7 +37,6 @@ h1 {
 .items-center {
   align-items: center;
 }
-
 
 main {
   width: 100%;

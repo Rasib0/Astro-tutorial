@@ -1,8 +1,10 @@
 ---
 import Header from "../components/Header.astro";
-const { pageTitle } = Astro.props;
+const { pageTitle, titleFont } = Astro.props;
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+
+const newFont = titleFont || "";
 ---
 
 <html lang="en">
@@ -27,7 +29,7 @@ import "../styles/global.css";
     <Header />
     <div class="flex items-center flex-col">
       <main class="max-width flex items-center flex-col">
-        <h1>{pageTitle}</h1>
+        <h1 style={`font-family: ${newFont};`}>{pageTitle}</h1>
         <slot />
         <Footer />
       </main>

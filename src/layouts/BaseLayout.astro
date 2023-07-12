@@ -12,12 +12,22 @@ import "../styles/global.css";
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>{pageTitle}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <Header />
-    <h1>{pageTitle}</h1>
-    <slot />
-    <Footer />
+    <div class="flex items-center flex-col">
+      <main class="max-width">
+        <h1>{pageTitle}</h1>
+        <slot />
+        <Footer />
+      </main>
+    </div>
     <script>
       import "../scripts/menu.js";
     </script>

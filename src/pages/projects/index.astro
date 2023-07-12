@@ -4,6 +4,22 @@ const pageTitle = "Projects";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <h5><a href="https://github.com/rasib0/chirp">Chirp github</a></h5>
-  <h5><a href="https://github.com/rasib0/mediatracker">Tracker github</a></h5>
+  <div class="project-card flex justify-between">
+    <div><a href="https://github.com/rasib0/chirp">Chirp github</a></div>
+    <div><a href="https://chirp.rasib.me">Chirp website</a></div>
+  </div>
+  <div class="project-card flex justify-between">
+    <div>
+      <a href="https://github.com/rasib0/mediatracker">Tracker github</a>
+    </div>
+    <div>
+      <a href="https://tracker.rasib.me">Tracker website</a>
+    </div>
+  </div>
 </BaseLayout>
+
+<style>
+  .project-card > div {
+    padding: 0px 8px;
+  }
+</style>

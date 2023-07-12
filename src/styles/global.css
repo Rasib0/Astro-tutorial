@@ -11,6 +11,11 @@ html {
     overflow-x: hidden; 
 }
 
+.accordion-content {
+  display: grid;
+
+}
+
 *::selection {
   background-color: var(--selection);
   color: white;
@@ -21,11 +26,6 @@ body {
   overflow-x: scroll;
 }
 
-header {
-  display: flex;
-  align-items: center;
-  border-radius: 0.25rem;
-}
 
 header, nav, .nav-links, .nav-links a, .hamburger {
   -webkit-touch-callout: none;
@@ -51,6 +51,7 @@ h1 {
   align-items: center;
 }
 
+
 main {
   width: 100%;
   max-width: 80ch;
@@ -58,7 +59,6 @@ main {
   min-height: 100vh;
   padding: 1rem;
   line-height: 1.5;
-  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 .box-shadow {
@@ -67,10 +67,30 @@ main {
       rgba(0, 0, 0, 0.05) 0px 4px 9px 0px;
 }
 
+header {
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+}
 /* nav styles */
 nav {
   width:100%;
-  background: var(--nav);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.project-card {
+ width: 100%;
+ padding: 1rem 0rem;
+ margin: 2px;
+ border: 1px solid #eaeaea;
+ border-radius: 10px;
 }
 
 .hamburger {
@@ -81,11 +101,14 @@ nav {
 .line {
   margin-bottom: 10px;
 }
-
+.justify-between {
+  justify-content: space-between;
+}
 .hamburger .line {
-  display: block;width: 40px;
+  display: block;
+  width: 40px;
   height: 5px;
-  background-color: white;
+  background-color: black;
   /*background-color: var(--hovered);*/
 }
 
@@ -103,17 +126,17 @@ nav {
 .nav-links a {
   display: block;
   padding: 6px 16px;
-  color: white;
+  color: var(--nav);
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: bold;
+  transition: text-decoration 0.3s;
   /* text-transform: uppercase; */
 }
 
 .nav-links a:hover, a:focus {
-  background-color: var(--hovered);
-  transition-duration: 300ms;
-  transition-property: background-color;
+  text-decoration: underline;
+  
 }
 
 .expanded {

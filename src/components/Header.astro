@@ -1,11 +1,18 @@
 ---
-import Navigation from "./Navigation.astro";
-import Hamburger from "./Hamburger.astro";
 ---
 
 <header>
-  <nav class="box-shadow">
-    <Hamburger />
-    <Navigation />
+  <nav>
+    <div class="hamburger">
+      <span class="line"></span>
+      <span class="line"></span>
+      <span class="line"></span>
+    </div>
+    <div class="nav-links">
+      <a draggable="false" href="/">Home</a>
+      <a draggable="false" href="/about">About</a>
+      <a draggable="false" href="/projects">Projects</a>
+      <a draggable="false" href="/blog">Blog</a>
+    </div>
   </nav>
 </header>

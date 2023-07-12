@@ -1,6 +1,7 @@
 html {
   font-family: 'Roboto', sans-serif;
   background: #9ca3af;
+  background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
   --outline: red;
   --nav: black;
   --main: white; /* gray */
@@ -43,11 +44,11 @@ h1 {
 main {
   width: 100%;
   max-width: 80ch;
-  border: 1px solid black;
   background-color: var(--main);
   min-height: 100vh;
   padding: 1rem;
   line-height: 1.5;
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
 }
 
 /* nav styles */

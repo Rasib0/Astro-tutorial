@@ -83,29 +83,14 @@ a:hover {
   text-decoration: underline;
 }
 
-.line {
-  margin-bottom: 10px;
-}
 .justify-between {
   justify-content: space-between;
-}
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  background-color: black;
-  /*background-color: var(--hovered);*/
-}
-
-.line:last-child {
-  margin-bottom: 0px;
 }
 
 .nav-links {
   width: 100%;
   align-items: center;
   display: none;
-  margin: 0px;
 }
 
 .nav-links a {
@@ -115,7 +100,6 @@ a:hover {
   text-decoration: none;
   font-size: 1.3rem;
   font-weight: bold;
-  transition: text-decoration 0.3s;
   /* text-transform: uppercase; */
 }
 
@@ -130,7 +114,6 @@ a:hover {
 @media screen and (min-width: 636px) {
   .nav-links {
     display: block;
-    position: static;
     background: none;
   }
 

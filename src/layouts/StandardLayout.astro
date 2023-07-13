@@ -8,8 +8,8 @@ const newFont = titleFont || "";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="flex items-center flex-col">
-      <main>
+    <div class="flex flex-col items-center h-screen">
+      <main class="mb-auto">
         {(
           newFont ? (
             <h1 style={`font-family: ${newFont};`}>{pageTitle}</h1>
@@ -18,8 +18,20 @@ const newFont = titleFont || "";
           ))
         }
         <slot />
-        <Footer />
       </main>
+      <Footer />
     </div>
   </BaseLayout>
 </html>
+<style>
+  .mb-auto {
+    margin-bottom: auto;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+
+  .h-screen {
+    min-height: 90vh;
+  }
+  </style>

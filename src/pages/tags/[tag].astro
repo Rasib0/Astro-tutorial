@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import StandardLayout from "../../layouts/StandardLayout.astro";
 import BlogPost from "../../components/BlogPost.astro";
 
 export async function getStaticPaths() {
@@ -24,7 +24,7 @@ const { posts } = Astro.props;
 const tagFont = "monospace";
 ---
 
-<BaseLayout pageTitle={"#" + tag} titleFont={tagFont}>
+<StandardLayout pageTitle={"#" + tag} titleFont={tagFont}>
   <h4>Posts tagged with <span>{tag}</span></h4>
   <ul>
     {
@@ -33,7 +33,7 @@ const tagFont = "monospace";
       ))
     }
   </ul>
-</BaseLayout>
+</StandardLayout>
 
 <style define:vars={{ tagFont }}>
   span {

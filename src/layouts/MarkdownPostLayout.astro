@@ -1,11 +1,11 @@
 ---
 const { frontmatter } = Astro.props;
-import BaseLayout from "./BaseLayout.astro";
+import StandardLayout from "./StandardLayout.astro";
 const allPost = await Astro.glob("../pages/posts/*.md");
 const tags = frontmatter.tags;
 ---
 
-<BaseLayout pageTitle={frontmatter.title}>
+<StandardLayout pageTitle={frontmatter.title}>
   <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
   <p>Written by {frontmatter.author}</p>
   <p>{frontmatter.description}</p>
@@ -27,4 +27,4 @@ const tags = frontmatter.tags;
       margin: 0 auto;
     }
   </style>
-</BaseLayout>
+</StandardLayout>

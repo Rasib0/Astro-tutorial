@@ -1,0 +1,25 @@
+---
+const { pageTitle, titleFont } = Astro.props;
+import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+import BaseLayout from "./BaseLayout.astro";
+
+const newFont = titleFont || "";
+---
+
+<BaseLayout pageTitle={pageTitle}>
+    <div class="flex items-center flex-col">
+      <main>
+        {(
+          newFont ? (
+            <h1 style={`font-family: ${newFont};`}>{pageTitle}</h1>
+            ) : (
+              <h1 style={`font-family: ${newFont};`}>{pageTitle}</h1>
+          ))
+        }
+        <slot />
+        <Footer />
+      </main>
+    </div>
+  </BaseLayout>
+</html>

@@ -1,5 +1,5 @@
 ---
-import BaseLayout from "../layouts/BaseLayout.astro";
+import StandardLayout from "../layouts/StandardLayout.astro";
 import "../styles/global.css";
 
 const identity = {
@@ -38,7 +38,7 @@ const pageTitle = "About Me";
   }
 </style>
 
-<BaseLayout pageTitle={pageTitle}>
+<StandardLayout pageTitle={pageTitle}>
   <p>Here are a few facts about me:</p>
   <ul>
     <li>
@@ -65,4 +65,4 @@ const pageTitle = "About Me";
       )
     }
   </ul>
-</BaseLayout>
+</StandardLayout>

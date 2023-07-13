@@ -1,15 +1,16 @@
 html {
-  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+    "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol";
   --hovered: rgb(38 38 38); /* hover neutral */
   --hovered-light: rgb(80 80 80); /* hover neutral */
   --nav: black;
   --main: white; /* gray */
   --selection: rgb(22 163 74);
-    width: 100%;
-    height: 100%;
-    margin: 0px;
-    padding: 0px;
-    overflow-x: hidden; 
+  width: 100%;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+  overflow-x: hidden;
 }
 
 *::selection {
@@ -21,8 +22,11 @@ body {
   margin: 0px;
 }
 
-
-header, nav, .nav-links, .nav-links a, .hamburger {
+header,
+nav,
+.nav-links,
+.nav-links a,
+.hamburger {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -32,7 +36,7 @@ header, nav, .nav-links, .nav-links a, .hamburger {
 }
 
 h1 {
-  font-size: 2.7rem;
+  font-size: 2.5rem;
 }
 
 .flex {
@@ -47,13 +51,14 @@ h1 {
 }
 
 .tag {
-    margin: 0.25em;
-    border: dotted 1px #a1a1a1;
-    border-radius: 0.5em;
-    padding: 0.5em 1em;
-    font-size: 1.15em;
- }
-  
+  margin: 0.25em;
+  border: dotted 1px #a1a1a1;
+  border-radius: 0.5em;
+  font-family: monospace;
+  padding: 0.2em 0.5em;
+  font-size: 1.15em;
+}
+
 main {
   width: 100%;
   max-width: 80ch;
@@ -65,8 +70,8 @@ main {
 
 .box-shadow {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 0.325926px 0.733333px 0px,
-      rgba(0, 0, 0, 0.07) 0px 1.54074px 2.86667px 0px,
-      rgba(0, 0, 0, 0.05) 0px 4px 9px 0px;
+    rgba(0, 0, 0, 0.07) 0px 1.54074px 2.86667px 0px,
+    rgba(0, 0, 0, 0.05) 0px 4px 9px 0px;
 }
 
 header {
@@ -76,7 +81,7 @@ header {
 }
 /* nav styles */
 nav {
-  width:100%;
+  width: 100%;
 }
 
 a {
@@ -84,7 +89,8 @@ a {
   color: var(--hovered-light);
 }
 
-a:hover, a:focus {
+a:hover,
+a:focus {
   text-decoration: underline;
 }
 
@@ -103,7 +109,6 @@ a:hover, a:focus {
   margin: 6px 16px;
 }
 
-
 .expanded {
   display: unset;
 }
@@ -119,7 +124,6 @@ a:hover, a:focus {
     margin: 12px 18px;
     overflow: hidden;
   }
-
 
   .hamburger {
     display: none;

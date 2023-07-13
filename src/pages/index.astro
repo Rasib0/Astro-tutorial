@@ -1,9 +1,20 @@
 ---
 const pageTitle = "Hi. I am Rasib";
 import "../styles/global.css";
+import Footer from "../components/Footer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <h3></h3>
+<BaseLayout>
+  <div class="flex items-center flex-col">
+          <h1>Hi. I am Rasib</h1>
+  </div>
+  <Footer/>
 </BaseLayout>
+
+<style>
+  h1 {
+    font-size: 3rem;
+  }
+  </style>
+

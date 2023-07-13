@@ -1,12 +1,12 @@
 ---
 import "../styles/global.css";
-import BaseLayout from "../layouts/BaseLayout.astro";
+import StandardLayout from "../layouts/StandardLayout.astro";
 const allPost = await Astro.glob("../pages/posts/*.md");
 const pageTitle = "My Blog";
 import BlogPost from "../components/BlogPost.astro";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<StandardLayout pageTitle={pageTitle}>
   <div>
     <p>Down below is a list of my blog posts:</p>
     <ul>
@@ -18,4 +18,4 @@ import BlogPost from "../components/BlogPost.astro";
     </ul>
     <p>Wanna search using tags instead? <a href="/tags">Click here</a></p>
   </div>
-</BaseLayout>
+</StandardLayout>

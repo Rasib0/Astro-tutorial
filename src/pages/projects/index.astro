@@ -1,13 +1,15 @@
 ---
-import BaseLayout from "../../layouts/BaseLayout.astro";
+import StandardLayout from "../../layouts/StandardLayout.astro";
 const pageTitle = "Projects";
 ---
 
-<BaseLayout pageTitle={pageTitle}>
+<StandardLayout pageTitle={pageTitle}>
+  <div>
   <div class="project-card flex justify-between">
     <div><a href="https://chirp.rasib.me">Chirp</a></div>
     <div><a href="https://github.com/rasib0/chirp">Github</a></div>
   </div>
+ </div> 
   <div class="project-card flex justify-between">
     <div>
       <a href="https://tracker.rasib.me">Tracker</a>
@@ -15,8 +17,7 @@ const pageTitle = "Projects";
     <div>
       <a href="https://github.com/rasib0/mediatracker">Github</a>
     </div>
-  </div>
-</BaseLayout>
+</StandardLayout>
 
 <style>
   .project-card > div {
@@ -27,9 +28,15 @@ const pageTitle = "Projects";
     width: 100%;
     padding: 2rem 0rem;
     margin: 4px 5px;
+    height: 64px;
+    transition: height 500ms ease-in-out 50ms; 
     border: 1px solid #eaeaea;
     font-weight: 600;
     font-size: 1.2rem;
     border-radius: 10px;
+  }
+
+  .project-card:hover {
+    height: 300px;
   }
 </style>

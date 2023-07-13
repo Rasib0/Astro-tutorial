@@ -3,6 +3,24 @@ const pageTitle = "Hi. I am Rasib";
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+
+
+const identity = {
+  firstName: "Rasib",
+  country: "Pakistan",
+  occupation: "Web Developer",
+  hobbies: ["Reading", "Writing", "Coding"],
+};
+
+const skills = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Astro",
+  "Python",
+  "Rust",
+];
 ---
 
 <BaseLayout>
@@ -10,6 +28,23 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   <div class="flex items-center flex-col h-screen">
           <h1>Hi. I am Rasib</h1>
           <main class="mb-auto">
+            <p>Here are a few facts about me:</p>
+            <ul>
+              <li>
+                I am from {identity.country} and I work as a {identity.occupation}.
+              </li>
+              <li>
+                Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
+              </li>
+              <li>
+                I like playing with different technology. My editor of choice is nvim with
+                tmux.
+              </li>
+              <p>My skills are:</p>
+              <ul>
+                {skills.map((skill) => <li class="skill">{skill}</li>)}
+              </ul>
+            </ul>
           </main>
           <Footer/>
         </div>
@@ -31,4 +66,16 @@ import BaseLayout from "../layouts/BaseLayout.astro";
   }
   
   </style>
+
+<style>
+  * {
+    --hover: rgb(80, 80, 80);
+  }
+
+  .skill {
+    color: var(--hover);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+</style>
 

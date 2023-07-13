@@ -2,9 +2,35 @@
 ---
 
 <style>
+  
+header {
+  display: flex;
+  align-items: center;
+  border-radius: 0.25rem;
+}
+/* nav styles */
+
+nav {
+  width: 100%;
+}
+
+.nav-links {
+  width: 100%;
+  display: none;
+}
+
+.nav-links > a {
+  display: block;
+  margin: 6px 16px;
+}
+
+.expanded {
+  display: unset;
+}
+
   .hamburger {
-    padding-top: 1rem;
-    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 0.5rem;
   }
 
   .line {
@@ -48,6 +74,22 @@
   .hover-underline-animation:hover::before {
     transform: translateX(0);
   }
+
+  /* BIG SCREEN */
+
+  @media screen and (min-width: 636px) {
+  .nav-links {
+    display: flex;
+  }
+
+  .nav-links > a {
+    margin: 12px 18px;
+  }
+
+  .hamburger {
+    display: none;
+  }
+}
 </style>
 <header>
   <nav>
@@ -58,16 +100,23 @@
     </div>
     <div class="nav-links">
       <a class="hover-underline-animation" draggable="false" href="/">Home</a>
-      <a class="hover-underline-animation" draggable="false" href="/about"
+      <!-- <a class="hover-underline-animation" draggable="false" href="/about"
         >About</a
-      >
+      > -->
       <a class="hover-underline-animation" draggable="false" href="/projects"
         >Projects</a
       >
       <a class="hover-underline-animation" draggable="false" href="/blog"
         >Blog</a
       >
+      <a aria-label="Open Resume P D F" class="hover-underline-animation" draggable="false" href="/resume.pdf"
+        >Resume</a
+      >
+      <a class="hover-underline-animation" draggable="false" href="/resume.pdf"
+      >Contact me</a
+    >
     </div>
+
   </nav>
 </header>
 

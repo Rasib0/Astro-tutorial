@@ -23,7 +23,7 @@ const skills = [
 ];
 ---
 
-<BaseLayout>
+<BaseLayout pageTitle={pageTitle}>
 <div class="main-padding">
   <div class="flex items-center flex-col h-screen">
           <h1>Hi. I am Rasib</h1>
@@ -40,10 +40,10 @@ const skills = [
                 I like playing with different technology. My editor of choice is nvim with
                 tmux.
               </li>
-              <p>My skills are:</p>
-              <ul>
-                {skills.map((skill) => <li class="skill">{skill}</li>)}
-              </ul>
+            </ul>
+            <p>My skills are:</p>
+            <ul>
+              {skills.map((skill) => <li class="skill">{skill}</li>)}
             </ul>
           </main>
           <Footer/>

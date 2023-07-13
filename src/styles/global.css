@@ -1,5 +1,5 @@
 html {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   --hovered: rgb(38 38 38); /* hover neutral */
   --hovered-light: rgb(80 80 80); /* hover neutral */
   --nav: black;
@@ -10,6 +10,7 @@ html {
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
+  box-sizing: border-box;
 }
 
 *::selection {
@@ -59,12 +60,14 @@ h1 {
   font-size: 1.15em;
 }
 
+.main-padding {
+  padding: 0 0.5rem;
+}
+
 main {
   width: 100%;
-  max-width: 80ch;
+  max-width: 800px;
   background-color: var(--main);
-  min-height: 100vh;
-  padding: 1rem;
   line-height: 1.5;
 }
 
@@ -87,6 +90,7 @@ nav {
 a {
   text-decoration: none;
   color: var(--hovered-light);
+  font-weight: 500;
 }
 
 a:hover,

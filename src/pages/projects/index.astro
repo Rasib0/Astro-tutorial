@@ -5,11 +5,11 @@ const pageTitle = "Projects";
 
 <StandardLayout pageTitle={pageTitle}>
   <div>
-  <div class="project-card flex justify-between">
-    <div><a href="https://chirp.rasib.me">Chirp</a></div>
-    <div><a href="https://github.com/rasib0/chirp">Github</a></div>
+    <div class="project-card flex justify-between">
+      <div><a href="https://chirp.rasib.me">Chirp</a></div>
+      <div><a href="https://github.com/rasib0/chirp">Github</a></div>
+    </div>
   </div>
- </div> 
   <div class="project-card flex justify-between">
     <div>
       <a href="https://tracker.rasib.me">Tracker</a>
@@ -17,26 +17,21 @@ const pageTitle = "Projects";
     <div>
       <a href="https://github.com/rasib0/mediatracker">Github</a>
     </div>
+  </div>
+
+  <style>
+    .project-card > div {
+      padding: 0px 24px;
+    }
+
+    .project-card {
+      width: 100%;
+      padding: 2rem 0rem;
+      margin: 4px 5px;
+      border: 1px solid #eaeaea;
+      font-weight: 600;
+      font-size: 1.2rem;
+      border-radius: 10px;
+    }
+  </style>
 </StandardLayout>
-
-<style>
-  .project-card > div {
-    padding: 0px 24px;
-  }
-
-  .project-card {
-    width: 100%;
-    padding: 2rem 0rem;
-    margin: 4px 5px;
-    height: 64px;
-    transition: height 500ms ease-in-out 50ms; 
-    border: 1px solid #eaeaea;
-    font-weight: 600;
-    font-size: 1.2rem;
-    border-radius: 10px;
-  }
-
-  .project-card:hover {
-    height: 300px;
-  }
-</style>

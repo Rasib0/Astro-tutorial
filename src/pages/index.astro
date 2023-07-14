@@ -54,10 +54,6 @@ const technologies = [
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg?raw=true",
   },
   {
-    name: "LaTeX",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg",
-  },
-  {
     name: "Linux",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
   },
@@ -78,11 +74,11 @@ const technologies = [
 
 <script></script>
 <BaseLayout pageTitle={pageTitle}>
-  <div class="main-padding">
-    <div class="flex items-center flex-col h-screen">
+    <div class="flex flex-col items-center h-screen">
       <h1>{pageTitle}</h1>
       <h3>{identity.occupation} @{identity.company}</h3>
       <main class="mb-auto">
+        <div class="main-padding">
         Welcome to my little corner of the web! I am a 4<sup>th</sup> year Computer
         Science student from the Institute of Business Administration (IBA) who is
         passionate about web development and open source. I am interested in
@@ -93,10 +89,9 @@ const technologies = [
         } and <span class="interests">{lastInterest}</span>.
 
         <h2>Technologies</h2>
-        <p>
-          I like learning new programming languages, frameworks and tools. I
-          have worked with the following technologies:<p>
-            <div>
+        <p>I like learning new programming languages, frameworks and tools. I
+          have worked with the following technologies:</p>
+            <div class="grid">
               {
                 technologies.map((technology) => (
                   <div class="techcard">
@@ -110,51 +105,55 @@ const technologies = [
                   </div>
                 ))
               }
-              <Footer />
             </div>
-          </p>
-        </p>
-
-        <style>
-          img {
-            background-color: white;
-            width: 50px;
-            border: 1px dotted grey;
-            height: 50px;
-            border-radius: 100%;
-          }
-          .mb-auto {
-            margin-bottom: auto;
-          }
-
-          .techcard {
-            display: flex;
-            gap: 1rem;
-            align-items: center;
-          }
-
-          .techcard > div {
-            font-weight: bold;
-          }
-
-          .h-screen {
-            min-height: 90vh;
-          }
-
-          .interests {
-            font-weight: bold;
-          }
-          * {
-            --hover: rgb(80, 80, 80);
-          }
-
-          .technologies {
-            color: var(--hover);
-            font-weight: bold;
-            text-transform: uppercase;
-          }
-        </style>
+        </div>
       </main>
+      <Footer />
     </div>
-  </div>
 </BaseLayout>
+
+<style>
+img {
+  background-color: var(--background-color);
+  width: 50px;
+  border: 1px dotted grey;
+  height: 50px;
+  border-radius: 100%;
+}
+.mb-auto {
+  margin-bottom: auto;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 0.75rem 0rem;
+}
+
+.techcard {
+  display: flex;
+  gap: 0rem 1rem;
+  padding-left:3rem;
+  align-items: center;
+}
+
+.techcard > div {
+  font-weight: bold;
+}
+
+.h-screen {
+  min-height: 90vh;
+}
+
+.interests {
+  font-weight: bold;
+}
+* {
+  --hover: rgb(80, 80, 80);
+}
+
+.technologies {
+  color: var(--hover);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+</style>

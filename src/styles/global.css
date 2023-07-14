@@ -20,6 +20,7 @@ html {
 
 body {
   margin: 0px;
+  text-wrap: balance;
 }
 
 header,

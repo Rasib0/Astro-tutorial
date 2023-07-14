@@ -25,9 +25,11 @@ body {
 
 header,
 nav,
+
 .nav-links,
 .nav-links a,
-.hamburger {
+.hamburger,
+.hamburger > span {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;

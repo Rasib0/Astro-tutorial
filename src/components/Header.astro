@@ -2,9 +2,90 @@
 ---
 
 <style>
-  /* HAMBURGER MENU */
+  * {
+    margin: 0px;
+    padding: 0px;
+  }
 
-  .hamburger {
+  header {
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+  }
+  /* nav styles */
+
+  nav {
+    width: 100%;
+  }
+
+  .nav-links {
+    width: 100%;
+    display: none;
+  }
+
+  .nav-link {
+    display: block;
+    margin: 6px 16px;
+  }
+
+  .expanded {
+    display: unset;
+  }
+
+  /* nav link styles */
+
+  .hover-underline-animation {
+    text-decoration: none !important;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    font-weight: 700;
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+  }
+
+  .hover-underline-animation::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+    z-index: -1;
+    height: 2px;
+    background-color: var(--text-color);
+    transition: transform 300ms ease-in-out 40ms;
+    transform: translateX(-100%);
+  }
+
+  .hover-underline-animation:hover::before {
+    transform: translateX(0);
+  }
+
+  /* big screen */
+
+  @media screen and (min-width: 636px) {
+    .nav-links {
+      display: flex;
+    }
+
+    .nav-link {
+      margin: 12px 18px;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .grow {
+      flex-grow: 1;
+    }
+  }
+
+    /* hamburger menu */
+    .hamburger {
     width: 30px;
     height: 28px;
     position: relative;
@@ -57,7 +138,7 @@
     width: 0%;
     left: 50%;
   }
-
+  
   .hamburger.open span:nth-child(2) {
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -77,85 +158,8 @@
     width: 0%;
     left: 50%;
   }
-  * {
-    margin: 0px;
-    padding: 0px;
-  }
-  header {
-    display: flex;
-    align-items: center;
-    border-radius: 0.25rem;
-  }
-  /* nav styles */
-
-  nav {
-    width: 100%;
-  }
-
-  .nav-links {
-    width: 100%;
-    display: none;
-  }
-
-  .nav-link {
-    display: block;
-    margin: 6px 16px;
-  }
-
-  .expanded {
-    display: unset;
-  }
-
-  .hover-underline-animation {
-    text-decoration: none !important;
-    position: relative;
-    overflow: hidden;
-    display: inline-block;
-    font-weight: 700;
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: bold;
-  }
-
-  .hover-underline-animation::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    width: 100%;
-    z-index: -1;
-    height: 2px;
-    background-color: var(--text-color);
-    transition: transform 300ms ease-in-out 40ms;
-    transform: translateX(-100%);
-  }
-
-  .hover-underline-animation:hover::before {
-    transform: translateX(0);
-  }
-
-  /* BIG SCREEN */
-
-  @media screen and (min-width: 636px) {
-    .nav-links {
-      display: flex;
-    }
-
-    .nav-link {
-      margin: 12px 18px;
-    }
-
-    .hamburger {
-      display: none;
-    }
-
-    .grow {
-      flex-grow: 1;
-    }
-  }
 </style>
+
 <header>
   <nav>
     <div class="hamburger">

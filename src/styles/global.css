@@ -1,7 +1,7 @@
 html {
   font-family: "Roboto", sans-serif;
   --hover-color: rgb(38 38 38); /* hover neutral */
-  --hover-color-light: rgb(80 80 80); /* hover neutral */
+  --hover-color-light: rgb(64 64 64); /* hover neutral */
   --text-color: black;
   --background-color: white; /* gray */
   --selection-color: #86efac;

@@ -2,31 +2,30 @@
 ---
 
 <style>
-  
-header {
-  display: flex;
-  align-items: center;
-  border-radius: 0.25rem;
-}
-/* nav styles */
+  header {
+    display: flex;
+    align-items: center;
+    border-radius: 0.25rem;
+  }
+  /* nav styles */
 
-nav {
-  width: 100%;
-}
+  nav {
+    width: 100%;
+  }
 
-.nav-links {
-  width: 100%;
-  display: none;
-}
+  .nav-links {
+    width: 100%;
+    display: none;
+  }
 
-.nav-link {
-  display: block;
-  margin: 6px 16px;
-}
+  .nav-link {
+    display: block;
+    margin: 6px 16px;
+  }
 
-.expanded {
-  display: unset;
-}
+  .expanded {
+    display: unset;
+  }
 
   .hamburger {
     padding-top: 0.5rem;
@@ -34,13 +33,13 @@ nav {
   }
 
   .line {
-    margin-bottom: 8px;
+    margin-bottom: 7px;
   }
 
   .hamburger .line {
     display: block;
-    width: 40px;
-    height: 5px;
+    width: 32px;
+    height: 4px;
     background-color: black;
     /*background-color: var(--hovered);*/
   }
@@ -78,24 +77,22 @@ nav {
   /* BIG SCREEN */
 
   @media screen and (min-width: 636px) {
-  .nav-links {
-    display: flex;
+    .nav-links {
+      display: flex;
+    }
+
+    .nav-link {
+      margin: 12px 18px;
+    }
+
+    .hamburger {
+      display: none;
+    }
+
+    .grow {
+      flex-grow: 1;
+    }
   }
-
-  .nav-link {
-    margin: 12px 18px;
-  }
-
-  .hamburger {
-    display: none;
-  }
-
-  .grow {
-  flex-grow: 1;
-}
-}
-
-
 </style>
 <header>
   <nav>
@@ -105,27 +102,45 @@ nav {
       <span class="line"></span>
     </div>
     <div class="nav-links">
-      <div>      
-        <a class="hover-underline-animation nav-link" draggable="false" href="/">Home</a>
-      </div>
-      <div>   
-        <a class="hover-underline-animation nav-link" draggable="false" href="/projects">Projects</a>
-      </div>
-      <div>      
-        <a class="hover-underline-animation nav-link" draggable="false" href="/blog">Blog</a>
-      </div>
-      <div class="grow">       
-        <a class="hover-underline-animation nav-link" aria-label="Open Resume P D F"  draggable="false" href="/resume.pdf">Resume</a>
+      <div>
+        <a class="hover-underline-animation nav-link" draggable="false" href="/"
+          >Home</a
+        >
       </div>
       <div>
-        <a class="hover-underline-animation nav-link" draggable="false" href="/resume.pdf">Contact me</a>
+        <a
+          class="hover-underline-animation nav-link"
+          draggable="false"
+          href="/projects">Projects</a
+        >
+      </div>
+      <div>
+        <a
+          class="hover-underline-animation nav-link"
+          draggable="false"
+          href="/blog">Blog</a
+        >
+      </div>
+      <div class="grow">
+        <a
+          class="hover-underline-animation nav-link"
+          aria-label="Open Resume P D F"
+          draggable="false"
+          href="/resume.pdf">Resume</a
+        >
+      </div>
+      <div>
+        <a
+          class="hover-underline-animation nav-link"
+          draggable="false"
+          href="mailto: m.nadeem.22976@khi.iba.edu.pk">Contact me</a
+        >
       </div>
       <!-- <div>
         <a class="hover-underline-animation" draggable="false" href="/about"
         >About</a>
       </div> -->
     </div>
-
   </nav>
 </header>
 

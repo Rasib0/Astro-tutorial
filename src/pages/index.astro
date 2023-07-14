@@ -1,81 +1,166 @@
 ---
-const pageTitle = "Hi. I am Rasib";
+const pageTitle = "Rasib Nadeem";
 import "../styles/global.css";
 import Footer from "../components/Footer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
-
 
 const identity = {
   firstName: "Rasib",
   country: "Pakistan",
   occupation: "Web Developer",
-  hobbies: ["Reading", "Writing", "Coding"],
+  company: "nowhere",
+  hobbies: ["Reading", "Youtube", "Coding"],
 };
 
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Astro",
-  "Python",
-  "Rust",
+const interests = [
+  "Web Development",
+  "Natural Language Processing",
+  "Open Source",
+];
+
+const lastInterest = interests.pop();
+
+const technologies = [
+  {
+    name: "HTML",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+  },
+  {
+    name: "CSS",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+  },
+  {
+    name: "JavaScript",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+  },
+  {
+    name: "React",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg?raw=true",
+  },
+  {
+    name: "Next.js",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+  },
+  {
+    name: "Rust",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
+  },
+  {
+    name: "Go",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg?raw=true",
+  },
+  {
+    name: "Python",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg?raw=true",
+  },
+  {
+    name: "LaTeX",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/latex/latex-original.svg",
+  },
+  {
+    name: "Linux",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+  },
+  {
+    name: "Astro",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
+  },
+  {
+    name: "Git",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+  },
+  {
+    name: "TypeScript",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+  },
 ];
 ---
 
+<script></script>
 <BaseLayout pageTitle={pageTitle}>
-<div class="main-padding">
-  <div class="flex items-center flex-col h-screen">
-          <h1>Hi. I am Rasib</h1>
-          <main class="mb-auto">
-            <p>Here are a few facts about me:</p>
-            <ul>
-              <li>
-                I am from {identity.country} and I work as a {identity.occupation}.
-              </li>
-              <li>
-                Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
-              </li>
-              <li>
-                I like playing with different technology. My editor of choice is nvim with
-                tmux.
-              </li>
-            </ul>
-            <p>My skills are:</p>
-            <ul>
-              {skills.map((skill) => <li class="skill">{skill}</li>)}
-            </ul>
-          </main>
-          <Footer/>
-        </div>
+  <div class="main-padding">
+    <div class="flex items-center flex-col h-screen">
+      <h1>{pageTitle}</h1>
+      <h3>{identity.occupation} @{identity.company}</h3>
+      <main class="mb-auto">
+        Welcome to my little corner of the web! I am a 3rd year Computer Science
+        student from the Institute of Business Administration (IBA) who is
+        passionate about web development and open source. I am interested in
+        {
+          interests.map((interest) => (
+            <span class="interests">{interest},&nbsp;</span>
+          ))
+        } and <span class="interests">{lastInterest}</span>.
+
+        <h2>Technologies</h2>
+        <p>
+          I like learning new programming languages, frameworks and tools. I
+          have worked with the following technologies:<p>
+            <div>
+              {
+                technologies.map((technology) => (
+                  <div class="techcard">
+                    <img
+                      src={technology.logo}
+                      height="40"
+                      width="52"
+                      alt={technology.name + " logo"}
+                    />
+                    <div>{technology.name}</div>
+                  </div>
+                ))
+              }
+              <Footer />
+            </div>
+          </p>
+        </p>
+
+        <style>
+          h1 {
+            font-size: 3rem;
+          }
+          img {
+            background-color: white;
+            width: 50px;
+            border: 2px solid black;
+            image-rendering: pixelated;
+            object-fit: cover;
+            height: 50px;
+            border-radius: 100%;
+          }
+          .mb-auto {
+            margin-bottom: auto;
+          }
+
+          .techcard {
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            border: 1px solid black;
+          }
+
+          .techcard > div {
+            font-weight: bold;
+          }
+
+          .h-screen {
+            min-height: 90vh;
+          }
+
+          .interests {
+            font-weight: bold;
+          }
+          * {
+            --hover: rgb(80, 80, 80);
+          }
+
+          .technologies {
+            color: var(--hover);
+            font-weight: bold;
+            text-transform: uppercase;
+          }
+        </style>
+      </main>
+    </div>
+  </div>
 </BaseLayout>
-</div>
-
-
-<style>
-  h1 {
-    font-size: 3rem;
-  }
-
-  .mb-auto {
-    margin-bottom: auto;
-  }
-
-  .h-screen {
-    min-height: 90vh;
-  }
-  
-  </style>
-
-<style>
-  * {
-    --hover: rgb(80, 80, 80);
-  }
-
-  .skill {
-    color: var(--hover);
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-</style>
-

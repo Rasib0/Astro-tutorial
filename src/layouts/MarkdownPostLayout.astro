@@ -1,12 +1,11 @@
 ---
 const { frontmatter } = Astro.props;
 import StandardLayout from "./StandardLayout.astro";
-const allPost = await Astro.glob("../pages/posts/*.md");
 const tags = frontmatter.tags;
 ---
 
 <StandardLayout pageTitle={frontmatter.title}>
-  <p>Published on: {frontmatter.pubDate.slice(0, 10)}</p>
+  <p>Published on: {frontmatter.pubDate.toDateString()}</p>
   <p>Written by {frontmatter.author}</p>
   <p>{frontmatter.description}</p>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
@@ -28,22 +27,20 @@ const tags = frontmatter.tags;
     }
 
     img:empty {
-      background: 
-        linear-gradient(0.25turn, transparent, #fff, transparent),
+      background: linear-gradient(0.25turn, transparent, #fff, transparent),
         linear-gradient(#eee, #eee),
         radial-gradient(38px circle at 19px 19px, #eee 50%, transparent 51%),
         linear-gradient(#eee, #eee);
       background-repeat: no-repeat;
-      background-size: 315px 250px, 315px 180px, 100px 100px, 225px 30px; 
-      background-position: -315px 0, 0 0, 0px 190px, 50px 195px; 
+      background-size: 315px 250px, 315px 180px, 100px 100px, 225px 30px;
+      background-position: -315px 0, 0 0, 0px 190px, 50px 195px;
       animation: loading 1.5s infinite;
     }
 
-
-    @keyframes loading {  
-  to {
-    background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+    @keyframes loading {
+      to {
+        background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+      }
     }
-  }
   </style>
 </StandardLayout>

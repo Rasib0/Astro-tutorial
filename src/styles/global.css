@@ -37,9 +37,7 @@ body {
 header,
 nav,
 .nav-links,
-.nav-links a,
-.hamburger,
-.hamburger span
+.nav-links a
  {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
@@ -47,6 +45,9 @@ nav,
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
+}
+
+.hamburger {
   -webkit-tap-highlight-color:transparent;
 }
 

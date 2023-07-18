@@ -15,7 +15,7 @@ link: "https://tracker.rasib.me", repo: "https://www.github.com/Rasib0/mediatrac
     {
       allProjects.map((project) => (
         <div class="project-card">
-          <div class="project-card flex justify-between">
+          <div class="project-card-inner flex justify-between">
             <div><a href={project.link}>{project.name}</a></div> 
             <div><a href={project.repo}>Repo</a></div>
           </div>
@@ -27,8 +27,6 @@ link: "https://tracker.rasib.me", repo: "https://www.github.com/Rasib0/mediatrac
   <style>
 
     .project-main {
-      margin: 9px;
-      padding: 1rem;
     }
 
     .project-card > div {
@@ -40,9 +38,17 @@ link: "https://tracker.rasib.me", repo: "https://www.github.com/Rasib0/mediatrac
     }
 
     .project-card {
-      margin: 4px 5px;
+      margin: 1.5rem 1rem;
       color: var(--text-color);
       border: 3px solid var(--text-color);
       border-radius: 10px;
+    }
+    .project-card-inner {
+      background-color: var(--nav-color);
+      color: var(--text-color);
+      border-radius: inherit;
+      border-bottom-left-radius: 0px;
+      border-bottom-right-radius: 0px;
+      border-bottom: 3px solid var(--text-color);
     }
   </style>

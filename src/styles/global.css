@@ -21,9 +21,10 @@
   --hover-color: rgb(160, 160, 160); /* hover neutral */
   --hover-color-light: rgb(200, 200, 200); /* hover neutral */
   --text-color: white;
-  --background-color: #020617;
-  --selection-color: #494949;
-  --nav-color: #db2777;
+  --background-color: #191a1b;
+  --selection-color: ##f50066;
+  --nav-color: #f50066;
+  --nav-hover-color: #1f010d46;
 }
 
 *::selection {
@@ -79,15 +80,6 @@ h3 {
 }
 .items-center {
   align-items: center;
-}
-
-.tag {
-  margin: 0.25em;
-  border: dotted 1px var(--hover-color-light);
-  border-radius: 0.5em;
-  font-family: monospace;
-  padding: 0.2em 0.5em;
-  font-size: 1.15em;
 }
 
 .main-content-padding {

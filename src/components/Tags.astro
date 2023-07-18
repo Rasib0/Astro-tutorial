@@ -1,23 +1,52 @@
 ---
 const { tags, notlink } = Astro.props;
+
+const tagsColor = [
+  {name: "javascript", color: "#f1e05a", text: "#000000"},
+   {name: "react", color: "#61dafb", text: "#000000"},
+  {name: "linux", color: "#f1e05a", text: "#000000"},
+  {name: "git", color: "#f34f29", text: "#ffffff"},
+  {Nmae: "go", color: "#00add8", text: "#ffffff"},
+  {name: "python", color: "#3572A5", text: "#ffffff"},
+  {name: "rust", color: "#dea584", text: "#000000"},
+  {name: "astro", color: "#f34f29", text: "#ffffff"},
+  {name: "next", color: "#000000", text: "#ffffff"},
+  {name: "css", color: "#563d7c", text: "#ffffff"},
+  {name: "html", color: "#e34c26",  text: "#ffffff"},
+  {name: "tailwindcss", color: "#38b2ac", text: "#ffffff"},
+  {name: "clerk", color: "#2b7489", text: "#ffffff"},
+  {name: "nextauth", color: "#000000", text: "#ffffff"},
+]
 ---
 
 <div class="tags">
   {
     tags.map((tag) => (
-      <p class="tag">
+      <span class="tag"
+      style={{backgroundColor: tagsColor.find((t) => t.name === tag.toLowerCase())?.color || "#f34f29"
+      , color: tagsColor.find((t) => t.name === tag.toLowerCase())?.text || "#ffffff"}}
+      >
         {notlink && <a href={`/tags/${tag}`}>{tag}</a>}
         {!notlink && <span>{tag}</span>}
-      </p>
+      </span>
     ))
   }
 </div>
 
 <style>
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+}
+
+.tag {
+  margin: 0.25em;
+  border: 2px solid var(--text-color);
+  border-radius: 0.5em;
+  font-family: monospace;
+  padding: 0.2em 0.5em;
+  font-size: 1.15em;
+}
 </style>
 

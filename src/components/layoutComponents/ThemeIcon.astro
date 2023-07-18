@@ -18,9 +18,18 @@
 
 <style>
   #themeToggle {
+    background: var(--nav-color);
     border: 0;
-    background: none;
+    cursor: pointer;
+    padding-top: 4px;
+    border-radius: 100%;
+    transition: background 100ms ease;
   }
+
+  #themeToggle:hover {
+    background: var(--nav-hover-color);
+  }
+
   .sun {
     fill: black;
   }

@@ -1,9 +1,7 @@
 ---
-import StandardLayout from "../../layouts/StandardLayout.astro";
-const pageTitle = "Projects";
 ---
 
-<StandardLayout pageTitle={pageTitle}>
+
   <div>
     <div class="project-card flex justify-between">
       <div><a href="https://chirp.rasib.me">Chirp</a></div>
@@ -26,11 +24,9 @@ const pageTitle = "Projects";
 
     .project-card {
       width: 100%;
-      padding: 2rem 0rem;
       margin: 4px 5px;
       color: var(--text-color);
-      border: 1px solid var(--hover-color);
+      border: 3px solid var(--text-color);
       border-radius: 10px;
     }
   </style>
-</StandardLayout>

@@ -1,6 +1,6 @@
 ---
 const { pageTitle, titleFont } = Astro.props;
-import Footer from "../components/Footer.astro";
+import Footer from "../components/layoutComponents/Footer.astro";
 import "../styles/global.css";
 import BaseLayout from "./BaseLayout.astro";
 
@@ -21,8 +21,9 @@ const newFont = titleFont || "";
         <slot />
         </div>
       </main>
-      <Footer />
+      
     </div>
+<Footer />
   </BaseLayout>
   
 <style>
@@ -31,6 +32,6 @@ const newFont = titleFont || "";
   }
 
   .h-screen {
-    min-height: 90vh;
+    min-height: 80vh;
   }
   </style>

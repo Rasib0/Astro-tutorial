@@ -12,11 +12,14 @@ import ThemeIcon from "./ThemeIcon.astro";
     display: flex;
     align-items: start;
     border-radius: 0.25rem;
+    background-color: var(--nav-color);
+    border-bottom: 3px solid var(--text-color);
   }
   /* nav styles */
 
   nav {
     width: 100%;
+    
   }
 
   .nav-links {
@@ -54,10 +57,9 @@ import ThemeIcon from "./ThemeIcon.astro";
     left: 0;
     overflow: hidden;
     width: 100%;
-    z-index: -1;
     height: 2px;
     background-color: var(--text-color);
-    transition: transform 300ms ease-in-out 40ms;
+    transition: transform 200ms ease-in-out 40ms;
     transform: translateX(-100%);
   }
 
@@ -66,7 +68,11 @@ import ThemeIcon from "./ThemeIcon.astro";
   }
 
   .theme-icon {
-    padding-top: 0.33rem;
+    padding: 0.30rem;
+    margin-top: 0.1rem;
+    margin-right: 1rem;
+    display: flex;
+    align-content: center;
   }
 
   /* big screen */
@@ -180,16 +186,15 @@ import ThemeIcon from "./ThemeIcon.astro";
           >Home</a
         >
       </div>
-      <div>
+      <!-- <div>
         <a
           class="hover-underline-animation nav-link"
           draggable="false"
           href="/projects">Projects</a
         >
-      </div>
-      <div>
-        <a
-          class="hover-underline-animation nav-link"
+      </div>-->
+      <div> 
+        <a class="hover-underline-animation nav-link"
           draggable="false"
           href="/blog">Blog</a
         >
@@ -221,7 +226,7 @@ import ThemeIcon from "./ThemeIcon.astro";
 </header>
 
 <script>
-  import "../scripts/menu.js";
+  import "../../scripts/menu.js";
 </script>
 
 <script is:inline>

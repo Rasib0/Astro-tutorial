@@ -34,8 +34,8 @@
 }
 
 *::selection {
-  background-color: var(--selection-color);
-  color: var(--text-color);
+  background-color: #f50066;
+  color: white;
 }
 
 body {

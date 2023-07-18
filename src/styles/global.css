@@ -26,9 +26,9 @@ html.dark {
   --hover-color: rgb(160, 160, 160); /* hover neutral */
   --hover-color-light: rgb(200, 200, 200); /* hover neutral */
   --text-color: white;
-  --background-color: #020617;
-  --selection-color: rgb(190 24 93);
-  --nav-color: rgb(190 24 93);
+  --background-color: #0a0a0a;
+  --selection-color: #db2777;
+  --nav-color: #db2777;
 }
 
 *::selection {
@@ -95,6 +95,7 @@ h3 {
 }
 :root {
   background-color: var(--background-color);
+  transition: background-color 120ms;
   color: var(--text-color);
 }
 

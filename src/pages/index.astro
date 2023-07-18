@@ -78,7 +78,7 @@ const technologies = [
       <h1>{pageTitle}</h1>
       <h3>{identity.occupation} @{identity.company}</h3>
       <main class="mb-auto">
-        <div class="main-padding">
+        <div class="main-content-padding">
         Welcome to my little corner of the web! I am a 4<sup>th</sup> year Computer
         Science student from the Institute of Business Administration (IBA) who is
         passionate about software engineering. I am interested in
@@ -92,6 +92,7 @@ const technologies = [
         <h2>Technologies</h2>
         <p>I like learning new programming languages, frameworks and tools. I
           have worked with the following technologies:</p>
+          
             <div class="grid">
               {
                 technologies.map((technology) => (
@@ -107,9 +108,8 @@ const technologies = [
                 ))
               }
             </div>
-        </div>
+      </div>
       </main>
-      <Footer />
     </div>
 </BaseLayout>
 

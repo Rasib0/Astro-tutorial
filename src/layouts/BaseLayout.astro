@@ -1,5 +1,6 @@
 ---
 const { pageTitle } = Astro.props;
+import Footer from "../components/layoutComponents/Footer.astro";
 import Header from "../components/layoutComponents/Header.astro";
 import "../styles/global.css";
 
@@ -7,10 +8,6 @@ import "../styles/global.css";
 
 <html lang="en">
   <head> <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,6 +22,12 @@ import "../styles/global.css";
   <body>
     <Header />
         <slot />
-  </body>
+    <Footer />
   </body>
 </html>
+<style>
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+</style>

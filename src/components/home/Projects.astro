@@ -1,29 +1,45 @@
 ---
+
+const allProjects = [
+  {name: "Chirp", description: "a twitter clone where you can only type in emojis! 👻"
+, link: "https://chirp.rasib.me", repo: "https://www.github.com/Rasib0/chirp"},
+
+{name: "tracker", description: "a website where you can tracker all the book, movies etc. you like!", 
+link: "https://tracker.rasib.me", repo: "https://www.github.com/Rasib0/mediatracker"
+}
+]
 ---
 
 
-  <div>
-    <div class="project-card flex justify-between">
-      <div><a href="https://chirp.rasib.me">Chirp</a></div>
-      <div><a href="https://github.com/rasib0/chirp">Github</a></div>
+  <div class="project-main">
+    {
+      allProjects.map((project) => (
+        <div class="project-card">
+          <div class="project-card flex justify-between">
+            <div><a href={project.link}>{project.name}</a></div> 
+            <div><a href={project.repo}>Repo</a></div>
+          </div>
+          <p>{project.description}</p>
+        </div>
+      ))
+    }
     </div>
-  </div>
-  <div class="project-card flex justify-between">
-    <div>
-      <a href="https://tracker.rasib.me">Tracker</a>
-    </div>
-    <div>
-      <a href="https://github.com/rasib0/mediatracker">Github</a>
-    </div>
-  </div>
-
   <style>
+
+    .project-main {
+      margin: 9px;
+      padding: 1rem;
+    }
+
     .project-card > div {
       padding: 0px 24px;
     }
 
+    p {
+      padding: 0px 12px;
+    }
+
     .project-card {
-      width: 100%;
       margin: 4px 5px;
       color: var(--text-color);
       border: 3px solid var(--text-color);

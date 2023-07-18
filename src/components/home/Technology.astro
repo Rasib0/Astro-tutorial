@@ -1,0 +1,115 @@
+---
+const technologies = [
+  {
+    name: "HTML",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
+  },
+  {
+    name: "CSS",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
+  },
+  {
+    name: "JavaScript",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+  },
+  {
+    name: "React",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg?raw=true",
+    link: "https://react.dev",
+  },
+  {
+    name: "Next.js",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    link: "https://nextjs.org",
+  },
+  {
+    name: "Rust",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
+    link: "https://rust-lang.org",
+  },
+  {
+    name: "Go",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg?raw=true",
+    link: "https://golang.org",
+  },
+  {
+    name: "Python",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg?raw=true",
+    link: "https://python.org",
+  },
+  {
+    name: "Linux",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+    link: "https://kernel.org",
+  },
+  {
+    name: "Docker",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg",
+    link: "https://docker.com",
+  },
+  {
+    name: "Astro",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
+    link: "https://astro.build",
+  },
+  {
+    name: "Git",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    link: "https://git-scm.com",
+  },
+  {
+    name: "TypeScript",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    link: "https://typescriptlang.org",
+  },
+];
+---
+
+<div class="grid">
+  {
+    technologies.map((tech) => (
+      <div class="techcard">
+        <img src={tech.logo} height="40" width="52" alt={tech.name + " logo"} />
+        <a href={tech.link} class="techcard-text">
+          {tech.name}
+        </a>
+      </div>
+    ))
+  }
+</div>
+<style>
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 0.75rem 0rem;
+    justify-items: center;
+  }
+  @media screen and (min-width: 636px) {
+    .grid {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+  }
+
+  .techcard {
+    display: flex;
+    gap: 0rem 0.5rem;
+    align-items: center;
+  }
+
+  .techcard-text {
+    font-weight: bold;
+    min-width: 2cm;
+  }
+
+  img {
+    background-color: white;
+    width: 50px;
+    border: 3px solid var(--text-color);
+    color: black;
+    height: 50px;
+    border-radius: 100%;
+  }
+</style>

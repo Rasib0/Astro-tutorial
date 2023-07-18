@@ -1,9 +1,9 @@
 ---
 const pageTitle = "Hi, I'm Rasib";
 import "../styles/global.css";
-import Footer from "../components/layoutComponents/Footer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Projects from "../components/home/Projects.astro";
+import Technology from "../components/home/Technology.astro";
 
 const identity = {
   firstName: "Rasib",
@@ -20,148 +20,42 @@ const interests = [
 ];
 
 const lastInterest = interests.pop();
-
-const technologies = [
-  {
-    name: "HTML",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
-  },
-  {
-    name: "CSS",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
-  },
-  {
-    name: "JavaScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
-  },
-  {
-    name: "React",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg?raw=true",
-  },
-  {
-    name: "Next.js",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
-  },
-  {
-    name: "Rust",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
-  },
-  {
-    name: "Go",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original.svg?raw=true",
-  },
-  {
-    name: "Python",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg?raw=true",
-  },
-  {
-    name: "Linux",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
-  },
-  {
-    name: "Astro",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
-  },
-  {
-    name: "Git",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
-  },
-  {
-    name: "TypeScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-  },
-];
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-    <div class="flex flex-col items-center h-screen">
-      <h1>{pageTitle}</h1>
-      <h3>{identity.occupation} @{identity.company}</h3>
-      <main class="mb-auto">
-        <div class="main-content-padding">
-        <p>Welcome to my little corner of the web! I am a 4<sup>th</sup> year Computer
-        Science student from the Institute of Business Administration (IBA) who is
-        passionate about software engineering. I am interested in
-        {
-          interests.map((interest) => (
-            <span class="interests">{interest},&nbsp;</span>
-          ))
-        } and <span class="interests">{lastInterest}</span></p>
+  <div class="flex flex-col items-center h-screen">
+    <h1>{pageTitle}</h1>
+    <h3>{identity.occupation} @{identity.company}</h3>
+    <main class="mb-auto">
+      <div class="main-content-padding">
+        <p>
+          Welcome to my little corner of the web! I am a 4<sup>th</sup> year Computer
+          Science student from the Institute of Business Administration (IBA) who
+          is passionate about software engineering. I am interested in
+          {
+            interests.map((interest) => (
+              <span class="interests">{interest},&nbsp;</span>
+            ))
+          } and <span class="interests">{lastInterest}</span>
+        </p>
         <h2>Projects</h2>
         <Projects />
         <h2>Technologies</h2>
-        <p>I like learning new programming languages, frameworks and tools. I
-          have worked with the following technologies:</p>
-          
-            <div class="grid">
-              {
-                technologies.map((technology) => (
-                  <div class="techcard">
-                    <img
-                      src={technology.logo}
-                      height="40"
-                      width="52"
-                      alt={technology.name + " logo"}
-                    />
-                    <div class="techcard-text">{technology.name}</div>
-                  </div>
-                ))
-              }
-            </div>
+        <p>
+          I like learning new programming languages, frameworks and tools. I
+          have worked with the following technologies:
+        </p>
+        <Technology technologies={technologies} />
       </div>
-      </main>
-    </div>
+    </main>
+  </div>
 </BaseLayout>
 
 <style>
-img {
-  background-color: white;
-  width: 50px;
-  border: 3px solid var(--text-color);
-  color: black;
-  height: 50px;
-  border-radius: 100%;
-}
-.mb-auto {
-  margin-bottom: auto;
-}
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 0.75rem 0rem;
-  justify-items: center;
-}
-@media screen and (min-width: 636px) {
-  .grid {
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  .mb-auto {
+    margin-bottom: auto;
   }
-}
-
-.techcard {
-  display: flex;
-  gap: 0rem 0.5rem;
-  align-items: center;
-}
-
-.techcard-text {
-  font-weight: bold;
-  min-width: 2.0cm;
-}
-
-.interests {
-  font-weight: bold;
-}
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  .interests {
+    font-weight: bold;
+  }
+</style>

@@ -27,8 +27,8 @@ html.dark {
   --hover-color: rgb(160, 160, 160); /* hover neutral */
   --hover-color-light: rgb(200, 200, 200); /* hover neutral */
   --text-color: white;
-  --background-color: #0a0a0a;
-  --selection-color: #db2777;
+  --background-color: #020617;
+  --selection-color: #494949;
   --nav-color: #db2777;
 }
 
@@ -40,6 +40,11 @@ html.dark {
 body {
   margin: 0px;
   text-justify: inter-word;
+  min-height: 100vh;
+}
+
+.h-screen {
+  height: calc(100% - 52px);
 }
 
 header,

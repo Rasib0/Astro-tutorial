@@ -1,29 +1,23 @@
 ---
-
-const allProjects = [
-  {name: "Chirp", description: "a twitter clone where you can only type in emojis! 👻"
-, link: "https://chirp.rasib.me", repo: "https://www.github.com/Rasib0/chirp"},
-
-{name: "tracker", description: "a website where you can tracker all the book, movies etc. you like!", 
-link: "https://tracker.rasib.me", repo: "https://www.github.com/Rasib0/mediatracker"
-}
-]
+import { getCollection } from "astro:content";
+const allProjects = await getCollection("projects");
 ---
   <div class="project-main">
     {
       allProjects.map((project) => (
         <div class="project-card">
           <div class="project-card-inner flex justify-between">
-            <div><a href={project.link}>{project.name}</a></div> 
-            <div><a href={project.repo}>Repo</a></div>
+            <div><a href={project.data.link}>{project.data.title}</a></div> 
+            <div><a href={project.data.repo}>Repo</a></div>
+            <div><a href={"/projects/"+project.slug}>Read more</a></div>
           </div>
-          <p>{project.description}</p>
+          <p>{project.data.description}</p>
         </div>
       ))
     }
     </div>
-  <style>
 
+  <style>
     .project-main {
     }
 

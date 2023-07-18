@@ -1,27 +1,12 @@
 ---
 import { getCollection } from "astro:content";
 import StandardLayout from "../../layouts/StandardLayout.astro";
+import Tags from "../../components/Tags.astro";
 const allPosts = await getCollection("posts");
 const tags = [...new Set(allPosts.map((post) => post.data.tags).flat())];
 const pageTitle = "Tag Index";
 ---
 
 <StandardLayout pageTitle={pageTitle}>
-  <div class="tags">
-    {
-      tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
+ <Tags tags={tags} /> 
 </StandardLayout>
-
-<style>
-  .tags {
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-  }
-</style>

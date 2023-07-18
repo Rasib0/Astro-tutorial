@@ -1,6 +1,7 @@
 ---
 const { frontmatter } = Astro.props;
 import StandardLayout from "./StandardLayout.astro";
+import Tags from "../components/Tags.astro";
 const tags = frontmatter.tags;
 ---
 
@@ -9,23 +10,9 @@ const tags = frontmatter.tags;
   <p>Written by {frontmatter.author}</p>
   <p>{frontmatter.description}</p>
   <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-  <div class="tags">
-    {
-      tags.map((tag) => (
-        <p class="tag">
-          <a href={`/tags/${tag}`}>{tag}</a>
-        </p>
-      ))
-    }
-  </div>
+  <Tags tags={tags}/>
   <slot />
   <style>
-    .tags {
-      display: flex;
-      flex-wrap: wrap;
-      margin: 0 auto;
-    }
-
     img:empty {
       background: linear-gradient(0.25turn, transparent, #fff, transparent),
         linear-gradient(#eee, #eee),

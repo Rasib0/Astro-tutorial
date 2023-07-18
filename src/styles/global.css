@@ -101,7 +101,6 @@ h3 {
 }
 :root {
   background-color: var(--background-color);
-  transition: background-color 120ms;
   color: var(--text-color);
 }
 

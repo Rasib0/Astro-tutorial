@@ -1,47 +1,57 @@
 ---
 import { getCollection } from "astro:content";
+import Tags from "../Tags.astro";
 const allProjects = await getCollection("projects");
 ---
-  <div class="project-main">
-    {
-      allProjects.map((project) => (
-        <div class="project-card">
-          <div class="project-card-inner flex justify-between">
-            <div><a href={project.data.link}>{project.data.title}</a></div> 
-            <div><a href={project.data.repo}>Repo</a></div>
-            <div><a href={"/projects/"+project.slug}>Read more</a></div>
+
+<div class="project-main">
+  {
+    allProjects.map((project) => (
+      <div class="project-card">
+        <div class="project-card-inner flex justify-between">
+          <div>
+            <a href={project.data.link}>{project.data.title}</a>
           </div>
-          <p>{project.data.description}</p>
+          <div>
+            <a href={project.data.repo}>Repo</a>
+          </div>
         </div>
-      ))
-    }
-    </div>
+        <div class="input">
+          <p>{project.data.description}</p>
+          <a href={"/projects/" + project.slug}>Learn more</a>
+          <p>Created: {project.data.pubDate.toLocaleDateString()}</p>
+          <Tags tags={project.data.tags} nolink={true} />
+        </div>
+      </div>
+    ))
+  }
+</div>
 
-  <style>
-    .project-main {
-    }
+<style>
+  .project-main {
+  }
 
-    .project-card > div {
-      padding: 0px 24px;
-    }
+  .project-card > div {
+    padding: 0px 24px;
+  }
 
-    p {
-      padding: 0px 12px;
-    }
+  .input {
+    padding: 0px 12px;
+  }
 
-    .project-card {
-      margin: 1.5rem 0.5rem;
-      color: var(--text-color);
-      border: 3px solid var(--text-color);
-      border-radius: 10px;
-    }
+  .project-card {
+    margin: 1.5rem 0.5rem;
+    color: var(--text-color);
+    border: 3px solid var(--text-color);
+    border-radius: 10px;
+  }
 
-    .project-card-inner {
-      background-color: var(--nav-color);
-      color: var(--text-color);
-      border-radius: inherit;
-      border-bottom-left-radius: 0px;
-      border-bottom-right-radius: 0px;
-      border-bottom: 3px solid var(--text-color);
-    }
-  </style>
+  .project-card-inner {
+    background-color: var(--nav-color);
+    color: var(--text-color);
+    border-radius: inherit;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom: 3px solid var(--text-color);
+  }
+</style>

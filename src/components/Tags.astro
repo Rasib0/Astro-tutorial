@@ -1,0 +1,23 @@
+---
+const { tags, notlink } = Astro.props;
+---
+
+<div class="tags">
+  {
+    tags.map((tag) => (
+      <p class="tag">
+        {notlink && <a href={`/tags/${tag}`}>{tag}</a>}
+        {!notlink && <span>{tag}</span>}
+      </p>
+    ))
+  }
+</div>
+
+<style>
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+  }
+</style>
+

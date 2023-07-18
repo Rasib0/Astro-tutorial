@@ -5,25 +5,31 @@
   padding: 0px;
   height: 100%;
   box-sizing: border-box;
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 :root {
   --hover-color: rgb(38 38 38); /* hover neutral */
   --hover-color-light: rgb(64 64 64); /* hover neutral */
+  --link-color: black; /* link neutral */
   --text-color: black;
+  --layout-color: black;
   --background-color: white; /* gray */
-  --selection-color: pink;
+  --selection-color: hsl(350, 70%, 75%);
   --nav-color: pink;
-  --nav-hover-color: hsl(350, 49%, 75%);
+  --nav-hover-color: hsl(350, 49%, 70%);
 }
 
 :root.dark {
   --hover-color: rgb(160, 160, 160); /* hover neutral */
   --hover-color-light: rgb(200, 200, 200); /* hover neutral */
   --text-color: white;
-  --background-color: #191a1b;
+  --link-color: pink; /* link neutral */
+  --layout-color: #f50066;
+  --background-color: black;
   --selection-color: ##f50066;
-  --nav-color: #f50066;
+  --nav-color: black;
   --nav-hover-color: #1f010d46;
 }
 
@@ -38,8 +44,10 @@ body {
   min-height: 100vh;
 }
 
-.h-screen {
-  min-height: 90vh;
+main {
+  width: 100%;
+  max-width: 800px;
+  line-height: 1.5;
 }
 
 header,
@@ -54,10 +62,6 @@ nav,
   user-select: none;
 }
 
-.hamburger {
-  -webkit-tap-highlight-color: transparent;
-}
-
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
@@ -69,6 +73,33 @@ h3 {
   padding: 0px;
   text-align: center;
   margin: 0px 0px 1.5rem 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: var(--layout-color);
+}
+
+a {
+  color: var(--link-color);
+  font-weight: 500;
+}
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+.h-screen {
+  min-height: 90vh;
+}
+
+.hamburger {
+  -webkit-tap-highlight-color: transparent;
 }
 
 .flex {
@@ -85,32 +116,11 @@ h3 {
 .main-content-padding {
   padding: 0 1rem;
 }
-:root {
-  background-color: var(--background-color);
-  color: var(--text-color);
-}
-
-main {
-  width: 100%;
-  max-width: 800px;
-  line-height: 1.5;
-}
 
 .box-shadow {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 0.325926px 0.733333px 0px,
     rgba(0, 0, 0, 0.07) 0px 1.54074px 2.86667px 0px,
     rgba(0, 0, 0, 0.05) 0px 4px 9px 0px;
-}
-
-a {
-  text-decoration: none;
-  color: var(--hover-color-light);
-  font-weight: 500;
-}
-
-a:hover,
-a:focus {
-  text-decoration: underline;
 }
 
 .justify-between {

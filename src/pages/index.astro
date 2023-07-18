@@ -79,14 +79,14 @@ const technologies = [
       <h3>{identity.occupation} @{identity.company}</h3>
       <main class="mb-auto">
         <div class="main-content-padding">
-        Welcome to my little corner of the web! I am a 4<sup>th</sup> year Computer
+        <p>Welcome to my little corner of the web! I am a 4<sup>th</sup> year Computer
         Science student from the Institute of Business Administration (IBA) who is
         passionate about software engineering. I am interested in
         {
           interests.map((interest) => (
             <span class="interests">{interest},&nbsp;</span>
           ))
-        } and <span class="interests">{lastInterest}</span>.
+        } and <span class="interests">{lastInterest}</span></p>
         <h2>Projects</h2>
         <Projects />
         <h2>Technologies</h2>

@@ -3,11 +3,6 @@ import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <style>
-  * {
-    margin: 0px;
-    padding: 0px;
-  }
-
   header {
     display: flex;
     align-items: start;
@@ -19,7 +14,6 @@ import ThemeIcon from "./ThemeIcon.astro";
 
   nav {
     width: 100%;
-    
   }
 
   .nav-links {
@@ -68,11 +62,11 @@ import ThemeIcon from "./ThemeIcon.astro";
   }
 
   .theme-icon {
-    padding: 0.30rem;
-    margin-top: 0.1rem;
     margin-right: 1rem;
+    height: 100%;
     display: flex;
-    align-content: center;
+    align-items: center;
+    justify-content: center;
   }
 
   /* big screen */
@@ -82,8 +76,12 @@ import ThemeIcon from "./ThemeIcon.astro";
       display: flex;
     }
 
+    header {
+      padding: 4px;
+    }
+
     .nav-link {
-      margin: 12px 18px;
+      margin: 7px 18px;
     }
 
     .hamburger {
@@ -102,6 +100,7 @@ import ThemeIcon from "./ThemeIcon.astro";
     touch-action: none;
     position: relative;
     margin: 6px;
+    margin-left: 1rem;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);
@@ -193,8 +192,9 @@ import ThemeIcon from "./ThemeIcon.astro";
           href="/projects">Projects</a
         >
       </div>-->
-      <div> 
-        <a class="hover-underline-animation nav-link"
+      <div>
+        <a
+          class="hover-underline-animation nav-link"
           draggable="false"
           href="/blog">Blog</a
         >

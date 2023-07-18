@@ -16,6 +16,7 @@ html {
   --background-color: white; /* gray */
   --selection-color: pink;
   --nav-color: pink;
+  --nav-hover-color: hsl(350, 49%, 75%);
 }
 
 html.dark {

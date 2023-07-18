@@ -5,16 +5,14 @@ const username_linkedin = "muhammad-rasib-nadeem"
 
 <style>
   .social {
-    padding: 0.3625rem 0.97rem;
-    border-radius: 10px;
-    font-weight: 500;
+    padding: 0.3925rem 0.99rem;
+    border-radius: 12px;
+    font-weight: 700;
     color: var(--background-color);
-    font-size: 14px;
     text-decoration: none;
     display: inline-flex;
     align-items; center;
     justify-content: center;
-    white-space: pre-line;
     letter-spacing: 0.02px;
     background-color: var(--text-color);
   }
@@ -26,8 +24,8 @@ const username_linkedin = "muhammad-rasib-nadeem"
   }
   footer {
     background: var(--nav-color);
-    margin-top: 2rem;
     padding: 1rem;
+    margin-top: 3rem;
     width: 100%;
     border-top: 3px solid var(--text-color);
     text-align: center;
@@ -38,17 +36,20 @@ const username_linkedin = "muhammad-rasib-nadeem"
     flex-wrap: wrap;
     gap: 1rem;
   }
+  p {
+    display: inline-block;
+  }
 </style>
 
 <footer>
-  <p>
-    Learn more about my projects on <a
-      href={`https://www.github.com/${username}`}
-    >github</a>!
-  </p>
   <div class="socials">
   <a class="box-shadow social" href={`https://www.github.com/${username}`}>github</a>
   <a class="box-shadow social" href={`https://www.twitter.com/${username}`}>twitter</a>
   <a class="box-shadow social" href={`https://www.linkedin.com/in/${username_linkedin}`}>linkedin</a>
   </div>
+  <p>
+    Built with love 💖 using <a
+      href={`https://astro.build/`}
+    >Astro</a>.
+  </p>
 </footer>

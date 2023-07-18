@@ -9,18 +9,16 @@ const allProjects = await getCollection("projects");
     allProjects.map((project) => (
       <div class="project-card">
         <div class="project-card-header flex justify-between">
-          <div>
-            <a href={project.data.link}>{project.data.title}</a>
-          </div>
-          <div>
-            <a href={project.data.repo}>Repo</a>
-          </div>
+          <a href={project.data.link}>{project.data.title}</a>
+          <a href={project.data.repo}>Repo</a>
         </div>
-        <div class="input">
+        <div class="project-card-text">
+          <p class="date">
+            Created: {project.data.pubDate.toLocaleDateString()}
+          </p>
           <p>{project.data.description}</p>
-          <a href={"/projects/" + project.slug}>Learn more</a>
-          <p>Created: {project.data.pubDate.toLocaleDateString()}</p>
           <Tags tags={project.data.tags} nolink={true} />
+          {/*<a href={"/projects/" + project.slug}>Learn more</a> */}
         </div>
       </div>
     ))
@@ -28,16 +26,21 @@ const allProjects = await getCollection("projects");
 </div>
 
 <style>
-  .project-card > div {
-    padding: 0px 24px;
+  .project-card-text {
+    padding-inline: 1rem;
   }
 
-  .input {
-    padding: 0px 10px;
+  .project-card-text > .date {
+    font-family: 300;
+    font-size: 12px;
+  }
+
+  p {
+    margin: 0.2rem;
   }
 
   .project-card {
-    margin-bottom: 1.0rem;
+    margin-bottom: 1rem;
     color: var(--text-color);
     border: 3px solid var(--layout-color);
     border-radius: 10px;
@@ -46,6 +49,7 @@ const allProjects = await getCollection("projects");
   .project-card-header {
     background-color: var(--nav-color);
     color: var(--text-color);
+    padding: 0px 24px;
     border-radius: inherit;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;

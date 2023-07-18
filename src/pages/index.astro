@@ -1,8 +1,9 @@
 ---
-const pageTitle = "Rasib Nadeem";
+const pageTitle = "Hi, I'm Rasib";
 import "../styles/global.css";
-import Footer from "../components/Footer.astro";
+import Footer from "../components/layoutComponents/Footer.astro";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Projects from "../components/home/Projects.astro";
 
 const identity = {
   firstName: "Rasib",
@@ -72,7 +73,6 @@ const technologies = [
 ];
 ---
 
-<script></script>
 <BaseLayout pageTitle={pageTitle}>
     <div class="flex flex-col items-center h-screen">
       <h1>{pageTitle}</h1>
@@ -87,7 +87,8 @@ const technologies = [
             <span class="interests">{interest},&nbsp;</span>
           ))
         } and <span class="interests">{lastInterest}</span>.
-
+        <h2>Projects</h2>
+        <Projects />
         <h2>Technologies</h2>
         <p>I like learning new programming languages, frameworks and tools. I
           have worked with the following technologies:</p>
@@ -114,9 +115,9 @@ const technologies = [
 
 <style>
 img {
-  background-color: var(--background-color);
+  background-color: var(--nav-color);
   width: 50px;
-  border: 1px dotted grey;
+  border: 3px solid var(--text-color);
   height: 50px;
   border-radius: 100%;
 }

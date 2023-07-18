@@ -4,7 +4,7 @@ const username_linkedin = "muhammad-rasib-nadeem"
 ---
 
 <style>
-  .button {
+  .social {
     padding: 0.3625rem 0.97rem;
     border-radius: 10px;
     font-weight: 500;
@@ -19,15 +19,17 @@ const username_linkedin = "muhammad-rasib-nadeem"
     background-color: var(--text-color);
   }
 
-  .button:hover {
+  .social:hover {
     background-color: var(--hover-color-light);
     text-decoration: none;
 
   }
   footer {
-    padding: 5px;
-    margin-top: 1rem;
+    background: var(--nav-color);
+    margin-top: 2rem;
+    padding: 1rem;
     width: 100%;
+    border-top: 3px solid var(--text-color);
     text-align: center;
   }
   .socials {
@@ -45,8 +47,8 @@ const username_linkedin = "muhammad-rasib-nadeem"
     >github</a>!
   </p>
   <div class="socials">
-  <a class="box-shadow button" href={`https://www.github.com/${username}`}>github</a>
-  <a class="box-shadow button" href={`https://www.twitter.com/${username}`}>twitter</a>
-  <a class="box-shadow button" href={`https://www.linkedin.com/in/${username_linkedin}`}>linkedin</a>
+  <a class="box-shadow social" href={`https://www.github.com/${username}`}>github</a>
+  <a class="box-shadow social" href={`https://www.twitter.com/${username}`}>twitter</a>
+  <a class="box-shadow social" href={`https://www.linkedin.com/in/${username_linkedin}`}>linkedin</a>
   </div>
 </footer>

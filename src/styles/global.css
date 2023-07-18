@@ -1,5 +1,6 @@
 html {
   font-family: "Roboto", sans-serif;
+  font-family: "Rubik", sans-serif;
   width: 100%;
   height: 100%;
   margin: 0px;
@@ -13,16 +14,18 @@ html {
   --hover-color-light: rgb(64 64 64); /* hover neutral */
   --text-color: black;
   --background-color: white; /* gray */
-  --selection-color: #86efac;
-  }
+  --selection-color: pink;
+  --nav-color: pink;
+}
 
 html.dark {
   --hover-color: rgb(160, 160, 160); /* hover neutral */
   --hover-color-light: rgb(200, 200, 200); /* hover neutral */
   --text-color: white;
   --background-color: #171717;
-  --selection-color: #85efac;
-  }
+  --selection-color: rgb(190 24 93);
+  --nav-color: rgb(190 24 93);
+}
 
 *::selection {
   background-color: var(--selection-color);
@@ -37,8 +40,7 @@ body {
 header,
 nav,
 .nav-links,
-.nav-links a
- {
+.nav-links a {
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -48,12 +50,12 @@ nav,
 }
 
 .hamburger {
-  -webkit-tap-highlight-color:transparent;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1 {
   font-size: 2.5rem;
-  font-weight: 900;
+  font-weight: 700;
   margin: 1rem 0px 0px 0px;
   text-align: center;
 }

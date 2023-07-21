@@ -15,9 +15,9 @@
   --link-color: black; /* link neutral */
   --text-color: black;
   --layout-color: black;
-  --background-color: white; /* gray */
-  --selection-color: hsl(350, 70%, 75%);
-  --nav-color: pink;
+  --background-color: white;
+  --selection-color: pink;
+  --nav-color: #06b6d4;
   --nav-hover-color: hsl(350, 49%, 70%);
 }
 
@@ -26,7 +26,7 @@
   --hover-color-light: rgb(200, 200, 200); /* hover neutral */
   --text-color: #dcd6cf;
   --link-color: #dcd6cf; /* link neutral */
-  --layout-color: #f50066;
+  --layout-color: #dcdbd9;
   --background-color: #121516;
   --selection-color: ##f50066;
   --nav-color: black;

@@ -9,8 +9,15 @@ const allProjects = await getCollection("projects");
     allProjects.map((project) => (
       <div class="project-card">
         <div class="project-card-header flex justify-between">
-          <a href={project.data.link}>{project.data.title}</a>
-          <a href={project.data.repo}>Repo</a>
+          <div class="title">{project.data.title}</div>
+          <div class="links">
+            <a class="link-button" href={project.data.link}>
+              View it here
+            </a>
+            <a class="repo-button" href={project.data.repo}>
+              View Github Repo
+            </a>
+          </div>
         </div>
         <div class="project-card-text">
           <p class="date">
@@ -26,8 +33,44 @@ const allProjects = await getCollection("projects");
 </div>
 
 <style>
+  .title {
+    margin: 0px;
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+
   .project-card-text {
     padding-inline: 1rem;
+    border: 1px solid var(--nav-color);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+  }
+
+  .links {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  .links > a {
+    display: block;
+  }
+
+  .link-button,
+  .repo-button {
+    padding: 0.3rem 0.7rem;
+    border-radius: 5px;
+    background-color: var(--link-color);
+    color: var(--background-color);
+    text-decoration: none;
+    font-size: 0.8rem;
+  }
+
+  .link-button:hover,
+  .repo-button:hover {
+    background-color: var(--hover-color-light);
+    color: var(--background-color);
+    text-decoration: none;
   }
 
   .project-card-text > .date {
@@ -42,17 +85,17 @@ const allProjects = await getCollection("projects");
   .project-card {
     margin-bottom: 1rem;
     color: var(--text-color);
-    border: 3px solid var(--layout-color);
+    /* border: 1px solid var(--layout-color); */
     border-radius: 10px;
   }
 
   .project-card-header {
     background-color: var(--nav-color);
     color: var(--text-color);
-    padding: 0px 24px;
+    padding: 0.5rem 24px;
     border-radius: inherit;
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-    border-bottom: 3px solid var(--layout-color);
+    /* border-bottom: 1px solid var(--layout-color); */
   }
 </style>

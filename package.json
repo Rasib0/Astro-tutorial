@@ -13,6 +13,7 @@
     "@astrojs/preact": "^2.2.1",
     "@astrojs/rss": "^2.4.3",
     "astro": "^2.8.3",
+    "pnpm": "^8.6.9",
     "preact": "^10.6.5"
   }
 }

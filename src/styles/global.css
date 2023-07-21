@@ -16,7 +16,7 @@
   --text-color: black;
   --layout-color: black;
   --background-color: white;
-  --selection-color: pink;
+  --selection-color: #06a6d4;
   --nav-color: #06b6d4;
   --nav-hover-color: hsl(350, 49%, 70%);
 }
@@ -28,15 +28,15 @@
   --link-color: #dcd6cf; /* link neutral */
   --layout-color: #dcdbd9;
   --background-color: #121516;
-  --selection-color: ##f50066;
+  --selection-color: #06a6d4;
   --nav-color: black;
   --nav-hover-color: #64002a52;
 }
 
-*::selection {
-  background-color: #f50066;
+/* *::selection {
+  background-color: var(--selection-color);
   color: white;
-}
+} */
 
 body {
   margin: 0px;

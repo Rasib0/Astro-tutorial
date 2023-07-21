@@ -50,6 +50,7 @@ const allProjects = await getCollection("projects");
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    flex-wrap: wrap;
   }
 
   .links > a {
@@ -64,7 +65,6 @@ const allProjects = await getCollection("projects");
     color: var(--background-color);
     text-decoration: none;
     white-space: nowrap;
-    flex-wrap: wrap;
     font-size: 0.8rem;
   }
 

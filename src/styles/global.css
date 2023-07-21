@@ -24,10 +24,10 @@
 :root.dark {
   --hover-color: rgb(160, 160, 160); /* hover neutral */
   --hover-color-light: rgb(200, 200, 200); /* hover neutral */
-  --text-color: pink;
-  --link-color: white; /* link neutral */
+  --text-color: #dcd6cf;
+  --link-color: #dcd6cf; /* link neutral */
   --layout-color: #f50066;
-  --background-color: black;
+  --background-color: #121516;
   --selection-color: ##f50066;
   --nav-color: black;
   --nav-hover-color: #64002a52;

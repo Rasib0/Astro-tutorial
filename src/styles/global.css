@@ -20,8 +20,8 @@ section {
   --selection-color: hsl(193, 94%, 43%);
 
   /* nav and footer colors */
-  --nav-color: hsl(198.6, 88.7%, 56.4%);
-  --nav-hover-color: hsl(193, 94%, 36%);
+  --nav-color: hsl(187, 94%, 44%);
+  --nav-hover-color: hsl(193, 99%, 31%);
   --nav-text-color: black;
 
   /* button colors */
@@ -29,7 +29,7 @@ section {
   --button-hover: rgb(64 64 64); /* hover neutral */
 
   /* ui colors */
-  --ui-color: #67e8f9;
+  --ui-color: hsla(199, 88%, 56%, 0.774);
 }
 
 :root.dark {

@@ -1,5 +1,5 @@
 ---
-const pageTitle = "Hi 👋, I'm Rasib!";
+const pageTitle = "I'm Rasib!";
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Projects from "../components/home/Projects.astro";
@@ -9,9 +9,19 @@ const identity = {
   firstName: "Rasib",
   country: "Pakistan",
   occupation: "Web Developer",
-  company: "nowhere",
+  company: "",
   hobbies: ["Reading", "Youtube", "Coding"],
 };
+
+const whoami = [
+  "Bookworm. 📚",
+  "anime fan. 🍿",
+  "Gamer. 🎮",
+  "AI hater. 🤖",
+  "Music lover. 🎵",
+  "Arch user. 🐧",
+  "vim enthusiast. ✨",
+];
 
 const interests = [
   "Web Development",
@@ -24,16 +34,24 @@ const lastInterest = interests.pop();
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col items-center h-screen">
-    <h1>{pageTitle}</h1>
-    <h3>{identity.occupation} @{identity.company}</h3>
+    <h1>g'day, I'm rasib!</h1>
+    <h3 id="intro-subtext">
+      {
+        `I am a ${identity.occupation} ${identity.company === "" ? "" : "@"}${
+          identity.company
+        } and`
+      }
+    </h3>
+    <h3 id="other-occupation">{whoami[0]}</h3>
+    <h4>Welcome to my little corner of the web! 🎉🎊</h4>
     <main class="mb-auto">
       <div class="main-content-padding">
         <section>
           <h2>About Me</h2>
           <p>
-            Welcome to my little corner of the web! I am a 4<sup>th</sup> year Computer
-            Science student from the Institute of Business Administration (IBA) who
-            is passionate about making software engineering fun . My interests are
+            I am a 4<sup>th</sup> year Computer Science student from the Institute
+            of Business Administration (IBA) who is passionate about making software
+            engineering fun . My interests are
             {
               interests.map((interest) => (
                 <span class="interests">{interest},&nbsp;</span>
@@ -85,4 +103,38 @@ const lastInterest = interests.pop();
   .interests {
     font-weight: bold;
   }
+
+  h3 {
+    margin: 0;
+  }
+
+  #other-occupation {
+    transition: opacity 0.5s ease-in-out;
+    display: inline-block;
+    /* align left  */
+    text-align: left;
+  }
 </style>
+
+<script define:vars={{ whoami }}>
+const other_occupation = document.querySelector("#other-occupation");
+
+let i = 1;
+
+console.log(whoami);
+function updateText() {
+  if (i > whoami.length - 1) {
+    i = 0;
+  }
+
+  other_occupation.style.opacity = 0;
+
+  setTimeout(() => {
+    other_occupation.textContent = whoami[i];
+    other_occupation.style.opacity = 1;
+    i++;
+  }, 600);
+}
+
+setInterval(updateText, 2500);
+</script>

@@ -5,7 +5,7 @@ description: "a website where you can tracker all the book, movies etc. you like
 image: { url: "", alt: "" }
 link: "https://tracker.rasib.me"
 repo: "https://github.com/Rasib0/MediaTracker"
-tags: ["React", "Next", "TailwindCSS", "NextAuth", "Postgresql", "Prisma"]
+tags: ["React", "Next", "TypeScript", "TailwindCSS", "NextAuth", "Postgresql", "Prisma"]
 ---
 
 Description coming soon

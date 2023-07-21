@@ -15,22 +15,22 @@
   --link-color: black; /* link neutral */
   --text-color: black;
   --layout-color: black;
-  --background-color: white;
-  --selection-color: #06a6d4;
-  --nav-color: #06b6d4;
-  --nav-hover-color: hsl(350, 49%, 70%);
+  --background-color: hsl(0, 0%, 100%);
+  --selection-color: hsl(193, 94%, 43%);
+  --nav-color: hsl(198.6, 88.7%, 56.4%);
+  --nav-hover-color: hsl(193, 94%, 36%);
 }
 
 :root.dark {
-  --hover-color: rgb(160, 160, 160); /* hover neutral */
-  --hover-color-light: rgb(200, 200, 200); /* hover neutral */
-  --text-color: #dcd6cf;
-  --link-color: #dcd6cf; /* link neutral */
-  --layout-color: #dcdbd9;
-  --background-color: #121516;
-  --selection-color: #06a6d4;
-  --nav-color: black;
-  --nav-hover-color: #64002a52;
+  --hover-color: hsl(0, 0%, 63%); /* hover neutral */
+  --hover-color-light: hsl(0, 0%, 78%); /* hover neutral */
+  --text-color: hsl(32, 16%, 84%);
+  --link-color: hsl(32, 16%, 84%); /* link neutral */
+  --layout-color: hsl(40, 4%, 86%);
+  --background-color: hsl(195, 10%, 8%);
+  --selection-color: hsl(193, 94%, 43%);
+  --nav-color: hsl(0, 0%, 0%);
+  --nav-hover-color: hsl(0, 0%, 30%);
 }
 
 /* *::selection {

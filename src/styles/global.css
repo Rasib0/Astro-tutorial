@@ -9,6 +9,10 @@
   color: var(--text-color);
 }
 
+section {
+  margin-bottom: 1.5cm;
+}
+
 :root {
   /* base colors*/
   --background-color: hsl(0, 0%, 100%);

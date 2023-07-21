@@ -28,24 +28,51 @@ const lastInterest = interests.pop();
     <h3>{identity.occupation} @{identity.company}</h3>
     <main class="mb-auto">
       <div class="main-content-padding">
-        <p>
-          Welcome to my little corner of the web! I am a 4<sup>th</sup> year Computer
-          Science student from the Institute of Business Administration (IBA) who
-          is passionate about software engineering. I am interested in
-          {
-            interests.map((interest) => (
-              <span class="interests">{interest},&nbsp;</span>
-            ))
-          } and <span class="interests">{lastInterest}</span>
-        </p>
-        <h2>Projects</h2>
-        <Projects />
-        <h2>Things I can do</h2>
-        <p>
-          I like learning new programming languages, frameworks and tools. I
-          have worked with the following technologies:
-        </p>
-        <Technology />
+        <section>
+          <h2>About Me</h2>
+          <p>
+            Welcome to my little corner of the web! I am a 4<sup>th</sup> year Computer
+            Science student from the Institute of Business Administration (IBA) who
+            is passionate about making software engineering fun . My interests are
+            {
+              interests.map((interest) => (
+                <span class="interests">{interest},&nbsp;</span>
+              ))
+            } and <span class="interests">{lastInterest}</span>
+          </p>
+        </section>
+
+        <section>
+          <h2>My Projects</h2>
+          <Projects />
+        </section>
+
+        <section>
+          <h2>Things I can do</h2>
+          <p>
+            I like learning new programming languages, frameworks and tools
+            (Currently learning <strong>go</strong>). I have worked with the
+            following technologies:
+          </p>
+
+          <Technology />
+        </section>
+
+        <section>
+          <h2>Tools I use</h2>
+          <p>Here are some of the tools I use on a daily basis:</p>
+          <uL>
+            <li>nvim</li>
+            <li>tmux</li>
+            <li>endeavouros</li>
+            <li>i3 window manager</li>
+            <li>vimium</li>
+            <li>Obsidian</li>
+            <li>zsh</li>
+            <li>firefox developer edition (for CSS)</li>
+            <li>vivaldi (for everything else)</li>
+          </uL>
+        </section>
       </div>
     </main>
   </div>

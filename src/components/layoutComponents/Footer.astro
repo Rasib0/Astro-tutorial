@@ -1,6 +1,6 @@
 ---
 const username = "rasib0";
-const username_linkedin = "muhammad-rasib-nadeem"
+const username_linkedin = "muhammad-rasib-nadeem";
 ---
 
 <style>
@@ -11,23 +11,21 @@ const username_linkedin = "muhammad-rasib-nadeem"
     color: var(--background-color);
     text-decoration: none;
     display: inline-flex;
-    align-items; center;
+    align-items: center;
     justify-content: center;
     letter-spacing: 0.02px;
-    background-color: var(--layout-color);
+    background-color: var(--button-color);
   }
 
   .social:hover {
-    background-color: var(--hover-color-light);
+    background-color: var(--button-hover);
     text-decoration: none;
     transition: background-color 150ms ease-in-out;
-
   }
   footer {
     background: var(--nav-color);
     padding: 1rem;
     margin-top: 3rem;
-    /* border-top: 1px solid var(--layout-color); */
     text-align: center;
   }
   .socials {
@@ -43,13 +41,18 @@ const username_linkedin = "muhammad-rasib-nadeem"
 
 <footer>
   <div class="socials">
-  <a class="box-shadow social" href={`https://www.github.com/${username}`}>github</a>
-  <a class="box-shadow social" href={`https://www.twitter.com/${username}`}>twitter</a>
-  <a class="box-shadow social" href={`https://www.linkedin.com/in/${username_linkedin}`}>linkedin</a>
+    <a class="box-shadow social" href={`https://www.github.com/${username}`}
+      >github</a
+    >
+    <a class="box-shadow social" href={`https://www.twitter.com/${username}`}
+      >twitter</a
+    >
+    <a
+      class="box-shadow social"
+      href={`https://www.linkedin.com/in/${username_linkedin}`}>linkedin</a
+    >
   </div>
   <p>
-    Built with love 💖 using <a
-      href={`https://astro.build/`}
-    >Astro</a>.
+    Built with love 💖 using <a href={`https://astro.build/`}>Astro</a>.
   </p>
 </footer>

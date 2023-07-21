@@ -10,27 +10,41 @@
 }
 
 :root {
-  --hover-color: rgb(38 38 38); /* hover neutral */
-  --hover-color-light: rgb(64 64 64); /* hover neutral */
-  --link-color: black; /* link neutral */
-  --text-color: black;
-  --layout-color: black;
+  /* base colors*/
   --background-color: hsl(0, 0%, 100%);
+  --text-color: black;
   --selection-color: hsl(193, 94%, 43%);
+
+  /* nav and footer colors */
   --nav-color: hsl(198.6, 88.7%, 56.4%);
   --nav-hover-color: hsl(193, 94%, 36%);
+  --nav-text-color: black;
+
+  /* button colors */
+  --button-color: black; /* link neutral */
+  --button-hover: rgb(64 64 64); /* hover neutral */
+
+  /* ui colors */
+  --ui-color: #67e8f9;
 }
 
 :root.dark {
-  --hover-color: hsl(0, 0%, 63%); /* hover neutral */
-  --hover-color-light: hsl(0, 0%, 78%); /* hover neutral */
-  --text-color: hsl(32, 16%, 84%);
-  --link-color: hsl(32, 16%, 84%); /* link neutral */
-  --layout-color: hsl(40, 4%, 86%);
+  /* base colors*/
   --background-color: hsl(195, 10%, 8%);
+  --text-color: hsl(32, 16%, 84%);
   --selection-color: hsl(193, 94%, 43%);
+
+  /* nav and footer colors */
   --nav-color: hsl(0, 0%, 0%);
   --nav-hover-color: hsl(0, 0%, 30%);
+  --nav-text-color: hsl(40, 4%, 86%);
+
+  /* button colors */
+  --button-hover: hsl(0, 0%, 78%);
+  --button-color: hsl(32, 16%, 84%);
+
+  /* ui colors */
+  --ui-color: #172554;
 }
 
 /* *::selection {
@@ -65,7 +79,7 @@ nav,
 h1 {
   font-size: 2.5rem;
   font-weight: 700;
-  margin: 1rem 0px 0px 0px;
+  margin: 3rem 0px 0px 0px;
   text-align: center;
 }
 
@@ -80,11 +94,11 @@ h2,
 h3,
 h4,
 h5 {
-  color: var(--layout-color);
+  color: var(--nav-text-color);
 }
 
 a {
-  color: var(--link-color);
+  color: var(--button-color);
   font-weight: 700;
   text-decoration: none;
 }

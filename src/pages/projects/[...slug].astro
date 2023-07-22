@@ -3,12 +3,12 @@ import { getCollection } from "astro:content";
 import StandardLayout from "../../layouts/StandardLayout.astro";
 
 export async function getStaticPaths() {
-    const projectEntries = await getCollection("projects");
-    
-    return projectEntries.map((entry) => ({
-        params: {slug: entry.slug},
-        props: {entry},
-    }));
+  const projectEntries = await getCollection("projects");
+
+  return projectEntries.map((entry) => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
 }
 
 const { entry } = Astro.props;
@@ -16,5 +16,6 @@ const { Content } = await entry.render();
 ---
 
 <StandardLayout>
-    <Content />
+  <Content />
 </StandardLayout>
+

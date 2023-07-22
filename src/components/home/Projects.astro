@@ -37,6 +37,8 @@ const allProjects = await getCollection("projects");
   .title {
     margin: 0px;
     font-weight: 700;
+    font-family: monospace;
+    font-size: 1.1rem;
   }
 
   .project-card-desc {
@@ -80,19 +82,19 @@ const allProjects = await getCollection("projects");
   .project-card {
     margin-bottom: 1rem;
     color: var(--text-color);
-    border-radius: 8px;
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     display: flex;
+    border-radius: 5px;
     flex-direction: column;
     border: 1px solid var(--ui-color);
   }
 
   .project-card-header {
+    /* background-color: var(--ui-color); */
     background-color: var(--ui-color);
     display: flex;
     justify-content: space-between;
     color: var(--text-color);
     padding: 0.5rem 12px;
-    border-radius: inherit;
-    border-bottom-left-radius: 0px;
   }
 </style>

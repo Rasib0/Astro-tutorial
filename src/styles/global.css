@@ -20,16 +20,17 @@ section {
   --selection-color: hsl(193, 94%, 43%);
 
   /* nav and footer colors */
-  --nav-color: hsl(187, 94%, 44%);
+  --nav-color: black;
   --nav-hover-color: hsl(193, 99%, 31%);
   --nav-text-color: black;
 
   /* button colors */
   --button-color: black; /* link neutral */
-  --button-hover: rgb(64 64 64); /* hover neutral */
+  --button-hover: rgb(24 24 24); /* hover neutral */
+  --button-hover-light: rgb(230 230 230);
 
   /* ui colors */
-  --ui-color: lightgreen;
+  --ui-color: black;
 }
 
 
@@ -40,16 +41,20 @@ section {
   --selection-color: hsl(193, 94%, 43%);
 
   /* nav and footer colors */
-  --nav-color: hsl(0, 0%, 0%);
+  --nav-color: hsl(195, 10%, 8%);
   --nav-hover-color: hsl(0, 0%, 30%);
   --nav-text-color: hsl(40, 4%, 86%);
 
-  /* button colors */
-  --button-hover: hsl(0, 0%, 78%);
-  --button-color: hsl(32, 16%, 84%);
+  /* button colors when I wanted them to swap colors */
+/*  --button-hover: hsl(0, 0%, 78%);
+  --button-color: hsl(32, 16%, 84%); */
 
+  /* button colors */
+  --button-color: black; /* link neutral */
+  --button-hover: rgb(24 24 24); /* hover neutral */
+ 
   /* ui colors */
-  --ui-color: green;
+  --ui-color: white;
 }
 
 /* *::selection {

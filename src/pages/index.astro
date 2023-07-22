@@ -44,7 +44,7 @@ const lastInterest = interests.pop();
     <h3 id="other-occupation">{whoami[0]}</h3>
     <main class="mb-auto">
       <div class="main-content-padding">
-        <section>
+        <section class="about">
           <h2>About Me</h2>
           <p>
             I am a 4<sup>th</sup> year Computer Science student from the Institute
@@ -63,7 +63,7 @@ const lastInterest = interests.pop();
           <Projects />
         </section>
 
-        <section>
+        <section class="tech">
           <h2>Things I can do</h2>
           <p>
             I like learning new programming languages, frameworks and tools
@@ -74,10 +74,10 @@ const lastInterest = interests.pop();
           <Technology />
         </section>
 
-        <section>
+        <section class="tools">
           <h2>Tools I use</h2>
           <p>Here are some of the tools I use on a daily basis:</p>
-          <uL>
+          <ul class="tools-list">
             <li>nvim</li>
             <li>tmux</li>
             <li>endeavouros</li>
@@ -87,7 +87,7 @@ const lastInterest = interests.pop();
             <li>zsh</li>
             <li>firefox developer edition (for CSS)</li>
             <li>vivaldi (for everything else)</li>
-          </uL>
+          </ul>
         </section>
       </div>
     </main>
@@ -115,6 +115,11 @@ const lastInterest = interests.pop();
     display: inline-block;
     /* align left  */
     text-align: left;
+  }
+
+  .tools-list {
+    font-size: 1rem;
+    font-family: monospace;
   }
 </style>
 

@@ -57,7 +57,7 @@ const allProjects = await getCollection("projects");
     padding: 0.3rem 0.5rem;
     border-radius: 5px;
     background-color: var(--button-color);
-    color: var(--background-color);
+    color: white;
     text-decoration: none;
     white-space: nowrap;
     font-size: 0.8rem;
@@ -66,7 +66,6 @@ const allProjects = await getCollection("projects");
   .link-button:hover,
   .repo-button:hover {
     background-color: var(--button-hover);
-    color: var(--background-color);
     text-decoration: none;
   }
 
@@ -81,20 +80,21 @@ const allProjects = await getCollection("projects");
 
   .project-card {
     margin-bottom: 1rem;
-    color: var(--text-color);
+    /*color: var(--text-color); */
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     display: flex;
     border-radius: 5px;
     flex-direction: column;
-    border: 1px solid var(--ui-color);
+    border: 2px solid var(--ui-color);
   }
 
   .project-card-header {
     /* background-color: var(--ui-color); */
-    background-color: var(--ui-color);
+    background-color: black;
     display: flex;
+    color: white;
+    border-bottom: 2px solid var(--ui-color);
     justify-content: space-between;
-    color: var(--text-color);
     padding: 0.5rem 12px;
   }
 </style>

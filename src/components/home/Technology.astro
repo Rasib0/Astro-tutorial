@@ -11,34 +11,26 @@ const technologies = [
     link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
-    name: "Java",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
-    link: "https://java.com",
-  },
-  {
     name: "JavaScript",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
+    name: "TypeScript",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    link: "https://typescriptlang.org",
+  },
+
+  {
     name: "React",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg?raw=true",
     link: "https://react.dev",
   },
-  {
-    name: "Kotlin",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
-    link: "kotlinlang.org",
-  },
+
   {
     name: "Next",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
     link: "https://nextjs.org",
-  },
-  {
-    name: "Rust",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
-    link: "https://rust-lang.org",
   },
   {
     name: "Python",
@@ -46,24 +38,34 @@ const technologies = [
     link: "https://python.org",
   },
   {
+    name: "Java",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    link: "https://java.com",
+  },
+  {
+    name: "Kotlin",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+    link: "kotlinlang.org",
+  },
+  {
+    name: "Rust",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
+    link: "https://rust-lang.org",
+  },
+  {
     name: "Linux",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
     link: "https://kernel.org",
   },
-  {
+  /* {
     name: "Astro",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/astro/astro-original.svg",
     link: "https://astro.build",
-  },
+    }, */
   {
     name: "Git",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
     link: "https://git-scm.com",
-  },
-  {
-    name: "TypeScript",
-    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
-    link: "https://typescriptlang.org",
   },
 ];
 ---
@@ -100,16 +102,15 @@ const technologies = [
   }
 
   .techcard-text {
-    font-weight: bold;
-    min-width: 2.3cm;
+    min-width: 2.5cm;
+    font-size: 0.95rem;
+    font-family: monospace;
+    color: var(--text-color);
   }
 
   img {
     background-color: white;
-    width: 50px;
-    border: 1px solid var(--text-color);
-    color: black;
-    height: 50px;
-    border-radius: 100%;
+    width: 48px;
+    height: 48px;
   }
 </style>

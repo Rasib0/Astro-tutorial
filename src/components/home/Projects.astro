@@ -9,7 +9,9 @@ const allProjects = await getCollection("projects");
     allProjects.map((project) => (
       <div class="project-card">
         <div class="project-card-header">
-          <div class="title">{project.data.title}</div>
+          <a href={"/projects/" + project.slug} class="title">
+            {project.data.title}
+          </a>
           <div class="links">
             <a class="link-button" href={project.data.link}>
               Live
@@ -20,9 +22,13 @@ const allProjects = await getCollection("projects");
           </div>
         </div>
         <p class="date">Created: {project.data.pubDate.toLocaleDateString()}</p>
-        <p class="project-card-desc">{project.data.description}</p>
-        <Tags tags={project.data.tags} nolink={true} />
-        {/*<a href={"/projects/" + project.slug}>Learn more</a> */}
+        <p class="project-card-desc">
+          {project.data.description}
+          {/* <a href={"/projects/" + project.slug}>Learn more</a>*/}
+        </p>
+        <div class="tags">
+          <Tags tags={project.data.tags} nolink={true} />
+        </div>
       </div>
     ))
   }
@@ -38,6 +44,7 @@ const allProjects = await getCollection("projects");
     margin: 0px;
     font-weight: 700;
     font-family: monospace;
+    color: white;
     font-size: 1.1rem;
   }
 
@@ -73,21 +80,6 @@ const allProjects = await getCollection("projects");
     font-family: 300;
     font-size: 12px;
   }
-
-  p {
-    margin: 0.3rem 0.6rem;
-  }
-
-  .project-card {
-    margin-bottom: 1rem;
-    /*color: var(--text-color); */
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
-    display: flex;
-    border-radius: 5px;
-    flex-direction: column;
-    border: 2px solid var(--ui-color);
-  }
-
   .project-card-header {
     /* background-color: var(--ui-color); */
     background-color: black;
@@ -96,5 +88,25 @@ const allProjects = await getCollection("projects");
     border-bottom: 2px solid var(--ui-color);
     justify-content: space-between;
     padding: 0.5rem 12px;
+  }
+
+  .project-card {
+    margin-bottom: 0.5rem;
+    /*color: var(--text-color); */
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    display: flex;
+    padding-bottom: 0.5rem;
+    border-radius: 5px;
+    flex-direction: column;
+    border: 2px solid var(--ui-color);
+  }
+
+  .tags {
+    margin: 0.5rem 0.3rem 0 0.3rem;
+    display: flex;
+  }
+
+  p {
+    margin: 0.3rem 0.6rem;
   }
 </style>

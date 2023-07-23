@@ -43,7 +43,6 @@ import ThemeIcon from "./ThemeIcon.astro";
   /* nav link styles */
 
   .hover-underline-animation {
-    text-decoration: none !important;
     position: relative;
     overflow: hidden;
     display: inline-block;
@@ -53,6 +52,10 @@ import ThemeIcon from "./ThemeIcon.astro";
     text-decoration: none;
     font-size: 1.1rem;
     font-weight: bold;
+  }
+
+  .hover-underline-animation:hover {
+    text-decoration: none;
   }
 
   .hover-underline-animation::before {

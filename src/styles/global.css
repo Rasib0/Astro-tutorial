@@ -10,7 +10,7 @@
 }
 
 section {
-  margin-bottom: 1.5cm;
+  margin-bottom: 2cm;
 }
 
 :root {
@@ -87,12 +87,12 @@ nav,
 }
 
 h1 {
+  
   font-size: 3rem;
   font-weight: 700;
   margin: 3rem 0px 8px 0px;
   letter-spacing: 0.06rem;
   text-align: center;
-  margin: 0px 1rem;
 }
 
 h2 {

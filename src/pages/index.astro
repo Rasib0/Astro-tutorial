@@ -116,6 +116,9 @@ const lastInterest = interests.pop();
       padding-right: 0.8rem;
     }
 
+    .name {
+    }
+
     .about-content {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -140,8 +143,10 @@ const lastInterest = interests.pop();
       margin-right: 1rem;
       min-width: 12.5cm;
     }
+
     .name::after {
       content: "⚡";
+      font-size: 2.1rem;
     }
 
     @media screen and (max-width: 480px) {
@@ -154,14 +159,20 @@ const lastInterest = interests.pop();
       }
 
       h1 {
-        font-size: 2.8em;
-        letter-spacing: 0.005ch;
+        font-size: 2.6em;
+        letter-spacing: 0.004ch;
         text-align: center;
       }
 
       .heading-wrapper h3 {
         margin-left: 0.5rem;
         margin-right: 0.5rem;
+      }
+    }
+
+    @media screen and (max-width: 360px) {
+      h1 {
+        font-size: 2.2em;
       }
     }
 
@@ -187,7 +198,7 @@ const lastInterest = interests.pop();
 
     .read-more {
       display: inline-block;
-      padding: 0.5rem 1rem;
+      padding: 0.4rem 0.8rem;
       margin-top: 1rem;
       border-radius: 0.5rem;
       background-color: black;

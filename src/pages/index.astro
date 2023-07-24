@@ -67,6 +67,8 @@ const lastInterest = interests.pop();
                 <img
                   alt="a picture of a cat coding using a laptop"
                   class="codingcat"
+                  width="400px"
+                  height="265px"
                   src="codingcat.gif"
                 />
                 <figcaption class="codingcat-caption">
@@ -126,7 +128,7 @@ const lastInterest = interests.pop();
     .codingcat {
       border: 2px solid var(--ui-color);
       margin-top: 2rem;
-      width: 100%;
+      width: min(100%, 400px);
       overflow: hidden;
     }
 

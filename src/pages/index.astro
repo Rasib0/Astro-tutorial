@@ -59,9 +59,15 @@ const lastInterest = interests.pop();
                   ))
                 } and <span class="interests">{lastInterest}</span>.
               </p>
-              <a role="button" class="more-button" href="/about"
-                >More about me 👀 ></a
+              <div
+                style="display: flex;
+                       justify-content: center;
+                       item-align: center;"
               >
+                <a role="button" class="more-button" href="/about"
+                  >More about me 👀 ></a
+                >
+              </div>
             </div>
             <figure>
               <img
@@ -75,22 +81,19 @@ const lastInterest = interests.pop();
             </figure>
           </div>
         </section>
-
         <section>
-          <div>
-            <h1>My Projects</h1>
-            <p>Here are some of my projects like you might like</p>
-            <Projects />
-            <div
-              class=""
-              style="display: flex;
+          <h1>Projects</h1>
+          <p>Here are some of my projects like you might like</p>
+          <Projects />
+          <div
+            class=""
+            style="display: flex;
                        justify-content: center;
                        item-align: center;"
+          >
+            <a role="button" class="more-button" href="/projects"
+              >More projects 📚 ></a
             >
-              <a role="button" class="more-button" href="/projects"
-                >More projects 📚 ></a
-              >
-            </div>
           </div>
         </section>
 
@@ -103,106 +106,113 @@ const lastInterest = interests.pop();
           <Technology />
         </section>
 
-        <section class="tools">
-          <h1>Extra: My dev setup</h1>
-          <p>
-            I use the following tools to be <em>blazingly fast</em> at what I do:
-          </p>
-          <ul class="tools-list">
-            <li>nvim</li>
-            <li>tmux</li>
-            <li>endeavouros</li>
-            <li>i3 window manager</li>
-            <li>vimium</li>
-            <li>Obsidian</li>
-            <li>zsh</li>
-            <li>firefox developer edition</li>
-          </ul>
+        <section class="Testimonials">
+          <h1>Testimonials</h1>
+          <h2>Nice Things People Have Said</h2>
+          <div>
+            <p></p>
+          </div>
+        </section>
+
+        <section class="contact">
+          <h1>Get in touch</h1>
+          <p>Want to work with me?</p>
+          <div
+            class=""
+            style="display: flex;
+                       justify-content: center;
+                       item-align: center;"
+          >
+            <a class="more-button" href="mailto:m.nadeem.22976@khi.iba.edu.pk"
+              >Leave a mail 💌>
+            </a>
+          </div>
         </section>
       </div>
     </main>
+
+    <style>
+      .about-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        align-items: center;
+      }
+
+      .codingcat {
+        border: 2px solid var(--ui-color);
+        margin-top: 2rem;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      .codingcat-caption {
+        text-align: center;
+        font-size: 0.9rem;
+        font-style: italic;
+      }
+
+      .name::after {
+        content: "⚡";
+        font-size: 1.8rem;
+      }
+
+      .mb-auto {
+        margin-bottom: auto;
+      }
+
+      .interests {
+        font-weight: bold;
+      }
+
+      #other-occupation {
+        transition: opacity 0.5s ease-in-out;
+        display: inline-block;
+        /* align left  */
+        text-align: left;
+      }
+
+      .tools-list {
+        font-family: monospace;
+      }
+
+      .more-button {
+        padding: 0.4rem 0.8rem;
+        border-radius: 0.5rem;
+        margin-top: 1rem;
+        background-color: black;
+        color: var(--ui-comp-color);
+        text-decoration: none;
+        font-weight: bold;
+        border: 1px solid var(--ui-color);
+      }
+
+      .more-button:hover {
+        text-decoration: none;
+        background-color: var(--button-hover);
+      }
+    </style>
+
+    <!-- h2 animation -->
+    <script define:vars={{ whoami }}>
+      const other_occupation = document.querySelector("#other-occupation");
+
+      let i = 1;
+
+      function updateText() {
+        if (i > whoami.length - 1) {
+          i = 0;
+        }
+
+        other_occupation.style.opacity = 0;
+
+        setTimeout(() => {
+          other_occupation.textContent = whoami[i];
+          other_occupation.style.opacity = 1;
+          i++;
+        }, 600);
+      }
+
+      setInterval(updateText, 3600);
+    </script>
   </div>
 </BaseLayout>
-<style>
-  .about-content {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    align-items: center;
-  }
-
-  .codingcat {
-    border: 2px solid var(--ui-color);
-    margin-top: 2rem;
-    width: 100%;
-    overflow: hidden;
-  }
-
-  .codingcat-caption {
-    text-align: center;
-    font-size: 0.9rem;
-    font-style: italic;
-  }
-
-  .name::after {
-    content: "⚡";
-    font-size: 1.8rem;
-  }
-
-  .mb-auto {
-    margin-bottom: auto;
-  }
-
-  .interests {
-    font-weight: bold;
-  }
-
-  #other-occupation {
-    transition: opacity 0.5s ease-in-out;
-    display: inline-block;
-    /* align left  */
-    text-align: left;
-  }
-
-  .tools-list {
-    font-family: monospace;
-  }
-
-  .more-button {
-    padding: 0.4rem 0.8rem;
-    border-radius: 0.5rem;
-    margin-top: 1rem;
-    background-color: black;
-    color: var(--ui-comp-color);
-    text-decoration: none;
-    font-weight: bold;
-    border: 1px solid var(--ui-color);
-  }
-
-  .more-button:hover {
-    text-decoration: none;
-    background-color: var(--button-hover);
-  }
-</style>
-
-<!-- h2 animation -->
-<script define:vars={{ whoami }}>
-const other_occupation = document.querySelector("#other-occupation");
-
-let i = 1;
-
-function updateText() {
-  if (i > whoami.length - 1) {
-    i = 0;
-  }
-
-  other_occupation.style.opacity = 0;
-
-  setTimeout(() => {
-    other_occupation.textContent = whoami[i];
-    other_occupation.style.opacity = 1;
-    i++;
-  }, 600);
-}
-
-setInterval(updateText, 3600);
-</script>

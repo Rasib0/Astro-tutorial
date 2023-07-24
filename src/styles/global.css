@@ -19,11 +19,16 @@
 }
 
 section {
-  margin-bottom: 4rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+@media screen and (max-width: 650px) {
+  section {
+    margin: 5rem 0;
+  }
 }
 
 :root {
@@ -120,7 +125,7 @@ h1 {
   text-wrap: balance;
   font-size: 2.5rem;
   font-weight: 700;
-  margin: 3rem 0px 0px 0px;
+  margin: 0;
   letter-spacing: 0.06rem;
 }
 

@@ -47,14 +47,6 @@ const allProjects = await getCollection("projects");
     }
   }
 
-  .title {
-    margin: 0px;
-    font-weight: 700;
-    font-family: monospace;
-    color: white;
-    font-size: 1.1rem;
-  }
-
   .project-card-desc {
     margin-bottom: auto;
   }
@@ -66,17 +58,19 @@ const allProjects = await getCollection("projects");
     flex-wrap: wrap;
   }
 
+  .title,
   .link-button,
   .repo-button {
+    text-align: center;
     padding: 0.3rem 0.5rem;
     border-radius: 5px;
     background-color: var(--button-color);
     color: white;
     text-decoration: none;
     white-space: nowrap;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
   }
-
+  .title:hover,
   .link-button:hover,
   .repo-button:hover {
     background-color: var(--button-hover);
@@ -85,7 +79,7 @@ const allProjects = await getCollection("projects");
 
   .date {
     font-family: 300;
-    font-size: 12px;
+    font-size: 0.8rem;
   }
   .project-card-header {
     /* background-color: var(--ui-color); */

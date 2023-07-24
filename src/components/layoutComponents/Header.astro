@@ -12,7 +12,7 @@ import ThemeIcon from "./ThemeIcon.astro";
         <span></span>
       </div>
       <div class="nav-links">
-        <div>
+        <div class="nav-link-wrapper">
           <a
             class="hover-underline-animation nav-link"
             draggable="false"
@@ -26,14 +26,14 @@ import ThemeIcon from "./ThemeIcon.astro";
           href="/projects">Projects</a
         >
       </div>-->
-        <div>
+        <div class="nav-link-wrapper">
           <a
             class="hover-underline-animation nav-link"
             draggable="false"
             href="/blog">Blog</a
           >
         </div>
-        <div class="grow">
+        <div class="grow nav-link-wrapper">
           <a
             class="hover-underline-animation nav-link"
             aria-label="Open Resume P D F"
@@ -41,7 +41,7 @@ import ThemeIcon from "./ThemeIcon.astro";
             href="/resume.pdf">Resume</a
           >
         </div>
-        <div>
+        <div class="nav-link-wrapper">
           <a
             class="hover-underline-animation nav-link"
             draggable="false"
@@ -54,7 +54,7 @@ import ThemeIcon from "./ThemeIcon.astro";
       </div> -->
       </div>
     </nav>
-    <div class="theme-icon">
+    <div class="theme-icon-container">
       <ThemeIcon />
     </div>
   </div>
@@ -69,16 +69,22 @@ import ThemeIcon from "./ThemeIcon.astro";
     background: linear-gradient(to top, #1d4ed8, #4f46e5);
     opacity: 0.9;
     font-family: monospace;
-    padding: 0.35rem;
     position: fixed;
     top: 0;
+    padding: 0.36rem 1rem;
     left: 0;
+    z-index: 1000;
     width: 100%;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   }
 
+  nav {
+    padding: 0.25rem;
+  }
+
   .wrapper {
     width: 100%;
+    height: 100%;
     display: flex;
     align-items: start;
     border-radius: 0.25rem;
@@ -99,7 +105,11 @@ import ThemeIcon from "./ThemeIcon.astro";
   .nav-link {
     display: block;
     font-size: 1rem;
-    margin: 0.5rem 1rem;
+    height: 100%;
+    text-align: center;
+  }
+  .nav-link-wrapper {
+    height: 100%;
   }
 
   .expanded {
@@ -142,28 +152,31 @@ import ThemeIcon from "./ThemeIcon.astro";
     transform: translateX(0);
   }
 
-  .theme-icon {
-    margin-right: 1rem;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  .theme-icon-container {
+    /*display: flex; */
   }
 
   /* big screen */
 
   @media screen and (min-width: 1024px) {
     .nav-links {
+      height: 100%;
       display: flex;
     }
 
     header {
-      padding: 0.4rem 6rem;
+      padding: 0.36rem 6rem;
     }
 
     .nav-link {
-      margin: 7px 18px;
+      height: 100%;
+      margin: 0px 18px;
       font-size: 1rem;
+      text-align: center;
+    }
+
+    .nav-link-wrapper {
+      display: flex;
     }
 
     .hamburger {
@@ -181,8 +194,6 @@ import ThemeIcon from "./ThemeIcon.astro";
     height: 28px;
     touch-action: none;
     position: relative;
-    margin: 6px;
-    margin-left: 1rem;
     -webkit-transform: rotate(0deg);
     -moz-transform: rotate(0deg);
     -o-transform: rotate(0deg);

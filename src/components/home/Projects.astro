@@ -40,6 +40,14 @@ const allProjects = await getCollection("projects");
     gap: 1rem;
     align-items: stretch;
   }
+
+  @media screen and (min-width: 768px) {
+    .grid {
+      margin-left: 36px;
+      margin-right: 36px;
+    }
+  }
+
   .title {
     margin: 0px;
     font-weight: 700;

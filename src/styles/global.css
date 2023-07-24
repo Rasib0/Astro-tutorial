@@ -119,7 +119,7 @@ h1 {
   
   font-size: 3rem;
   font-weight: 700;
-  margin: 3rem 0px 8px 0px;
+  margin: 3rem 0px 0px 0px;
   letter-spacing: 0.06rem;
 }
 
@@ -166,7 +166,7 @@ a:focus {
 
   @media screen and (max-width: 400px) {
     .main-content-padding {
-      padding: 0 0.5rem;
+      padding: 0 1.1rem;
     }
     
     figure {

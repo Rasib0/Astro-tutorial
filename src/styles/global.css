@@ -1,16 +1,23 @@
 :root {
   font-family: "Roboto", sans-serif;
   font-family: "Rubik", sans-serif;
-  margin: 0px;
-  padding: 0px;
   height: 100%;
-  box-sizing: border-box;
   background-color: var(--background-color);
   color: var(--text-color);
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 section {
-  margin-bottom: 2cm;
+  margin-bottom: 4rem;
 }
 
 :root {
@@ -20,8 +27,8 @@ section {
   --selection-color: hsl(193, 94%, 43%);
     
 
-  --primary-color:  ;
-  --secondary-color: ;
+/*  --primary-color:  ;
+  --secondary-color: ; */
 
   /* nav and footer colors */
   --nav-color: black;
@@ -72,6 +79,10 @@ body {
   min-height: 100vh;
 }
 
+.main-content-padding {
+  padding: 0 1.5rem;
+}
+
 main {
   width: 100%;
   max-width: 960px;
@@ -105,7 +116,7 @@ h2 {
 
 h3 {
   font-size: 1.2rem;
-    font-family: monospace;
+  font-family: monospace;
   letter-spacing: 0.02rem;
   margin: 0px 0px 1.5rem 0px;
 }
@@ -119,7 +130,7 @@ h5 {
 }
 
 a {
-  color: var(--button-color);
+  color: var(--ui-color);
   font-weight: 700;
   text-decoration: none;
 }
@@ -146,10 +157,6 @@ a:focus {
 }
 .items-center {
   align-items: center;
-}
-
-.main-content-padding {
-  padding: 0 1rem;
 }
 
 .box-shadow {

@@ -1,5 +1,5 @@
 ---
-const pageTitle = "I'm Rasib";
+const pageTitle = "Rasib's Portfolio";
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Projects from "../components/home/Projects.astro";
@@ -34,136 +34,177 @@ const lastInterest = interests.pop();
 <BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col items-center h-screen">
     <div class="heading-wrapper">
-      <h1>Hey, I'm <span date-value="rasib!" class="name">rasib</span></h1>
-      <h3 id="intro-subtext">
-        {
-          `I am a ${identity.occupation} ${identity.company === "" ? "" : "@"}${
-            identity.company
-          } and`
-        }
-        <span id="other-occupation">{whoami[0]}</span>
-      </h3>
+      <h1>
+        Hey, I'm <span date-value="rasib" class="name">rasib</span>
+        <h3 id="intro-subtext">
+          {
+            `I am a ${identity.occupation} ${
+              identity.company === "" ? "" : "@"
+            }${identity.company} and`
+          }
+          <span id="other-occupation">{whoami[0]}</span>
+        </h3>
+      </h1>
+      <main class="mb-auto">
+        <div class="main-content-padding">
+          <section class="about">
+            <div class="about-content">
+              <div class="about-text">
+                <h2>About Me</h2>
+                <p>
+                  I am a CS student from <a href="https://www.iba.edu.pk">IBA</a
+                  > who is passionate about making software engineering fun. Some
+                  of my interests are
+                  {
+                    interests.map((interest) => (
+                      <span class="interests">{interest},&nbsp;</span>
+                    ))
+                  } and <span class="interests">{lastInterest}</span>.
+
+                  <a href="/about">Read More</a>
+                </p>
+              </div>
+              <figure>
+                <img class="codingcat" src="../../public/codingcat.gif" />
+                <figcaption class="codingcat-caption">
+                  Here's a random cat that codes.
+                </figcaption>
+              </figure>
+            </div>
+          </section>
+          <section>
+            <h2>My Projects</h2>
+            <p>Here are some of my projects like you might like</p>
+            <Projects />
+          </section>
+
+          <section class="tech">
+            <h2>Things I can do</h2>
+            <p>
+              I like learning new programming languages, frameworks and tools
+              (Currently learning <strong>go</strong>). I have worked with the
+              following technologies:
+            </p>
+
+            <Technology />
+          </section>
+
+          <section class="tools">
+            <h2>Tools I use</h2>
+            <p>Here are some of the tools I use on a daily basis:</p>
+            <ul class="tools-list">
+              <li>nvim</li>
+              <li>tmux</li>
+              <li>endeavouros</li>
+              <li>i3 window manager</li>
+              <li>vimium</li>
+              <li>Obsidian</li>
+              <li>zsh</li>
+              <li>firefox developer edition (for CSS)</li>
+              <li>vivaldi (for everything else)</li>
+            </ul>
+          </section>
+        </div>
+      </main>
     </div>
-    <main class="mb-auto">
-      <div class="main-content-padding">
-        <section class="about">
-          <h2>About Me</h2>
-          <p>
-            I am a 4<sup>th</sup> year Computer Science student from the Institute
-            of Business Administration (IBA) who is passionate about making software
-            engineering fun. My interests are
-            {
-              interests.map((interest) => (
-                <span class="interests">{interest},&nbsp;</span>
-              ))
-            } and <span class="interests">{lastInterest}</span>
-          </p>
-        </section>
-
-        <section>
-          <h2>My Projects</h2>
-          <Projects />
-        </section>
-
-        <section class="tech">
-          <h2>Things I can do</h2>
-          <p>
-            I like learning new programming languages, frameworks and tools
-            (Currently learning <strong>go</strong>). I have worked with the
-            following technologies:
-          </p>
-
-          <Technology />
-        </section>
-
-        <section class="tools">
-          <h2>Tools I use</h2>
-          <p>Here are some of the tools I use on a daily basis:</p>
-          <ul class="tools-list">
-            <li>nvim</li>
-            <li>tmux</li>
-            <li>endeavouros</li>
-            <li>i3 window manager</li>
-            <li>vimium</li>
-            <li>Obsidian</li>
-            <li>zsh</li>
-            <li>firefox developer edition (for CSS)</li>
-            <li>vivaldi (for everything else)</li>
-          </ul>
-        </section>
-      </div>
-    </main>
   </div>
-</BaseLayout>
-<style>
-  .heading-wrapper {
-    margin-left: 0.7cm;
-    min-width: 12cm;
-  }
 
-  @media screen and (max-width: 430px) {
+  <style>
+    .heading-wrapper h3 {
+      padding-right: 0.8rem;
+    }
+
+    .about-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      align-items: center;
+    }
+
+    .codingcat {
+      border: 2px solid var(--ui-color);
+      margin-top: 2rem;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .codingcat-caption {
+      text-align: center;
+      font-size: 0.9rem;
+      font-style: italic;
+    }
+
     .heading-wrapper {
       margin-left: 1.6rem;
       margin-right: 1rem;
-      min-width: 0;
+      min-width: 12.5cm;
     }
-    h1 {
-      font-size: 2.85em;
+    .name::after {
+      content: "⚡";
     }
-    .heading-wrapper h3 {
-      margin-left: 0.4rem;
-      margin-right: 0.4rem;
+
+    @media screen and (max-width: 480px) {
+      .heading-wrapper {
+        min-width: 0;
+      }
+
+      figure {
+        margin: 0;
+      }
+
+      h1 {
+        font-size: 2.8em;
+        letter-spacing: 0.005ch;
+        text-align: center;
+      }
+
+      .heading-wrapper h3 {
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+      }
     }
+
+    .mb-auto {
+      margin-bottom: auto;
+    }
+
+    .interests {
+      font-weight: bold;
+    }
+
+    #other-occupation {
+      transition: opacity 0.5s ease-in-out;
+      displ0ay: inline-block;
+      /* align left  */
+      text-align: left;
+    }
+
+    .tools-list {
+      font-size: 1rem;
+      font-family: monospace;
+    }
+  </style>
+
+  <!-- h2 animation -->
+  <script define:vars={{ whoami }}>
+  const other_occupation = document.querySelector("#other-occupation");
+
+  let i = 1;
+
+  console.log(whoami);
+  function updateText() {
+    if (i > whoami.length - 1) {
+      i = 0;
+    }
+
+    other_occupation.style.opacity = 0;
+
+    setTimeout(() => {
+      other_occupation.textContent = whoami[i];
+      other_occupation.style.opacity = 1;
+      i++;
+    }, 600);
   }
 
-  .mb-auto {
-    margin-bottom: auto;
-  }
-
-  .name {
-  }
-
-  .interests {
-    font-weight: bold;
-  }
-
-  h3 {
-    margin: 0;
-  }
-
-  #other-occupation {
-    transition: opacity 0.5s ease-in-out;
-    display: inline-block;
-    /* align left  */
-    text-align: left;
-  }
-
-  .tools-list {
-    font-size: 1rem;
-    font-family: monospace;
-  }
-</style>
-
-<!-- h2 animation -->
-<script define:vars={{ whoami }}>
-const other_occupation = document.querySelector("#other-occupation");
-
-let i = 1;
-
-console.log(whoami);
-function updateText() {
-  if (i > whoami.length - 1) {
-    i = 0;
-  }
-
-  other_occupation.style.opacity = 0;
-
-  setTimeout(() => {
-    other_occupation.textContent = whoami[i];
-    other_occupation.style.opacity = 1;
-    i++;
-  }, 600);
-}
-
-setInterval(updateText, 3600);
-</script>
+  setInterval(updateText, 3600);
+  </script>
+</BaseLayout>

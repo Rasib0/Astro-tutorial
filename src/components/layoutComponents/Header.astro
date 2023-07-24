@@ -5,13 +5,15 @@ import ThemeIcon from "./ThemeIcon.astro";
 <style>
   header {
     background: linear-gradient(to top, #1d4ed8, #4f46e5);
-    position: sticky;
     font-family: monospace;
     padding: 0.35rem;
+    position: fixed;
     top: 0;
-    z-index: 1000;
+    left: 0;
+    width: 100%;
     box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
   }
+
   .wrapper {
     width: 100%;
     display: flex;

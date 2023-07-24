@@ -34,23 +34,22 @@ const lastInterest = interests.pop();
 <BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col items-center h-screen">
     <div class="heading-wrapper">
-      <h1>
-        Hey, I'm <span date-value="rasib" class="name">rasib</span>
-        <h3 id="intro-subtext">
-          {
-            `I am a ${identity.occupation} ${
-              identity.company === "" ? "" : "@"
-            }${identity.company} and`
-          }
-          <span id="other-occupation">{whoami[0]}</span>
-        </h3>
-      </h1>
       <main class="mb-auto">
         <div class="main-content-padding">
           <section class="about">
             <div class="about-content">
               <div class="about-text">
-                <h2>About Me</h2>
+                <h1>
+                  Hey, I'm <span date-value="rasib" class="name">rasib</span>
+                </h1>
+                <h3 id="intro-subtext">
+                  {
+                    `I am a ${identity.occupation} ${
+                      identity.company === "" ? "" : "@"
+                    }${identity.company} and`
+                  }
+                  <span id="other-occupation">{whoami[0]}</span>
+                </h3>
                 <p>
                   I am a CS student from <a href="https://www.iba.edu.pk">IBA</a
                   > who is passionate about making software engineering fun. Some
@@ -61,7 +60,7 @@ const lastInterest = interests.pop();
                     ))
                   } and <span class="interests">{lastInterest}</span>.
                 </p>
-                <a class="read-more" href="/about">Read More</a>
+                <a class="read-more" href="/about">More about me 👀</a>
               </div>
               <figure>
                 <img
@@ -117,6 +116,10 @@ const lastInterest = interests.pop();
     }
 
     .name {
+    }
+
+    .about-text {
+      padding: 1rem;
     }
 
     .about-content {
@@ -186,7 +189,7 @@ const lastInterest = interests.pop();
 
     #other-occupation {
       transition: opacity 0.5s ease-in-out;
-      displ0ay: inline-block;
+      display: inline-block;
       /* align left  */
       text-align: left;
     }
@@ -205,7 +208,6 @@ const lastInterest = interests.pop();
       color: var(--ui-comp-color);
       text-decoration: none;
       font-weight: bold;
-      border: 1px solid var(--ui-color);
       border: 1px solid var(--ui-color);
     }
 

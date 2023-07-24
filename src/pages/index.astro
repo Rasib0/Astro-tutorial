@@ -60,9 +60,8 @@ const lastInterest = interests.pop();
                       <span class="interests">{interest},&nbsp;</span>
                     ))
                   } and <span class="interests">{lastInterest}</span>.
-
-                  <a href="/about">Read More</a>
                 </p>
+                <a class="read-more" href="/about">Read More</a>
               </div>
               <figure>
                 <img class="codingcat" src="codingcat.gif" />
@@ -181,6 +180,24 @@ const lastInterest = interests.pop();
     .tools-list {
       font-size: 1rem;
       font-family: monospace;
+    }
+
+    .read-more {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      margin-top: 1rem;
+      border-radius: 0.5rem;
+      background-color: black;
+      color: var(--ui-comp-color);
+      text-decoration: none;
+      font-weight: bold;
+      border: 1px solid var(--ui-color);
+      border: 1px solid var(--ui-color);
+    }
+
+    .read-more:hover {
+      text-decoration: none;
+      background-color: var(--button-hover);
     }
   </style>
 

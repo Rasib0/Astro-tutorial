@@ -42,6 +42,7 @@ section {
 
   /* ui colors */
   --ui-color: black;
+  --ui-comp-color: white;
 
   --white: hsl(32, 16%, 84%);
 }
@@ -68,6 +69,7 @@ section {
  
   /* ui colors */
   --ui-color: var(--white);
+  --uni-comp-color: black;
 }
 
 /* *::selection {

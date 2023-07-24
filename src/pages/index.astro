@@ -14,12 +14,12 @@ const identity = {
 };
 
 const whoami = [
-  "Bookworm. 📚",
-  "anime fan. 🍿",
-  "Gamer. 🎮",
-  "AI hater. 🤖",
-  "Arch user. 🐧",
-  "vim enthusiast. ✨",
+  "Arch user 🐧",
+  "vim user ✨",
+  "Bookworm 📚",
+  "anime fan 🍿",
+  "Game lover 🎮",
+  "AI hater 🤖",
 ];
 
 const interests = [
@@ -33,15 +33,17 @@ const lastInterest = interests.pop();
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col items-center h-screen">
-    <h1>Hey, I'm <span date-value="rasib!" class="name">rasib!</span></h1>
-    <h3 id="intro-subtext">
-      {
-        `I am a ${identity.occupation} ${identity.company === "" ? "" : "@"}${
-          identity.company
-        } and`
-      }
-    </h3>
-    <h3 id="other-occupation">{whoami[0]}</h3>
+    <div class="heading-wrapper">
+      <h1>Hey, I'm <span date-value="rasib!" class="name">rasib!</span></h1>
+      <h3 id="intro-subtext">
+        {
+          `I am a ${identity.occupation} ${identity.company === "" ? "" : "@"}${
+            identity.company
+          } and`
+        }
+        <span id="other-occupation">{whoami[0]}</span>
+      </h3>
+    </div>
     <main class="mb-auto">
       <div class="main-content-padding">
         <section class="about">
@@ -93,8 +95,25 @@ const lastInterest = interests.pop();
     </main>
   </div>
 </BaseLayout>
-
 <style>
+  .heading-wrapper {
+    margin-left: 0.7cm;
+    min-width: 12cm;
+  }
+
+  @media screen and (max-width: 500px) {
+    .heading-wrapper {
+      margin-left: 1rem;
+      margin-right: 1rem;
+      min-width: 0;
+    }
+    .heading-wrapper h3 {
+      margin-left: 0.4rem;
+      margin-right: 0.4rem;
+    } 
+   }
+  }
+
   .mb-auto {
     margin-bottom: auto;
   }
@@ -144,5 +163,5 @@ function updateText() {
   }, 600);
 }
 
-setInterval(updateText, 3000);
+setInterval(updateText, 3600);
 </script>

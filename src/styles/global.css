@@ -70,7 +70,7 @@ body {
 
 main {
   width: 100%;
-  max-width: 800px;
+  max-width: 960px;
   line-height: 1.5;
 }
 
@@ -92,7 +92,6 @@ h1 {
   font-weight: 700;
   margin: 3rem 0px 8px 0px;
   letter-spacing: 0.06rem;
-  text-align: center;
 }
 
 h2 {
@@ -101,8 +100,6 @@ h2 {
 }
 
 h3 {
-  padding: 0px;
-  text-align: center;
   font-size: 1.2rem;
     font-family: monospace;
   letter-spacing: 0.02rem;

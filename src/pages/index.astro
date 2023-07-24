@@ -1,5 +1,5 @@
 ---
-const pageTitle = "I'm Rasib!";
+const pageTitle = "I'm Rasib";
 import "../styles/global.css";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import Projects from "../components/home/Projects.astro";
@@ -34,7 +34,7 @@ const lastInterest = interests.pop();
 <BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col items-center h-screen">
     <div class="heading-wrapper">
-      <h1>Hey, I'm <span date-value="rasib!" class="name">rasib!</span></h1>
+      <h1>Hey, I'm <span date-value="rasib!" class="name">rasib</span></h1>
       <h3 id="intro-subtext">
         {
           `I am a ${identity.occupation} ${identity.company === "" ? "" : "@"}${
@@ -106,6 +106,9 @@ const lastInterest = interests.pop();
       margin-left: 1rem;
       margin-right: 1rem;
       min-width: 0;
+    }
+    h1 {
+      font-size: 2.85em;
     }
     .heading-wrapper h3 {
       margin-left: 0.4rem;

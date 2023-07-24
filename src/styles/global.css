@@ -18,6 +18,10 @@ section {
   --background-color: hsl(0, 0%, 100%);
   --text-color: black;
   --selection-color: hsl(193, 94%, 43%);
+    
+
+  --primary-color:  ;
+  --secondary-color: ;
 
   /* nav and footer colors */
   --nav-color: black;

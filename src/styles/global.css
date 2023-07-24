@@ -130,14 +130,6 @@ h2 {
   margin: 0px 0px 1.5rem 0px;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-  color: var(--nav-text-color);
-}
-
 a {
   color: var(--ui-color);
   font-weight: 700;

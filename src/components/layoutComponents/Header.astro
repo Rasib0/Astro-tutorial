@@ -2,6 +2,68 @@
 import ThemeIcon from "./ThemeIcon.astro";
 ---
 
+<header>
+  <div class="wrapper">
+    <nav>
+      <div class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="nav-links">
+        <div>
+          <a
+            class="hover-underline-animation nav-link"
+            draggable="false"
+            href="/">Home</a
+          >
+        </div>
+        <!-- <div>
+        <a
+          class="hover-underline-animation nav-link"
+          draggable="false"
+          href="/projects">Projects</a
+        >
+      </div>-->
+        <div>
+          <a
+            class="hover-underline-animation nav-link"
+            draggable="false"
+            href="/blog">Blog</a
+          >
+        </div>
+        <div class="grow">
+          <a
+            class="hover-underline-animation nav-link"
+            aria-label="Open Resume P D F"
+            draggable="false"
+            href="/resume.pdf">Resume</a
+          >
+        </div>
+        <div>
+          <a
+            class="hover-underline-animation nav-link"
+            draggable="false"
+            href="mailto: m.nadeem.22976@khi.iba.edu.pk">Contact me</a
+          >
+        </div>
+        <!-- <div>
+        <a class="hover-underline-animation" draggable="false" href="/about"
+        >About</a>
+      </div> -->
+      </div>
+    </nav>
+    <div class="theme-icon">
+      <ThemeIcon />
+    </div>
+  </div>
+</header>
+
+<script>
+  import "../../scripts/menu.js";
+</script>
+
 <style>
   header {
     background: linear-gradient(to top, #1d4ed8, #4f46e5);
@@ -89,7 +151,7 @@ import ThemeIcon from "./ThemeIcon.astro";
 
   /* big screen */
 
-  @media screen and (min-width: 732px) {
+  @media screen and (min-width: 900px) {
     .nav-links {
       display: flex;
     }
@@ -189,65 +251,3 @@ import ThemeIcon from "./ThemeIcon.astro";
     left: 50%;
   }
 </style>
-
-<header>
-  <div class="wrapper">
-    <nav>
-      <div class="hamburger">
-        <span></span>
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="nav-links">
-        <div>
-          <a
-            class="hover-underline-animation nav-link"
-            draggable="false"
-            href="/">Home</a
-          >
-        </div>
-        <!-- <div>
-        <a
-          class="hover-underline-animation nav-link"
-          draggable="false"
-          href="/projects">Projects</a
-        >
-      </div>-->
-        <div>
-          <a
-            class="hover-underline-animation nav-link"
-            draggable="false"
-            href="/blog">Blog</a
-          >
-        </div>
-        <div class="grow">
-          <a
-            class="hover-underline-animation nav-link"
-            aria-label="Open Resume P D F"
-            draggable="false"
-            href="/resume.pdf">Resume</a
-          >
-        </div>
-        <div>
-          <a
-            class="hover-underline-animation nav-link"
-            draggable="false"
-            href="mailto: m.nadeem.22976@khi.iba.edu.pk">Contact me</a
-          >
-        </div>
-        <!-- <div>
-        <a class="hover-underline-animation" draggable="false" href="/about"
-        >About</a>
-      </div> -->
-      </div>
-    </nav>
-    <div class="theme-icon">
-      <ThemeIcon />
-    </div>
-  </div>
-</header>
-
-<script>
-  import "../../scripts/menu.js";
-</script>

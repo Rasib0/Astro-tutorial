@@ -17,8 +17,8 @@
   box-sizing: border-box;
 }
 
-
 section {
+  margin-bottom: 4rem;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -98,6 +98,11 @@ main {
   line-height: 1.5;
 }
 
+
+figure {
+  margin: 2.5rem;
+}
+
 header,
 nav,
 .nav-links,
@@ -119,11 +124,6 @@ h1 {
 }
 
 h2 {
-  font-family: monospace;
-  font-size: 1.6rem;
-}
-
-h3 {
   font-size: 1.2rem;
   font-family: monospace;
   letter-spacing: 0.02rem;
@@ -156,6 +156,28 @@ a:focus {
 .hamburger {
   -webkit-tap-highlight-color: transparent;
 }
+
+  @media screen and (max-width: 880px) {
+
+    h1 {
+      font-size: 2.6em;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .main-content-padding {
+      padding: 0 0.5rem;
+    }
+    
+    figure {
+      margin: 1rem;
+    }
+
+    h1 {
+      font-size: 2.105em;
+    }
+  }
+
 
 .flex {
   display: flex;

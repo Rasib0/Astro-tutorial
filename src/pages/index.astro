@@ -33,210 +33,182 @@ const lastInterest = interests.pop();
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col items-center h-screen">
-    <div class="heading-wrapper">
-      <main class="mb-auto">
-        <div class="main-content-padding">
-          <section class="about">
-            <div class="about-content">
-              <div class="about-text">
-                <h1>
-                  Hey, I'm <span date-value="rasib" class="name">rasib</span>
-                </h1>
-                <h3 id="intro-subtext">
-                  {
-                    `I am a ${identity.occupation} ${
-                      identity.company === "" ? "" : "@"
-                    }${identity.company} and`
-                  }
-                  <span id="other-occupation">{whoami[0]}</span>
-                </h3>
-                <p>
-                  I am a CS student from <a href="https://www.iba.edu.pk">IBA</a
-                  > who is passionate about making software engineering fun. Some
-                  of my interests are
-                  {
-                    interests.map((interest) => (
-                      <span class="interests">{interest},&nbsp;</span>
-                    ))
-                  } and <span class="interests">{lastInterest}</span>.
-                </p>
-                <a class="read-more" href="/about">More about me 👀</a>
-              </div>
-              <figure>
-                <img
-                  alt="a picture of a cat coding using a laptop"
-                  class="codingcat"
-                  src="codingcat.gif"
-                />
-                <figcaption class="codingcat-caption">
-                  Here's a random cat that codes.
-                </figcaption>
-              </figure>
+    <main class="mb-auto">
+      <div class="main-content-padding">
+        <section class="about">
+          <div class="about-content">
+            <div class="about-text">
+              <h1>
+                Hey, I'm <span date-value="rasib" class="name">rasib</span>
+              </h1>
+              <h2 id="intro-subtext">
+                {
+                  `I am a ${identity.occupation} ${
+                    identity.company === "" ? "" : "@"
+                  }${identity.company} and`
+                }
+                <span id="other-occupation">{whoami[0]}</span>
+              </h2>
+              <p>
+                I am a CS student from <a href="https://www.iba.edu.pk">IBA</a> who
+                is passionate about making software engineering fun. Some of my interests
+                are
+                {
+                  interests.map((interest) => (
+                    <span class="interests">{interest},&nbsp;</span>
+                  ))
+                } and <span class="interests">{lastInterest}</span>.
+              </p>
+              <a role="button" class="more-button" href="/about"
+                >More about me 👀 ></a
+              >
             </div>
-          </section>
-          <section>
-            <h2>My Projects</h2>
+            <figure>
+              <img
+                alt="a picture of a cat coding using a laptop"
+                class="codingcat"
+                src="codingcat.gif"
+              />
+              <figcaption class="codingcat-caption">
+                Here's a random cat that codes.
+              </figcaption>
+            </figure>
+          </div>
+        </section>
+
+        <section>
+          <div>
+            <h1>My Projects</h1>
             <p>Here are some of my projects like you might like</p>
             <Projects />
-          </section>
+            <div
+              class=""
+              style="display: flex;
+                       justify-content: center;
+                       item-align: center;"
+            >
+              <a role="button" class="more-button" href="/projects"
+                >More projects 📚 ></a
+              >
+            </div>
+          </div>
+        </section>
 
-          <section class="tech">
-            <h2>Things I can do</h2>
-            <p>
-              I like learning new programming languages, frameworks and tools
-              (Currently learning <strong>go</strong>). I have worked with the
-              following technologies:
-            </p>
-            <Technology />
-          </section>
+        <section class="tech">
+          <h1>Things I can do</h1>
+          <p>
+            I like learning new programming languages, frameworks and tools
+            (Currently learning <strong>go</strong>). I have worked with the
+            following technologies:
+          </p>
+          <Technology />
+        </section>
 
-          <section class="tools">
-            <h2>Tools I use</h2>
-            <p>Here are some of the tools I use on a daily basis:</p>
-            <ul class="tools-list">
-              <li>nvim</li>
-              <li>tmux</li>
-              <li>endeavouros</li>
-              <li>i3 window manager</li>
-              <li>vimium</li>
-              <li>Obsidian</li>
-              <li>zsh</li>
-              <li>firefox developer edition (for CSS)</li>
-              <li>vivaldi (for everything else)</li>
-            </ul>
-          </section>
-        </div>
-      </main>
-    </div>
+        <section class="tools">
+          <h1>Tools I use</h1>
+          <p>Here are some of the tools I use on a daily basis:</p>
+          <ul class="tools-list">
+            <li>nvim</li>
+            <li>tmux</li>
+            <li>endeavouros</li>
+            <li>i3 window manager</li>
+            <li>vimium</li>
+            <li>Obsidian</li>
+            <li>zsh</li>
+            <li>firefox developer edition (for CSS)</li>
+            <li>vivaldi (for everything else)</li>
+          </ul>
+        </section>
+      </div>
+    </main>
   </div>
+</BaseLayout>
 
-  <style>
-    .heading-wrapper h3 {
-      padding-right: 0.8rem;
-    }
-
-    .name {
-    }
-
-    .about-text {
-      padding: 1rem;
-    }
-
-    .about-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      align-items: center;
-    }
-
-    .codingcat {
-      border: 2px solid var(--ui-color);
-      margin-top: 2rem;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .codingcat-caption {
-      text-align: center;
-      font-size: 0.9rem;
-      font-style: italic;
-    }
-
-    .heading-wrapper {
-      margin-left: 1.6rem;
-      margin-right: 1rem;
-      min-width: 12.5cm;
-    }
-
-    .name::after {
-      content: "⚡";
-      font-size: 2.1rem;
-    }
-
-    @media screen and (max-width: 480px) {
-      .heading-wrapper {
-        min-width: 0;
-      }
-
-      figure {
-        margin: 0;
-      }
-
-      h1 {
-        font-size: 2.6em;
-        letter-spacing: 0.004ch;
-        text-align: center;
-      }
-
-      .heading-wrapper h3 {
-        margin-left: 0.5rem;
-        margin-right: 0.5rem;
-      }
-    }
-
-    @media screen and (max-width: 360px) {
-      h1 {
-        font-size: 2.2em;
-      }
-    }
-
-    .mb-auto {
-      margin-bottom: auto;
-    }
-
-    .interests {
-      font-weight: bold;
-    }
-
-    #other-occupation {
-      transition: opacity 0.5s ease-in-out;
-      display: inline-block;
-      /* align left  */
-      text-align: left;
-    }
-
-    .tools-list {
-      font-size: 1rem;
-      font-family: monospace;
-    }
-
-    .read-more {
-      display: inline-block;
-      padding: 0.4rem 0.8rem;
-      margin-top: 1rem;
-      border-radius: 0.5rem;
-      background-color: black;
-      color: var(--ui-comp-color);
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid var(--ui-color);
-    }
-
-    .read-more:hover {
-      text-decoration: none;
-      background-color: var(--button-hover);
-    }
-  </style>
-
-  <!-- h2 animation -->
-  <script define:vars={{ whoami }}>
-  const other_occupation = document.querySelector("#other-occupation");
-
-  let i = 1;
-
-  function updateText() {
-    if (i > whoami.length - 1) {
-      i = 0;
-    }
-
-    other_occupation.style.opacity = 0;
-
-    setTimeout(() => {
-      other_occupation.textContent = whoami[i];
-      other_occupation.style.opacity = 1;
-      i++;
-    }, 600);
+<style>
+  .about-text {
+    padding: 1rem;
   }
 
-  setInterval(updateText, 3600);
-  </script>
-</BaseLayout>
+  .about-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+  }
+
+  .codingcat {
+    border: 2px solid var(--ui-color);
+    margin-top: 2rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .codingcat-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  .name::after {
+    content: "⚡";
+    font-size: 2.1rem;
+  }
+
+  .mb-auto {
+    margin-bottom: auto;
+  }
+
+  .interests {
+    font-weight: bold;
+  }
+
+  #other-occupation {
+    transition: opacity 0.5s ease-in-out;
+    display: inline-block;
+    /* align left  */
+    text-align: left;
+  }
+
+  .tools-list {
+    font-size: 1rem;
+    font-family: monospace;
+  }
+
+  .more-button {
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    margin-top: 1rem;
+    background-color: black;
+    color: var(--ui-comp-color);
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid var(--ui-color);
+  }
+
+  .more-button:hover {
+    text-decoration: none;
+    background-color: var(--button-hover);
+  }
+</style>
+
+<!-- h2 animation -->
+<script define:vars={{ whoami }}>
+const other_occupation = document.querySelector("#other-occupation");
+
+let i = 1;
+
+function updateText() {
+  if (i > whoami.length - 1) {
+    i = 0;
+  }
+
+  other_occupation.style.opacity = 0;
+
+  setTimeout(() => {
+    other_occupation.textContent = whoami[i];
+    other_occupation.style.opacity = 1;
+    i++;
+  }, 600);
+}
+
+setInterval(updateText, 3600);
+</script>

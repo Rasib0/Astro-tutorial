@@ -70,26 +70,42 @@ const technologies = [
 ];
 ---
 
-<div class="grid">
-  {
-    technologies.map((tech) => (
-      <div class="techcard">
-        <img src={tech.logo} height="40" width="52" alt={tech.name + " logo"} />
-        <a href={tech.link} class="techcard-text">
-          {tech.name}
-        </a>
-      </div>
-    ))
-  }
+<div class="flex-wrapper">
+  <div class="grid">
+    {
+      technologies.map((tech) => (
+        <div class="techcard">
+          <img
+            src={tech.logo}
+            height="40"
+            width="52"
+            alt={tech.name + " logo"}
+          />
+          <a href={tech.link} class="techcard-text">
+            {tech.name}
+          </a>
+        </div>
+      ))
+    }
+  </div>
 </div>
 <style>
+  .flex-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   .grid {
+    flex: 1;
     display: grid;
+    max-width: 600px;
+    width: 100%;
     grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: 0.75rem 0rem;
     justify-items: center;
-    margin: 0 36px;
+    margin: 2rem 0rem;
   }
+
   @media screen and (min-width: 636px) {
     .grid {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

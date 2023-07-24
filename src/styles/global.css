@@ -42,6 +42,8 @@ section {
 
   /* ui colors */
   --ui-color: black;
+
+  --white: hsl(32, 16%, 84%);
 }
 
 
@@ -65,7 +67,7 @@ section {
   --button-hover: rgb(24 24 24); /* hover neutral */
  
   /* ui colors */
-  --ui-color: white;
+  --ui-color: var(--white);
 }
 
 /* *::selection {

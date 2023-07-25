@@ -18,8 +18,7 @@ const whoami = [
 
 const interests = [
   "Web Development",
-  "Natural Language Processing",
-  "Open Source",
+  "Learning Languages (Human and Programming)",
 ];
 
 const lastInterest = interests.pop();
@@ -41,7 +40,7 @@ const lastInterest = interests.pop();
       </h2>
       <p>
         I am a CS student from <a href="https://www.iba.edu.pk">IBA</a> who is passionate
-        about making software engineering fun. Some of my interests are
+        about making software. My interests are
         {
           interests.map((interest) => (
             <span class="interests">{interest},&nbsp;</span>
@@ -94,6 +93,9 @@ setInterval(updateText, 3600);
 </script>
 
 <style>
+  .name {
+    color: var(--secondary-color);
+  }
   .about-grid-wrapper {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));

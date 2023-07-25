@@ -65,7 +65,11 @@
   --button-hover-light: var(--neutral-200);
 
   --ui-color: black;
-  --ui-comp-color: white;
+  --ui-comp-color: var(--neutral-50);
+
+  --white: var(--neutral-50);
+
+  --secondary-color: var(--blue-500);
 }
 
 :root.dark {
@@ -75,5 +79,7 @@
   --button-color: black;
   --button-hover: var(--neutral-900);
   --ui-color: var(--neutral-50);
-  --uni-comp-color: black;
+  --ui-comp-color: black;
+
+  --secondary-color: var(--blue-200);
 }

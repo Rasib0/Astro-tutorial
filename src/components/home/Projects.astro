@@ -41,6 +41,7 @@ const allProjects = await getCollection("projects");
     gap: 12px;
     align-items: stretch;
     font-size: 16px;
+    padding-bottom: 6px;
   }
 
   @media screen and (min-width: 768px) {
@@ -87,22 +88,18 @@ const allProjects = await getCollection("projects");
     /* background-color: var(--ui-color); */
     background-color: black;
     display: flex;
-    border-radius: 6px 6px 0 0;
+    border-radius: 8px 8px 0 0;
     border-bottom: 1px solid var(--ui-color);
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
     justify-content: space-between;
     padding: 4px 12px;
   }
 
   .project-card {
-    margin-bottom: 0.5rem;
-    /*color: var(--text-color); */
     box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
       0 4px 6px -4px rgb(0 0 0 / 0.1);
     display: flex;
     padding-bottom: 0.5rem;
-    border-radius: 7px;
+    border-radius: 8px 8px 0px 0px;
     flex-direction: column;
     border: 1px solid var(--ui-color);
   }

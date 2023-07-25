@@ -1,47 +1,23 @@
-# Astro Starter Kit: Minimal
+# Rasib's Portfolio Website
 
-```
-npm create astro@latest -- --template minimal
-```
+Welcome to my GitHub repository for my portfolio website! This project showcases my skills and projects, all developed using Astro.js, an efficient static site builder.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/minimal/devcontainer.json)
+## Technologies Used
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+- **Astro.js**: Leveraging Astro.js to create a performant and easily maintainable portfolio website.
+- **HTML/CSS**: Crafting responsive and visually appealing user interfaces (with animations).
+- **JavaScript (ES6+)**: Implementing interactive elements and optimizing user experiences.
+- **Markdown**: Organizing and presenting content with clean and structured Markdown syntax.
 
-## 🚀 Project Structure
+## Features
 
-Inside of your Astro project, you'll see the following folders and files:
+- **Project Showcase**: Explore a curated collection of my projects, complete with detailed descriptions and live demos.
+- **About Me**: Gain insights into my background, interests, and aspirations in the realm of web development.
+- **Skills & Expertise**: Discover the technical skills and proficiency I possess.
+- **Contact Form**: Reach out to me easily using the integrated contact form.
+- **Responsive Design**: Ensuring a seamless user experience across various devices.
 
-```
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+## Visit My Portfolio
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+To explore the complete collection of projects and learn more about my work, visit my portfolio website at [rasib.me](https://rasib.me).

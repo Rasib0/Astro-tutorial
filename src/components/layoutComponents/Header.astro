@@ -66,7 +66,7 @@ import ThemeIcon from "./ThemeIcon.astro";
 
 <style>
   header {
-    background: linear-gradient(to top, #1d4ed8, #4f46e5);
+    background: linear-gradient(to top, var(--red-700), var(--red-600));
     opacity: 0.9;
     font-family: monospace;
     position: fixed;
@@ -184,12 +184,13 @@ import ThemeIcon from "./ThemeIcon.astro";
     .hamburger {
       display: none;
     }
-
     .grow {
       flex-grow: 1;
     }
   }
+</style>
 
+<style>
   /* hamburger menu */
   .hamburger {
     width: 30px;
@@ -264,5 +265,9 @@ import ThemeIcon from "./ThemeIcon.astro";
     top: 18px;
     width: 0%;
     left: 50%;
+  }
+
+  .hamburger {
+    -webkit-tap-highlight-color: transparent;
   }
 </style>

@@ -1,0 +1,94 @@
+:root {
+  --slate-100: #f1f5f9;
+  --slate-200: #e2e8f0;
+  --slate-300: #cbd5e1;
+  --slate-400: #94a3b8;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+
+  --lime-50: #f7fee7;
+  --lime-100: #ecfccb;
+  --lime-200: #d9f99d;
+  --lime-300: #bef264;
+  --lime-400: #a3e635;
+  --lime-500: #84cc16;
+  --lime-600: #65a30d;
+  --lime-700: #4d7c0f;
+
+  --Emerald-50: #ecfdf5;
+  --Emerald-100: #d1fae5;
+  --Emerald-200: #a7f3d0;
+  --Emerald-300: #6ee7b7;
+  --Emerald-400: #34d399;
+  --Emerald-500: #10b981;
+  --Emerald-600: #059669;
+  --Emerald-700: #047857;
+
+  --blue-50: #eff6ff;
+  --blue-100: #dbeafe;
+  --blue-200: #bfdbfe;
+  --blue-300: #93c5fd;
+  --blue-400: #60a5fa;
+  --blue-500: #3b82f6;
+  --blue-600: #2563eb;
+  --blue-700: #1d4ed8;
+
+  --neutral-50: #f9fafb;
+  --neutral-100: #f3f4f6;
+  --neutral-200: #e5e7eb;
+  --neutral-300: #d1d5db;
+  --neutral-400: #9ca3af;
+  --neutral-500: #6b7280;
+  --neutral-600: #4b5563;
+  --neutral-700: #374151;
+  --neutral-800: #1f2937;
+  --neutral-900: #111827;
+  --neutral-950: #050505;
+
+  --red-50: #fef2f2;
+  --red-100: #fee2e2;
+  --red-200: #fecaca;
+  --red-300: #fca5a5;
+  --red-400: #f87171;
+  --red-500: #ef4444;
+  --red-600: #dc2626;
+  --red-700: #b91c1c;
+}
+
+:root {
+  --background-color: var(--neutral-50);
+  --text-color: black;
+
+  --button-color: black; /* link neutral */
+  --button-hover: rgb(24 24 24); /* hover neutral */
+  --button-hover-light: rgb(230 230 230);
+
+  /* ui colors */
+  --ui-color: black;
+  --ui-comp-color: white;
+
+  --white: hsl(32, 16%, 84%);
+}
+
+:root.dark {
+  --background-color: var(--neutral-950);
+  --text-color: var(--neutral-50);
+
+  /* button colors when I wanted them to swap colors */
+  /*  --button-hover: hsl(0, 0%, 78%);
+  --button-color: hsl(32, 16%, 84%); */
+
+  /* button colors */
+  --button-color: black; /* link neutral */
+  --button-hover: rgb(24 24 24); /* hover neutral */
+
+  /* ui colors */
+  --ui-color: var(--white);
+  --uni-comp-color: black;
+}
+
+/* *::selection {
+  background-color: var(--selection-color);
+  color: white;
+} */

@@ -1,0 +1,132 @@
+---
+const identity = {
+  firstName: "Rasib",
+  country: "Pakistan",
+  occupation: "Web Developer",
+  company: "",
+  hobbies: ["Reading", "Youtube", "Coding"],
+};
+
+const whoami = [
+  "Arch user 🐧",
+  "vim user ✨",
+  "Bookworm 📚",
+  "anime fan 🍿",
+  "Game lover 🎮",
+  "AI hater 🤖",
+];
+
+const interests = [
+  "Web Development",
+  "Natural Language Processing",
+  "Open Source",
+];
+
+const lastInterest = interests.pop();
+---
+
+<section class="about">
+  <div class="about-grid-wrapper">
+    <div>
+      <h1>
+        Hey, I'm <span date-value="rasib" class="name">rasib</span>
+      </h1>
+      <h2 class="intro-subtext">
+        {
+          `I am a ${identity.occupation} ${identity.company === "" ? "" : "@"}${
+            identity.company
+          } and`
+        }
+        <span id="other-occupation">{whoami[0]}</span>
+      </h2>
+      <p>
+        I am a CS student from <a href="https://www.iba.edu.pk">IBA</a> who is passionate
+        about making software engineering fun. Some of my interests are
+        {
+          interests.map((interest) => (
+            <span class="interests">{interest},&nbsp;</span>
+          ))
+        } and <span class="interests">{lastInterest}</span>.
+      </p>
+      <div
+        style="display: flex;
+                       justify-content: center;
+                       item-align: center;"
+      >
+        <a role="button" class="more-button" href="/about">More about me 👀 ></a
+        >
+      </div>
+    </div>
+    <figure>
+      <img
+        alt="a picture of a cat coding using a laptop"
+        class="codingcat-img"
+        src="codingcat.gif"
+      />
+      <figcaption class="codingcat-caption">
+        Here's a random cat that codes.
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- h2 animation -->
+<script define:vars={{ whoami }}>
+const other_occupation = document.querySelector("#other-occupation");
+
+let i = 1;
+
+function updateText() {
+    if (i > whoami.length - 1) {
+        i = 0;
+    }
+
+    other_occupation.style.opacity = 0;
+
+    setTimeout(() => {
+        other_occupation.textContent = whoami[i];
+        other_occupation.style.opacity = 1;
+        i++;
+    }, 600);
+}
+
+setInterval(updateText, 3600);
+</script>
+
+<style>
+  .about-grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    align-items: center;
+  }
+
+  .codingcat-img {
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.75);
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .codingcat-caption {
+    text-align: center;
+    font-size: 0.9rem;
+    font-style: italic;
+  }
+
+  .name::after {
+    content: "⚡";
+    font-size: 1.8rem;
+  }
+
+  .interests {
+    font-weight: bold;
+  }
+
+  #other-occupation {
+    transition: opacity 0.5s ease-in-out;
+    display: inline-block;
+    /* align left  */
+    text-align: left;
+  }
+</style>

@@ -56,30 +56,42 @@
   --red-700: #b91c1c;
 }
 
+/* one off colors */
 :root {
+  --button-color: black;
+  --button-hover: var(--neutral-900);
+  --white: var(--neutral-50);
+}
+
+/* theme colors swap */
+:root {
+  --link-color: var(--blue-500);
   --background-color: var(--neutral-50);
   --text-color: black;
 
-  --button-color: black;
-  --button-hover: var(--neutral-900);
-  --button-hover-light: var(--neutral-200);
-
-  --ui-color: black;
+  --ui-color: var(--slate-400);
   --ui-comp-color: var(--neutral-50);
 
-  --white: var(--neutral-50);
+  --nav-element-color: black;
 
-  --secondary-color: var(--blue-500);
+  --secondary-color: var(--blue-700);
+  --tertiary-color: var(--neutral-500);
+  --tertiary-color-dark: var(--slate-700);
 }
 
 :root.dark {
+  --link-color: var(--blue-400);
+
   --background-color: var(--neutral-950);
   --text-color: var(--neutral-50);
 
-  --button-color: black;
-  --button-hover: var(--neutral-900);
-  --ui-color: var(--neutral-50);
-  --ui-comp-color: black;
+  --ui-color: var(--neutral-700);
+  --ui-comp-color: var(--neutral-800);
+
+  --nav-element-color: var(--neutral-50);
 
   --secondary-color: var(--blue-200);
+
+  --tertiary-color: var(--slate-400);
+  --tertiary-color-dark: var(--slate-300);
 }

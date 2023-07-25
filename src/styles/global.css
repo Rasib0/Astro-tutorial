@@ -1,9 +1,9 @@
 .section-label {
-  font-size: 24px;
+  font-size: 22px;
   text-transform: uppercase;
   margin: 0 0 0 0;
-  font-weight: 700;
-  color: var(--secondary-color);
+  font-weight: 200;
+  color: var(--tertiary-color);
 }
 
 .more-button {
@@ -14,11 +14,16 @@
   background-color: black;
   color: var(--white);
   text-decoration: none;
-  font-weight: bold;
+  font-weight: semibold;
   border: 1px solid var(--ui-color);
+  transition: background-color 0.2s ease-in-out;
 }
 
 .more-button:hover {
   text-decoration: none;
   background-color: var(--button-hover);
+}
+
+section > h2 {
+  color: var(--tertiary-color-dark);
 }

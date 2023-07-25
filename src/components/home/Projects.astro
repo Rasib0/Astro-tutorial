@@ -26,6 +26,7 @@ const allProjects = await getCollection("projects");
           {project.data.description}
           {/* <a href={"/projects/" + project.slug}>Learn more</a>*/}
         </p>
+        <br />
         <div class="tags">
           <Tags tags={project.data.tags} nolink={true} />
         </div>
@@ -37,9 +38,9 @@ const allProjects = await getCollection("projects");
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
+    gap: 12px;
     align-items: stretch;
-    font-size: 18px;
+    font-size: 16px;
   }
 
   @media screen and (min-width: 768px) {
@@ -66,7 +67,7 @@ const allProjects = await getCollection("projects");
     padding: 0.3rem 0.5rem;
     border-radius: 5px;
     background-color: var(--button-color);
-    color: white;
+    color: var(--white);
     text-decoration: none;
     white-space: nowrap;
     font-size: 0.9rem;
@@ -86,10 +87,10 @@ const allProjects = await getCollection("projects");
     /* background-color: var(--ui-color); */
     background-color: black;
     display: flex;
-    color: white;
-    border-bottom: 2px solid var(--ui-color);
+    border-radius: 3px 3px 0 0;
+    border-bottom: 1px solid var(--ui-color);
     justify-content: space-between;
-    padding: 0.5rem 12px;
+    padding: 4px 12px;
   }
 
   .project-card {
@@ -98,9 +99,9 @@ const allProjects = await getCollection("projects");
     box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
     display: flex;
     padding-bottom: 0.5rem;
-    border-radius: 5px;
+    border-radius: 3px;
     flex-direction: column;
-    border: 2px solid var(--ui-color);
+    border: 1px solid var(--ui-color);
   }
 
   .tags {

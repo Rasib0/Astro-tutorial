@@ -60,35 +60,20 @@
   --background-color: var(--neutral-50);
   --text-color: black;
 
-  --button-color: black; /* link neutral */
-  --button-hover: rgb(24 24 24); /* hover neutral */
-  --button-hover-light: rgb(230 230 230);
+  --button-color: black;
+  --button-hover: var(--neutral-700);
+  --button-hover-light: var(--neutral-200);
 
-  /* ui colors */
   --ui-color: black;
   --ui-comp-color: white;
-
-  --white: hsl(32, 16%, 84%);
 }
 
 :root.dark {
   --background-color: var(--neutral-950);
   --text-color: var(--neutral-50);
 
-  /* button colors when I wanted them to swap colors */
-  /*  --button-hover: hsl(0, 0%, 78%);
-  --button-color: hsl(32, 16%, 84%); */
-
-  /* button colors */
-  --button-color: black; /* link neutral */
-  --button-hover: rgb(24 24 24); /* hover neutral */
-
-  /* ui colors */
-  --ui-color: var(--white);
+  --button-color: black;
+  --button-hover: var(--neutral-700);
+  --ui-color: var(--neutral-50);
   --uni-comp-color: black;
 }
-
-/* *::selection {
-  background-color: var(--selection-color);
-  color: white;
-} */

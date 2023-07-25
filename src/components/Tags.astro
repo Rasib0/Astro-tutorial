@@ -29,11 +29,11 @@ const tagsColor = [
 ];
 ---
 
-<div class="tags">
+<div class="">
   {
     tags.map((tag) => (
       <span
-        class="tag"
+        class="font-mono text-xs overflow-x-scroll m-1 border border-solid border-black rounded-md px-2 py-1"
         style={{
           backgroundColor:
             tagsColor.find((t) => t.name === tag.toLowerCase())?.color ||
@@ -49,20 +49,3 @@ const tagsColor = [
     ))
   }
 </div>
-
-<style>
-  .tags {
-    display: flex;
-    overflow: clip;
-    margin: 0 auto;
-  }
-
-  .tag {
-    margin: 0.25em;
-    border: 2px solid var(--nav-text-color);
-    border-radius: 0.5em;
-    font-family: monospace;
-    padding: 0.2em 0.5em;
-    font-size: 0.8em;
-  }
-</style>

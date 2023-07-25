@@ -1,29 +1,7 @@
-:root {
-  font-family: "Roboto", sans-serif;
-  font-family: "Rubik", sans-serif;
-  width: 100%;
-  height: 100%;
-  background-color: var(--background-color);
-  font-size: 1.25rem;
-  color: var(--text-color);
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
-  margin: 0;
-  padding: 0;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-* {
-  box-sizing: border-box;
-}
-
-section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 
 @media screen and (max-width: 650px) {
   section {
@@ -121,16 +99,7 @@ nav,
   user-select: none;
 }
 
-a {
-  color: var(--ui-color);
-  font-weight: 700;
-  text-decoration: none;
-}
 
-a:hover,
-a:focus {
-  text-decoration: underline;
-}
 
 .h-screen {
   min-height: 90vh;
@@ -142,7 +111,6 @@ a:focus {
 
 
 h1 {
-  font-size: 48px;
   font-weight: 700;
   margin: 0;
 }
@@ -193,12 +161,7 @@ h1 {
   }
 
 .section-label {
-  font-size: 24px;
-  text-transform: uppercase;
-  margin: 0 0 0 0;
-  font-weight: 700;
-  color: rgb(148 163 184);
-}
+  }
 
 h2 {
   margin: 0 0 4px 0;

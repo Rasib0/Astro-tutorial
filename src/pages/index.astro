@@ -8,7 +8,7 @@ import Technology from "../components/home/Technology.astro";
 const identity = {
   firstName: "Rasib",
   country: "Pakistan",
-  occupation: "Web Developer",
+  occupation: "Web Developer / Designer",
   company: "",
   hobbies: ["Reading", "Youtube", "Coding"],
 };
@@ -34,14 +34,14 @@ const lastInterest = interests.pop();
 <BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col items-center h-screen">
     <main class="mb-auto">
-      <div class="main-content-padding">
-        <section id="about">
-          <div class="about-content">
-            <div class="about-text">
-              <h1>
+      <div class="px-4">
+        <section class="flex flex-col min-h-screen justify-center" id=" about">
+          <div class="grid items-center grid-template-col-about">
+            <div>
+              <h1 class="text-4xl font-bold">
                 Hey, I'm <span date-value="rasib" class="name">rasib</span>
               </h1>
-              <h2 class="intro-subtext">
+              <h2 class="font-mono text-lime-900">
                 {
                   `I am a ${identity.occupation} ${
                     identity.company === "" ? "" : "@"
@@ -49,204 +49,149 @@ const lastInterest = interests.pop();
                 }
                 <span id="other-occupation">{whoami[0]}</span>
               </h2>
-              <p>
+              <p class="text-neutral-800">
                 I am a CS student from <a href="https://www.iba.edu.pk">IBA</a> who
-                is passionate about making software engineering fun. Some of my interests
+                is passionate about coding and design.
+                <!--
+                Some of my interests
                 are
                 {
                   interests.map((interest) => (
                     <span class="interests">{interest},&nbsp;</span>
                   ))
-                } and <span class="interests">{lastInterest}</span>.
+                  } and <span class="interests">{lastInterest}</span>.
+                -->
               </p>
-              <div
-                style="display: flex;
-                       justify-content: center;
-                       item-align: center;"
+              <div class="p-2"></div>
+              <a
+                role="button"
+                class="bg-neutral-900 text-neutral-50 rounded-lg p-2 font-semibold hover:bg-neutral-800"
+                href="/about">More about me 👀 ></a
               >
-                <a role="button" class="more-button" href="/about"
-                  >More about me 👀 ></a
-                >
-              </div>
+              <div class="p-2"></div>
             </div>
-            <figure>
+            <figure class="flex flex-col items-center">
               <img
                 alt="a picture of a cat coding using a laptop"
-                class="codingcat"
+                class="border border-gray-300 rounded-md shadow-md"
+                width="400px"
+                height="300px"
                 src="codingcat.gif"
               />
-              <figcaption class="codingcat-caption">
-                Here's a random cat that codes.
+              <figcaption class="text-center text-xs text-neutral-500">
+                Here's a cat that codes to make you feel cozy.
               </figcaption>
             </figure>
           </div>
         </section>
-        <section id="Projects">
-          <h1 class="section-label">Projects</h1>
-          <h2>Some of my work</h2>
-          <p>Here are some of my projects like you might like</p>
-          <Projects />
-          <div
-            class=""
-            style="display: flex;
-                       justify-content: center;
-                       item-align: center;"
-          >
-            <a role="button" class="more-button" href="/projects"
-              >More projects 📚 ></a
-            >
-          </div>
-        </section>
-
-        <section id="skills">
-          <h1 class="section-label">Skills</h1>
-          <h2>Things I can do</h2>
-          Here are the list of technologies that I can use to build you any website
-          or app:
-          <Technology />
-        </section>
-
-        <section id="Testimonials">
-          <h1 class="section-label">Testimonials</h1>
-          <h2>Nice Things People Have Said</h2>
-          <div>
-            <p></p>
-          </div>
-        </section>
-
-        <section id="contact">
-          <h1 class="section-label">CONTACT</h1>
-          <h2>Let's work together</h2>
-          <p>You can contact me through at:</p>
-          <div class="contacts">
-            <div>
-              <a
-                class="more-button"
-                href="mailto:m.nadeem.22976@khi.iba.edu.pk"
-              >
-                Leave a mail 💌>
-              </a>
-            </div>
-            <div>
-              <a class="more-button" href={`https://www.github.com/Rasib0`}
-                >Github ></a
-              >
-            </div>
-            <div>
-              <a
-                class="more-button"
-                href={`https://www.linkedin.com/in/muhammad-rasib-nadeem`}
-                >LinkedIn ></a
-              >
-            </div>
-          </div>
-        </section>
       </div>
+      <section class="flex flex-col pt-16 min-h-screen" id=" projects">
+        <h1 class="text-2xl uppercase font-thin text-neutral-500">Projects</h1>
+        <h2 class="font-semibold pb-2">Some of my work</h2>
+        <p>Here are some of my projects like you might like</p>
+        <Projects />
+        <div class="flex justify-center itemindexs-center">
+          <a
+            role="button"
+            class="bg-neutral-900 text-neutral-50 rounded-lg p-2 font-semibold hover:bg-neutral-800"
+            href="/projects">More projects 📚 ></a
+          >
+        </div>
+      </section>
+
+      <section class="flex flex-col pt-16 min-h-screen" id="skills">
+        <h1 class="text-2xl uppercase font-thin text-neutral-500">Skills</h1>
+        <h2 class="font-semibold pb-2">Things I can do</h2>
+        Here are the list of technologies that I can use to build you any website
+        or app:
+        <Technology />
+      </section>
+
+      <section class="flex flex-col pt-16 min-h-screen" id="testimonials">
+        <h1 class="text-2xl uppercase font-thin text-neutral-500">
+          Testimonials
+        </h1>
+        <h2 class="font-semibold pb-2">Nice Things People Have Said</h2>
+        <div>
+          <p></p>
+        </div>
+      </section>
+
+      <section class="flex flex-col pt-16 min-h-screen" id="contact">
+        <h1 class="text-2xl uppercase font-thin text-neutral-500">CONTACT</h1>
+        <h2 class="font-semibold pb-2">Let's work together</h2>
+        <p class="pb-2">You can contact me through at:</p>
+        <div class="flex flex-col gap-2 items-center px-16">
+          <a
+            class="bg-neutral-900 block w-[100%] text-center text-neutral-50 rounded-lg py-2 px-16 font-semibold hover:bg-neutral-800"
+            href="mailto:m.nadeem.22976@khi.iba.edu.pk"
+          >
+            Leave a mail 💌>
+          </a>
+          <a
+            class="bg-neutral-900 text-neutral-50 block w-[100%] text-center rounded-lg py-2 font-semibold hover:bg-neutral-800"
+            href={`https://www.github.com/Rasib0`}>Github ></a
+          >
+          <a
+            class="bg-neutral-900 block w-[100%] text-neutral-50 text-center rounded-lg py-2 font-semibold hover:bg-neutral-800"
+            href={`https://www.linkedin.com/in/muhammad-rasib-nadeem`}
+            >LinkedIn ></a
+          >
+        </div>
+      </section>
     </main>
   </div>
+</BaseLayout>
 
-  <style>
-    .about-content {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      align-items: center;
-    }
-
-    .codingcat {
-      border: 2px solid var(--ui-color);
-      margin-top: 2rem;
-      width: 100%;
-      overflow: hidden;
-    }
-
-    .codingcat-caption {
-      text-align: center;
-      font-size: 0.9rem;
-      font-style: italic;
-    }
-
-    .name::after {
-      content: "⚡";
-      font-size: 1.8rem;
-    }
-
-    .mb-auto {
-      margin-bottom: auto;
-    }
-
-    .interests {
-      font-weight: bold;
-    }
-
-    #other-occupation {
-      transition: opacity 0.5s ease-in-out;
-      display: inline-block;
-      /* align left  */
-      text-align: left;
-    }
-
-    .tools-list {
-      font-family: monospace;
-    }
-
-    .more-button {
-      padding: 0.4rem 0.8rem;
-      border-radius: 0.5rem;
-      font-size: 16px;
-      margin-top: 1rem;
-      background-color: black;
-      color: var(--ui-comp-color);
-      text-decoration: none;
-      font-weight: bold;
-      border: 1px solid var(--ui-color);
-    }
-
-    .more-button:hover {
-      text-decoration: none;
-      background-color: var(--button-hover);
-    }
-
-    .intro-subtext {
-      font-size: 24px;
-      font-family: monospace;
-      margin: 0px 0px 8px 0px;
-    }
-
-    .contacts {
-      display: flex;
-      gap: 16px;
-      margin-inline: 10vw;
-      item-align: center;
-      flex-direction: column;
-    }
-
-    .contacts a {
-      text-align: center;
-      display: block;
-      width: 100%;
-    }
-  </style>
-
-  <!-- h2 animation -->
-  <script define:vars={{ whoami }}>
-  const other_occupation = document.querySelector("#other-occupation");
-
-  let i = 1;
-
-  function updateText() {
-    if (i > whoami.length - 1) {
-      i = 0;
-    }
-
-    other_occupation.style.opacity = 0;
-
-    setTimeout(() => {
-      other_occupation.textContent = whoami[i];
-      other_occupation.style.opacity = 1;
-      i++;
-    }, 600);
+<style>
+  .grid-template-col-about {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 
-  setInterval(updateText, 3600);
-  </script>
-</BaseLayout>
+  .name::after {
+    content: "⚡";
+    font-size: 1.8rem;
+  }
+
+  .interests {
+    font-weight: bold;
+  }
+
+  #other-occupation {
+    transition: opacity 0.5s ease-in-out;
+    display: inline-block;
+    /* align left  */
+    text-align: left;
+  }
+
+  .tools-list {
+    font-family: monospace;
+  }
+
+  .intro-subtext {
+    font-size: 24px;
+    font-family: monospace;
+    margin: 0px 0px 8px 0px;
+  }
+</style>
+<script define:vars={{ whoami }}>
+const other_occupation = document.querySelector("#other-occupation");
+
+let i = 1;
+
+function updateText() {
+  if (i > whoami.length - 1) {
+    i = 0;
+  }
+
+  other_occupation.style.opacity = 0;
+
+  setTimeout(() => {
+    other_occupation.textContent = whoami[i];
+    other_occupation.style.opacity = 1;
+    i++;
+  }, 600);
+}
+
+setInterval(updateText, 3600);
+</script>

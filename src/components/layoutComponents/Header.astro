@@ -2,7 +2,7 @@
 import ThemeIcon from "./ThemeIcon.astro";
 ---
 
-<header>
+<header class="bg-neutral-900">
   <div class="wrapper">
     <nav>
       <div class="hamburger">
@@ -12,16 +12,18 @@ import ThemeIcon from "./ThemeIcon.astro";
         <span></span>
       </div>
       <div class="nav-links">
+        <!--
         <div class="nav-link-wrapper">
           <a
-            class="hover-underline-animation nav-link"
+            class="hover-underline-animation h-[100%] mx-6 text-center"
             draggable="false"
             href="/">Home</a
           >
-        </div>
+          </div>
+        -->
         <!-- <div>
         <a
-          class="hover-underline-animation nav-link"
+          class="hover-underline-animation h-[100%] mx-6 text-center"
           draggable="false"
           href="/projects">Projects</a
         >
@@ -29,25 +31,41 @@ import ThemeIcon from "./ThemeIcon.astro";
         <!--
         <div class="nav-link-wrapper">
           <a
-            class="hover-underline-animation nav-link"
+            class="hover-underline-animation h-[100%] mx-6 text-center"
             draggable="false"
             href="/blog">Blog</a
           >
           </div>
         -->
-        <div class="grow nav-link-wrapper">
+        <div class="nav-link-wrapper">
           <a
-            class="hover-underline-animation nav-link"
-            aria-label="Open Resume P D F"
+            class="hover-underline-animation h-[100%] mx-6 text-center"
             draggable="false"
-            href="/resume.pdf">Resume</a
+            href="#about">About</a
+          >
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a
+            class="hover-underline-animation h-[100%] mx-6 text-center"
+            draggable="false"
+            href="#testimonials">Testimonials</a
           >
         </div>
         <div class="nav-link-wrapper">
           <a
-            class="hover-underline-animation nav-link"
+            class="grow hover-underline-animation h-[100%] mx-6 text-center"
             draggable="false"
-            href="mailto: m.nadeem.22976@khi.iba.edu.pk">Contact me</a
+            href="#projects">Projects</a
+          >
+        </div>
+
+        <div class="nav-link-wrapper">
+          <a
+            class="hover-underline-animation h-[100%] mx-6 text-center"
+            aria-label="Open Resume P D F"
+            draggable="false"
+            href="/resume.pdf">Resume</a
           >
         </div>
         <!-- <div>
@@ -68,7 +86,6 @@ import ThemeIcon from "./ThemeIcon.astro";
 
 <style>
   header {
-    background: linear-gradient(to top, #1d4ed8, #4f46e5);
     opacity: 0.9;
     font-family: monospace;
     position: fixed;
@@ -171,13 +188,6 @@ import ThemeIcon from "./ThemeIcon.astro";
       padding: 0.36rem 6rem;
     }
 
-    .nav-link {
-      height: 100%;
-      margin: 0px 18px;
-      font-size: 1rem;
-      text-align: center;
-    }
-
     .nav-link-wrapper {
       display: flex;
       margin: 0;
@@ -185,10 +195,6 @@ import ThemeIcon from "./ThemeIcon.astro";
 
     .hamburger {
       display: none;
-    }
-
-    .grow {
-      flex-grow: 1;
     }
   }
 

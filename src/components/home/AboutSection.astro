@@ -25,7 +25,7 @@ const interests = [
 const lastInterest = interests.pop();
 ---
 
-<section class="about">
+<section id="about">
   <div class="about-grid-wrapper">
     <div>
       <h1>
@@ -77,17 +77,17 @@ const other_occupation = document.querySelector("#other-occupation");
 let i = 1;
 
 function updateText() {
-    if (i > whoami.length - 1) {
-        i = 0;
-    }
+  if (i > whoami.length - 1) {
+    i = 0;
+  }
 
-    other_occupation.style.opacity = 0;
+  other_occupation.style.opacity = 0;
 
-    setTimeout(() => {
-        other_occupation.textContent = whoami[i];
-        other_occupation.style.opacity = 1;
-        i++;
-    }, 600);
+  setTimeout(() => {
+    other_occupation.textContent = whoami[i];
+    other_occupation.style.opacity = 1;
+    i++;
+  }, 600);
 }
 
 setInterval(updateText, 3600);

@@ -61,7 +61,7 @@
   --text-color: black;
 
   --button-color: black;
-  --button-hover: var(--neutral-700);
+  --button-hover: var(--neutral-900);
   --button-hover-light: var(--neutral-200);
 
   --ui-color: black;
@@ -73,7 +73,7 @@
   --text-color: var(--neutral-50);
 
   --button-color: black;
-  --button-hover: var(--neutral-700);
+  --button-hover: var(--neutral-900);
   --ui-color: var(--neutral-50);
   --uni-comp-color: black;
 }

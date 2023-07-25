@@ -12,13 +12,13 @@ import ThemeIcon from "./ThemeIcon.astro";
         <span></span>
       </div>
       <div class="nav-links">
-        <div class="nav-link-wrapper">
+        <!-- <div class="nav-link-wrapper">
           <a
             class="hover-underline-animation nav-link"
             draggable="false"
             href="/">Home</a
           >
-        </div>
+        </div> -->
         <!-- <div>
         <a
           class="hover-underline-animation nav-link"
@@ -30,7 +30,21 @@ import ThemeIcon from "./ThemeIcon.astro";
           <a
             class="hover-underline-animation nav-link"
             draggable="false"
-            href="/blog">Blog</a
+            href="#about">About</a
+          >
+        </div>
+        <div class="nav-link-wrapper">
+          <a
+            class="hover-underline-animation nav-link"
+            draggable="false"
+            href="#projects">Projects</a
+          >
+        </div>
+        <div class="nav-link-wrapper">
+          <a
+            class="hover-underline-animation nav-link"
+            draggable="false"
+            href="#testimonials">Testimonials</a
           >
         </div>
         <div class="grow nav-link-wrapper">
@@ -45,7 +59,7 @@ import ThemeIcon from "./ThemeIcon.astro";
           <a
             class="hover-underline-animation nav-link"
             draggable="false"
-            href="mailto: m.nadeem.22976@khi.iba.edu.pk">Contact me</a
+            href="#contact">Contact me</a
           >
         </div>
         <!-- <div>
@@ -67,8 +81,6 @@ import ThemeIcon from "./ThemeIcon.astro";
 <style>
   header {
     background: linear-gradient(to top, var(--red-700), var(--red-600));
-    opacity: 0.9;
-    font-family: monospace;
     position: fixed;
     top: 0;
     padding: 0.36rem 1rem;

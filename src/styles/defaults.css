@@ -9,6 +9,7 @@
   margin: 0;
   padding: 0;
   background-color: var(--background-color);
+  scroll-behavior: smooth;
   color: var(--text-color);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

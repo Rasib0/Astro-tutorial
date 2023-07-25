@@ -18,16 +18,7 @@
 }
 
 section {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-@media screen and (max-width: 650px) {
-  section {
-    margin: 5rem 0;
-  }
+  padding: 5rem 0;
 }
 
 body {

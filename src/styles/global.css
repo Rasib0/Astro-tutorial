@@ -95,7 +95,7 @@ body {
 }
 
 .main-content-padding {
-  padding: 0 1.5rem;
+  padding: 0 16px;
 }
 
 main {
@@ -121,21 +121,6 @@ nav,
   user-select: none;
 }
 
-h1 {
-  text-wrap: balance;
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin: 0;
-  letter-spacing: 0.06rem;
-}
-
-h2 {
-  font-size: 1.5rem;
-  font-family: monospace;
-  letter-spacing: 0.02rem;
-  margin: 0px 0px 1.5rem 0px;
-}
-
 a {
   color: var(--ui-color);
   font-weight: 700;
@@ -155,49 +140,51 @@ a:focus {
   -webkit-tap-highlight-color: transparent;
 }
 
+
+h1 {
+  font-size: 48px;
+  font-weight: 700;
+  margin: 0;
+}
+
   @media screen and (max-width: 1024px) {
 
     h1 {
-      font-size: 2.7em;
+      font-size: 42px;
     }
 
     :root {
-      font-size: 1.1rem;
+      font-size: 18px;
     }
   }
 
   @media screen and (max-width: 768px) {
-    :root {
-      font-size: 1.1rem;
-    }
-    
-    h1 {
-      font-size: 2.6;
-    }
-
-  
 }
 
   @media screen and (max-width: 640px) {
     .main-content-padding {
-      padding: 0 1.1rem;
+      padding: 0 8px;
     }
-    
+
     figure {
-      margin: 1rem;
+      margin: 8px;
     }
     
     h1 {
-      font-size: 2.405em;
+      font-size: 40px;
+    }
+
+    :root {
+      font-size: 16px;
     }
   }
 
   @media screen and (max-width: 400px) {
     h1 {
-      font-size: 2em;
+      font-size: 36px;
     }
     h2 {
-      font-size:  1.2em;
+      font-size:  18px;
     }
 
     :root {
@@ -205,6 +192,17 @@ a:focus {
     }
   }
 
+.section-label {
+  font-size: 24px;
+  text-transform: uppercase;
+  margin: 0 0 0 0;
+  font-weight: 700;
+  color: rgb(148 163 184);
+}
+
+h2 {
+  margin: 0 0 4px 0;
+}
 
 .flex {
   display: flex;

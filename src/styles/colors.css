@@ -75,6 +75,7 @@
   --nav-element-color: black;
 
   --secondary-color: var(--blue-700);
+
   --tertiary-color: var(--neutral-500);
   --tertiary-color-dark: var(--slate-700);
 }

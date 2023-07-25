@@ -87,8 +87,10 @@ const allProjects = await getCollection("projects");
     /* background-color: var(--ui-color); */
     background-color: black;
     display: flex;
-    border-radius: 3px 3px 0 0;
+    border-radius: 6px 6px 0 0;
     border-bottom: 1px solid var(--ui-color);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
     justify-content: space-between;
     padding: 4px 12px;
   }
@@ -96,10 +98,11 @@ const allProjects = await getCollection("projects");
   .project-card {
     margin-bottom: 0.5rem;
     /*color: var(--text-color); */
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
     display: flex;
     padding-bottom: 0.5rem;
-    border-radius: 3px;
+    border-radius: 7px;
     flex-direction: column;
     border: 1px solid var(--ui-color);
   }

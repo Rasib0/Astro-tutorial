@@ -2,23 +2,6 @@
 import StandardLayout from "../layouts/StandardLayout.astro";
 import "../styles/global.css";
 
-const identity = {
-  firstName: "Rasib",
-  country: "Pakistan",
-  occupation: "Web Developer",
-  hobbies: ["Reading", "Writing", "Coding"],
-};
-
-const skills = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Astro",
-  "Python",
-  "Rust",
-];
-
 const pageTitle = "About Me";
 ---
 
@@ -34,58 +17,59 @@ const pageTitle = "About Me";
   }
 </style>
 
-<StandardLayout pageTitle={pageTitle}>
-  <p>Here are a few facts about me:</p>
-  <ul>
-    <li>
-      I am from {identity.country} and I work as a {identity.occupation}.
-    </li>
-    <li>
-      Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}
-    </li>
-    <li>
-      I like playing with different technology. My editor of choice is nvim with
-      tmux.
-    </li>
-    <p>My skills are:</p>
-    <ul>
-      {skills.map((skill) => <li class="skill">{skill}</li>)}
-    </ul>
-  </ul>
-  <section class="tools">
-    <h1>Extra: My dev setup</h1>
+<StandardLayout pageTitle={"About me"}>
+  <section>
+    <h1>👋 Heyyy-hello!</h1>
     <p>
-      I use the following tools to be <em>blazingly fast</em> at what I do:
+      Rasib here, I'm a Frontend-engineer. I'm am a duo designer/developer from
+      Paksitan, currently residing in Karachi.
     </p>
-    <ul class="tools-list">
-      <li>nvim</li>
-      <li>tmux</li>
-      <li>endeavouros</li>
-      <li>i3 window manager</li>
-      <li>vimium</li>
-      <li>Obsidian</li>
-      <li>zsh</li>
-      <li>firefox developer edition</li>
+    <p>
+      I am self-taught Frontend-developer, and have BS in Computer Science where
+      I mostly focused on theory stuff.
+    </p>
+    <p>
+      My battle-tested tech stack is Next.js, TypeScript, React, and Astro. I
+      also have experience with java, Python and Rust (currently adding Go to my
+      toolkit 🛠)
+    </p>
+    <p>
+      I'm happiest when I'm creating, learning, exploring and thinking about how
+      ot make things better.
+    </p>
+
+    <h2>🥳Fun facts about me:</h2>
+    <ul>
+      <li>
+        💻Coding Environment: Dark 🖤 + Vs Code default theme everywhere (yes
+        even in the terminal)
+      </li>
+      <li>⚡Personality type: ISTJ-A</li>
+      <li>
+        Three Recommoneded Books: "So Good They Can't Ignore You: Why Skills
+        Trump Passion" - Cal Newport, "Atomic Habit" - James Clear, "The name of
+        the Wind" - Patrick Rothfuss
+      </li>
+      <li>
+        Favourite Quote:<em>
+          "It's the questions we can't answer that teach us the most. They teach
+          us how to think. If you give a man an answer, all he gains is a little
+          fact. But give him a question and he'll look for his own
+          answers."&mdash; Patrick Rothfuss
+        </em>
+      </li>
     </ul>
+    <hr />
+
+    <p>
+      Welp, you made it all the way down!! Thanks for dropping by! While you're
+      here, be sure to check out my <a href="/blog">blog</a> and <a
+        href="/projects">projects</a
+      >!
+    </p>
+    <p>
+      Have a great day! 😁, and I hope all your tests pass and your divs stay
+      centered!
+    </p>
   </section>
 </StandardLayout>
-
-<style>
-  .tools {
-    margin-top: 2rem;
-  }
-
-  .tools-list {
-    list-style: none;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .tools-list li {
-    margin: 0.5rem;
-    padding: 0.5rem;
-    border: 1px solid var(--hover);
-    border-radius: 0.5rem;
-  }
-</style>

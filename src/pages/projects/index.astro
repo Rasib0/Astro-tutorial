@@ -1,0 +1,23 @@
+---
+import { getCollection } from "astro:content";
+import StandardLayout from "../../layouts/StandardLayout.astro";
+
+const pageTitle = "Projects index";
+const allProjects = await getCollection("projects");
+---
+
+<StandardLayout pageTitle={pageTitle}>
+  <section>
+    <h1>My Work 💻</h1>
+    <p>Here are my projects:</p>
+    <ul>
+      {
+        allProjects.map((project) => (
+          <li>
+            <a url={"/projects/" + project.slug}> {project.data.title}</a>
+          </li>
+        ))
+      }
+    </ul>
+  </section>
+</StandardLayout>

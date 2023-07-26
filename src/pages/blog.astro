@@ -1,5 +1,4 @@
 ---
-import "../styles/global.css";
 import { getCollection } from "astro:content";
 import StandardLayout from "../layouts/StandardLayout.astro";
 import BlogPost from "../components/BlogPost.astro";
@@ -8,8 +7,9 @@ const pageTitle = "My Writing";
 const allPost = await getCollection("posts");
 ---
 
-<StandardLayout pageTitle={pageTitle}>
-  <div>
+<StandardLayout pageTitle={"Blog"}>
+  <section>
+    <h1>My Writing ✍🏻</h1>
     <p>Down below is a list of my blog posts:</p>
     <ul>
       {
@@ -21,5 +21,5 @@ const allPost = await getCollection("posts");
     <p>Wanna search using tags instead? <a href="/tags">Click here</a></p>
     {/*TODO: add arrow floating point right */}
     {/*TODO: add griding tiling to blog posts*/}
-  </div>
+  </section>
 </StandardLayout>

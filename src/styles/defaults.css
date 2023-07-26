@@ -10,7 +10,6 @@
   padding: 0;
   background-color: var(--background-color);
   scroll-behavior: smooth;
-  color: var(--text-color);
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -30,7 +29,7 @@ body {
 main {
   width: 100%;
   max-width: 960px;
-  line-height: 1.5;
+  line-height: 1.7;
 }
 
 figure {
@@ -74,6 +73,10 @@ h1 {
   :root {
     font-size: 18px;
   }
+}
+
+li {
+ margin-bottom: 8px; 
 }
 
 @media screen and (max-width: 768px) {

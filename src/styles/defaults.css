@@ -8,6 +8,7 @@
   height: 100%;
   margin: 0;
   padding: 0;
+  font-size: 20px;
   color: var(--text-color);
   background-color: var(--background-color);
   scroll-behavior: smooth;
@@ -70,20 +71,14 @@ h1 {
   h1 {
     font-size: 42px;
   }
-
-  :root {
-    font-size: 18px;
-  }
 }
 
 li {
  margin-bottom: 8px; 
 }
 
-@media screen and (max-width: 768px) {
-}
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 768px) {
   .main-content-padding {
     padding: 0 8px;
   }
@@ -107,10 +102,6 @@ li {
   }
   h2 {
     font-size: 18px;
-  }
-
-  :root {
-    font-size: 1rem;
   }
 }
 

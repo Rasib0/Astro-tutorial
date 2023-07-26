@@ -79,9 +79,6 @@ li {
 
 
 @media screen and (max-width: 768px) {
-  .main-content-padding {
-    padding: 0 8px;
-  }
 
   figure {
     margin: 8px;
@@ -90,10 +87,6 @@ li {
   h1 {
     font-size: 40px;
   }
-
-  :root {
-    font-size: 16px;
-  }
 }
 
 @media screen and (max-width: 400px) {
@@ -101,6 +94,9 @@ li {
     font-size: 36px;
   }
   h2 {
+    font-size: 20px;
+  }
+  :root {
     font-size: 18px;
   }
 }

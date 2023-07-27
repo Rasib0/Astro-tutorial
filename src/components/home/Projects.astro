@@ -79,15 +79,24 @@ const allProjects = await getCollection("projects");
 
   .title {
     text-transform: none;
+    font-weight: 600;
   }
 
   .title:hover,
   .link-button:hover,
   .repo-button:hover {
     text-decoration: none;
+    background-color: var(--red-300);
+  }
+
+  :global(.dark) .title:hover,
+  :global(.dark) .link-button:hover,
+  :global(.dark) .repo-button:hover {
+    background-color: var(--red-700);
   }
 
   .date {
+    margin-left: 4px;
     font-size: 12px;
   }
   .project-card-header {

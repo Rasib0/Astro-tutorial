@@ -105,6 +105,7 @@ const allProjects = await getCollection("projects");
     display: flex;
     justify-content: space-between;
     padding: 4px 12px;
+    transition: inherit;
   }
 
   :global(.dark) .project-card-header {
@@ -117,12 +118,35 @@ const allProjects = await getCollection("projects");
     margin-bottom: 18px;
     background-color: var(--red-100);
     flex-direction: column;
+    transform: scale(1);
+    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out,
+      background-color 200ms ease-in-out;
+  }
+
+  .project-card:hover {
+    box-shadow: 0 1px 5px var(--red-500);
+    background-color: var(--red-200);
+    transform: scale(1.01) perspective(1px);
+  }
+
+  .project-card:hover .project-card-header {
+    background-color: var(--red-300);
   }
 
   :global(.dark) .project-card {
     box-shadow: 0 1px 2px var(--red-700);
     background-color: var(--background-color);
   }
+
+  :global(.dark) .project-card:hover {
+    box-shadow: 0 1px 5px var(--red-500);
+    background-color: var(--red-900);
+  }
+
+  :global(.dark) .project-card:hover .project-card-header {
+    background-color: var(--red-700);
+  }
+  )
 
   .tags {
     margin: 0.5rem 0.3rem 0 0.3rem;

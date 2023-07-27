@@ -2,7 +2,7 @@
 const identity = {
   firstName: "Rasib",
   country: "Pakistan",
-  occupation: "Web Developer",
+  occupation: "Software Engineer",
   company: "",
   hobbies: ["Reading", "Youtube", "Coding"],
 };
@@ -12,14 +12,11 @@ const whoami = [
   "vim user ✨",
   "Bookworm 📚",
   "anime fan 🍿",
-  "Game lover 🎮",
+  "Gamer 🎮",
   "AI hater 🤖",
 ];
 
-const interests = [
-  "Web Development",
-  "Learning Languages (Human and Programming)",
-];
+const interests = ["web development", "learning languages (👨 and 💻)"];
 
 const lastInterest = interests.pop();
 ---
@@ -28,7 +25,7 @@ const lastInterest = interests.pop();
   <div class="about-grid-wrapper">
     <div>
       <h1>
-        Hey, I'm <span date-value="rasib" class="name">rasib</span>
+        Hi, I'm <span date-value="rasib" class="name">rasib</span>
       </h1>
       <h2 class="intro-subtext">
         {
@@ -39,8 +36,8 @@ const lastInterest = interests.pop();
         <span id="other-occupation">{whoami[0]}</span>
       </h2>
       <p>
-        I am a CS student from <a href="https://www.iba.edu.pk">IBA</a> who is passionate
-        about making software. My interests are
+        I am a CS student from <strong>IBA</strong> who is passionate about making
+        performant and accessible software. I am into
         {
           interests.map((interest) => (
             <span class="interests">{interest},&nbsp;</span>
@@ -124,10 +121,6 @@ setInterval(updateText, 3600);
   .name::after {
     content: "⚡";
     font-size: 1.8rem;
-  }
-
-  .interests {
-    font-weight: bold;
   }
 
   #other-occupation {

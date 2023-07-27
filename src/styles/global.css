@@ -16,12 +16,15 @@
   text-decoration: none;
   font-weight: 600;
   border: 1px solid var(--button-hover);
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 300ms ease-in-out
+  , transform 300ms ease-in-out;
   box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  transform: scale(1);
 }
 
 .more-button:hover {
   text-decoration: none;
   background-color: var(--button-hover);
+  transform: scale(1.10) perspective(1px);
 }
 

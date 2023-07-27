@@ -60,7 +60,8 @@ const lastInterest = interests.pop();
         src="codingcat.gif"
       />
       <figcaption class="font-mono codingcat-caption">
-        Here's a cat picture to make you feel cozy.
+        Here's a cat picture to make you feel cozy
+        <span id="codingcat-caption-emoji">😇</span>
       </figcaption>
     </figure>
   </div>
@@ -104,6 +105,10 @@ setInterval(updateText, 3600);
     margin-top: 2rem;
     width: 100%;
     overflow: hidden;
+  }
+
+  #codingcat-caption-emoji {
+    font-style: normal;
   }
 
   :global(.dark) .codingcat-img {

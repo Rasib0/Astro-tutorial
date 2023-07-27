@@ -5,7 +5,7 @@ description: "A restaurant reviewing website built using only Rust and web techn
 image: { url: "", alt: "" }
 link: "https://github.com/Rasib0/Rustaurant-server"
 repo: "https://github.com/Rasib0/Rustaurant"
-tags: ["Rust", "WASM", "Axum", "Yew"]
+tags: ["Rust", "WebAssembly", "Axum", "Yew"]
 ---
 
 A website I made for my rust course project

@@ -1,5 +1,5 @@
 .section-label {
-  font-size: 22px;
+  font-size: 19px;
   text-transform: uppercase;
   margin: 0 0 0 0;
   font-weight: 200;
@@ -25,6 +25,3 @@
   background-color: var(--button-hover);
 }
 
-section > h2 {
-  color: var(--tertiary-color-dark);
-}

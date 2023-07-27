@@ -1,50 +1,96 @@
 ---
 const { tags, notlink } = Astro.props;
 
-const tagsColor = [
-{ name: "javascript", color: "#f1e05a", text: "#000000" },
-{ name: "react", color: "#61dafb", text: "#000000" },
-{ name: "linux", color: "#f1e05a", text: "#000000" },
-{ name: "git", color: "#f34f29", text: "#ffffff" },
-{ Nmae: "go", color: "#00add8", text: "#ffffff" },
-{ name: "python", color: "#3572A5", text: "#ffffff" },
-{ name: "rust", color: "#dea584", text: "#000000" },
-{ name: "astro", color: "#f34f29", text: "#ffffff" },
-{ name: "next", color: "#000000", text: "#ffffff" },
-{ name: "css", color: "#563d7c", text: "#ffffff" },
-{ name: "html", color: "#e34c26", text: "#ffffff" },
-{ name: "tailwindcss", color: "#38b2ac", text: "#ffffff" },
-{ name: "clerk", color: "#2b7489", text: "#ffffff" },
-{ name: "nextauth", color: "#000000", text: "#ffffff" },
-{ name: "vercel", color: "#000000", text: "#ffffff" },
-{ name: "netlify", color: "#00c7b7", text: "#ffffff" },
-{ name: "node", color: "#43853d", text: "#ffffff" },
-{ name: "prisma", color: "#2d3748", text: "#ffffff" },
-{ name: "postgresql", color: "#336791", text: "#ffffff" },
-{ name: "mysql", color: "#4479a1", text: "#ffffff" },
-{ name: "mongo", color: "#4ea94b", text: "#ffffff" },
-{ name: "java", color: "#0074bd", text: "#ffffff" },
-{ name: "game", color: "red", text: "#ffffff" },
-{ name: "portfolio", color: "red", text: "#ffffff" },
+const tagsIcons = [
+  {
+    name: "javascript",
+    logo: "devicon-javascript-plain",
+  },
+  {
+    name: "react",
+    logo: "devicon-react-plain",
+  },
+  {
+    name: "linux",
+    logo: "devicon-linux-plain",
+  },
+  {
+    name: "git",
+    logo: "devicon-git-plain",
+  },
+  {
+    name: "go",
+    logo: "devicon-go-plain",
+  },
+  {
+    name: "python",
+    logo: "devicon-python-plain",
+  },
+  {
+    name: "rust",
+    logo: "devicon-rust-plain",
+  },
+  {
+    name: "astro",
+    logo: "devicon-astro-plain",
+  },
+  {
+    name: "next",
+    logo: "devicon-nextjs-plain",
+  },
+  {
+    name: "css",
+    logo: "devicon-css3-plain",
+  },
+  {
+    name: "html",
+    logo: "devicon-html5-plain",
+  },
+  {
+    name: "tailwindcss",
+    logo: "devicon-tailwindcss-plain",
+  },
+  {
+    name: "node",
+    logo: "devicon-nodejs-plain",
+  },
+  {
+    name: "prisma",
+    logo: "devicon-prisma-plain",
+  },
+  {
+    name: "postgresql",
+    logo: "devicon-postgresql-plain",
+  },
+  {
+    name: "mysql",
+    logo: "devicon-mysql-plain",
+  },
+  {
+    name: "mongo",
+    logo: "devicon-mongodb-plain",
+  },
+  {
+    name: "java",
+    logo: "devicon-java-plain",
+  },
+  { name: "typescript", logo: "devicon-typescript-plain" },
 ];
 ---
 
 <div class="tags">
   {
     tags.map((tag) => (
-      <span
-        class="tag"
-        style={{
-          backgroundColor:
-            tagsColor.find((t) => t.name === tag.toLowerCase())?.color ||
-            "#f34f29",
-          color:
-            tagsColor.find((t) => t.name === tag.toLowerCase())?.text ||
-            "#ffffff",
-        }}
-      >
+      <span class="tag font-mono">
         {notlink && <a href={`/tags/${tag}`}>{tag}</a>}
-        {!notlink && <span>{tag}</span>}
+        {!notlink && (
+          <>
+            <i
+              class={tagsIcons.find((t) => t.name === tag.toLowerCase())?.logo}
+            />
+            {tag}
+          </>
+        )}
       </span>
     ))
   }
@@ -54,15 +100,31 @@ const tagsColor = [
   .tags {
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
+    gap: 8px;
+    padding-top: 4px;
+    padding-bottom: 16px;
+    margin: 0;
+  }
+
+  i {
+    text-align: center;
+    font-size: 16px;
   }
 
   .tag {
-    margin: 0.25em;
-    border: 2px solid var(--nav-text-color);
-    border-radius: 0.5em;
-    padding: 0.2em 0.5em;
-    font-size: 0.8em;
-    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+    color: var(--neutral-50);
+    border-radius: 16px;
+    background: var(--red-600);
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 3px 8px;
+    font-size: 12px;
+    box-shadow: 0 1px 3px 0 var(--red-700), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+
+  :global(.dark) .tag {
+    color: black;
+    background-color: var(--red-500);
   }
 </style>

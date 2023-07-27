@@ -23,20 +23,18 @@ export async function getStaticPaths() {
 }
 const { tag } = Astro.params;
 const { posts } = Astro.props;
-const tagFont = "monospace";
 ---
 
-<StandardLayout pageTitle={"#" + tag} titleFont={tagFont}>
+<StandardLayout pageTitle={"#" + tag}>
   <h4>Posts tagged with <span>{tag}</span></h4>
   <ul>
     {posts.map((post) => <BlogPost url={post.slug} title={post.data.title} />)}
   </ul>
 </StandardLayout>
 
-<style define:vars={{ tagFont }}>
+<style>
   span {
     color: var(--selection-color);
     font-size: 1rem;
-    font-family: var(--tagFont);
   }
 </style>

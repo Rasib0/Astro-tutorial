@@ -52,7 +52,7 @@
 </style>
 
 <script is:inline>
-const theme = (() => {
+let theme = (() => {
   if (typeof localStorage !== "undefined" && localStorage.getItem("theme")) {
     return localStorage.getItem("theme");
   }
@@ -61,6 +61,9 @@ const theme = (() => {
   }
   return "light";
 })();
+
+/* default theme is dark for now*/
+theme = "dark";
 
 if (theme === "light") {
   document.documentElement.classList.remove("dark");

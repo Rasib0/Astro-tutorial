@@ -3,58 +3,71 @@ const skills = [
   {
     name: "HTML",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg",
+    font_link: "devicon-html5-plain",
     link: "https://developer.mozilla.org/en-US/docs/Web/HTML",
   },
   {
     name: "CSS",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg",
+    font_link: "devicon-css3-plain",
     link: "https://developer.mozilla.org/en-US/docs/Web/CSS",
   },
   {
     name: "JavaScript",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg",
+    font_link: "devicon-javascript-plain",
     link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
   },
   {
     name: "TypeScript",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg",
+    font_link: "devicon-typescript-plain",
     link: "https://typescriptlang.org",
   },
 
   {
     name: "React",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg?raw=true",
+    font_link: "devicon-react-plain",
     link: "https://react.dev",
   },
 
   {
     name: "Next",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg",
+    font_link: "devicon-nextjs-plain",
     link: "https://nextjs.org",
   },
   {
     name: "Python",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg?raw=true",
+    font_link: "devicon-python-plain",
+
     link: "https://python.org",
   },
   {
     name: "Java",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg",
+    font_link: "devicon-java-plain",
     link: "https://java.com",
   },
   {
     name: "Kotlin",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg",
+    font_link: "devicon-kotlin-plain",
     link: "kotlinlang.org",
   },
   {
     name: "Rust",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/rust/rust-plain.svg",
+    font_link: "devicon-rust-plain",
+
     link: "https://rust-lang.org",
   },
   {
     name: "Linux",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linux/linux-original.svg",
+    font_link: "devicon-linux-plain",
     link: "https://kernel.org",
   },
   /* {
@@ -65,7 +78,36 @@ const skills = [
   {
     name: "Git",
     logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg",
+    font_link: "devicon-git-plain",
+
     link: "https://git-scm.com",
+  },
+
+  {
+    name: "vim",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vim/vim-original.svg",
+    font_link: "devicon-vim-plain",
+    link: "https://vim.org",
+  },
+
+  {
+    name: "vscode",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/vscode/vscode-original.svg",
+    font_link: "devicon-vscode-plain",
+    link: "https://code.visualstudio.com",
+  },
+
+  {
+    name: "bash",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bash/bash-original.svg",
+    font_link: "devicon-bash-plain",
+    link: "https://www.gnu.org/software/bash/",
+  },
+  {
+    name: "github",
+    logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/github/github-original.svg",
+    font_link: "devicon-github-plain",
+    link: "https://github.com",
   },
 ];
 ---
@@ -73,19 +115,14 @@ const skills = [
 <div class="flex-wrapper">
   <div class="grid">
     {
-      skills.map((tech) => (
-        <div class="techcard">
-          <img
-            src={tech.logo}
-            height="40"
-            width="52"
-            alt={tech.name + " logo"}
-          />
-          <a href={tech.link} class="techcard-text">
-            {tech.name}
-          </a>
-        </div>
-      ))
+      skills.map((skill) => {
+        return (
+          <figure>
+            <i class={skill.font_link} />
+            <figcaption class="font-mono">{skill.name}</figcaption>
+          </figure>
+        );
+      })
     }
   </div>
 </div>
@@ -93,6 +130,7 @@ const skills = [
   .flex-wrapper {
     display: flex;
     justify-content: center;
+    align-items: center;
   }
 
   .grid {
@@ -100,33 +138,51 @@ const skills = [
     display: grid;
     max-width: 799px;
     width: 100%;
-    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-    gap: 0.75rem 0rem;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     justify-items: center;
-    margin: 2rem 0rem;
   }
 
-  @media screen and (min-width: 636px) {
-    .grid {
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    }
+  figcaption {
+    min-width: 2.5cm;
+    color: unset;
+    text-align: center;
+    font-weight: 600;
+    font-size: 16px;
+    opacity: 0;
+    padding: 3px 5px;
+    border-radius: 100px;
+    position: absolute;
+    top: 68px;
+    z-index: 1;
+    transition: opacity 300ms ease-in-out;
   }
 
-  .techcard {
+  figure:hover figcaption {
+    opacity: 1;
+  }
+  figure {
     display: flex;
-    gap: 0rem 0.4rem;
+    position: relative;
+    flex-direction: column;
     align-items: center;
   }
 
-  .techcard-text {
-    min-width: 2.5cm;
-    color: unset;
-    font-size: 18px;
+  i {
+    font-size: 64px;
+    color: var(--pink-800);
+    text-align: center;
+    transition: color 300ms ease-in-out;
   }
 
-  img {
-    color: white;
-    width: 48px;
-    height: 48px;
+  i:hover {
+    color: var(--pink-400);
+  }
+
+  :global(.dark) i:hover {
+    color: var(--pink-700);
+  }
+
+  :global(.dark) i {
+    color: var(--pink-300);
   }
 </style>

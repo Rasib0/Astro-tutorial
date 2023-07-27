@@ -5,7 +5,7 @@ description: "My portfolio website made with just html and css (and a little bit
 image: { url: "", alt: "" }
 link: "https://rasib.me"
 repo: "https://github.com/Rasib0/chirp"
-tags: ["html", "css", "javascript", "astro", "portfolio"]
+tags: ["html", "css", "javascript", "astro"]
 ---
 
 I made this portfolio website using the Astro framework without any external libraries.

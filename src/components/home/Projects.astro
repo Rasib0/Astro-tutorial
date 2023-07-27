@@ -11,6 +11,9 @@ const allProjects = await getCollection("projects");
         <div class="project-card-header">
           <a href={"/projects/" + project.slug} class="title">
             {project.data.title}
+            <span class="date">
+              {project.data.pubDate.toLocaleDateString()}
+            </span>
           </a>
           <div class="links">
             <a class="link-button" href={project.data.link}>
@@ -21,7 +24,7 @@ const allProjects = await getCollection("projects");
             </a>
           </div>
         </div>
-        <p class="date">Created: {project.data.pubDate.toLocaleDateString()}</p>
+        <p class="date font-mono" />
         <p class="project-card-desc">
           {project.data.description}
           {/* <a href={"/projects/" + project.slug}>Learn more</a>*/}
@@ -50,6 +53,8 @@ const allProjects = await getCollection("projects");
   }
 
   .project-card-desc {
+    padding: 4px 8px;
+    font-size: 18px;
     margin-bottom: auto;
   }
 
@@ -64,42 +69,49 @@ const allProjects = await getCollection("projects");
   .link-button,
   .repo-button {
     text-align: center;
-    padding: 0.3rem 0.5rem;
-    border-radius: 5px;
-    background-color: var(--button-color);
-    color: var(--white);
+    padding: 4px 8px;
+    text-transform: uppercase;
+    font-size: 16px;
+    color: var(--ui-color-dark);
+    border-radius: 4px;
     text-decoration: none;
-    white-space: nowrap;
   }
+
+  .title {
+    text-transform: none;
+  }
+
   .title:hover,
   .link-button:hover,
   .repo-button:hover {
-    background-color: var(--button-hover);
     text-decoration: none;
   }
 
   .date {
-    font-family: 300;
-    font-size: 18px;
+    font-size: 12px;
   }
   .project-card-header {
-    /* background-color: var(--ui-color); */
-    background-color: black;
+    background-color: var(--red-200);
     display: flex;
-    border-radius: 8px 8px 0 0;
-    border-bottom: 1px solid var(--ui-color);
     justify-content: space-between;
     padding: 4px 12px;
   }
 
+  :global(.dark) .project-card-header {
+    background-color: var(--red-950);
+  }
+
   .project-card {
-    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
-      0 4px 6px -4px rgb(0 0 0 / 0.1);
+    box-shadow: 0 1px 2px var(--red-300);
     display: flex;
-    padding-bottom: 0.5rem;
-    border-radius: 8px 8px 0px 0px;
+    margin-bottom: 18px;
+    background-color: var(--red-100);
     flex-direction: column;
-    border: 1px solid var(--ui-color);
+  }
+
+  :global(.dark) .project-card {
+    box-shadow: 0 1px 2px var(--red-700);
+    background-color: var(--background-color);
   }
 
   .tags {
@@ -109,5 +121,9 @@ const allProjects = await getCollection("projects");
 
   p {
     margin: 0.3rem 0.6rem;
+  }
+
+  section > h2 {
+    color: var(--red-700);
   }
 </style>

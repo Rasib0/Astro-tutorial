@@ -4,26 +4,20 @@
 <section id="contact">
   <h1 class="section-label">CONTACT</h1>
   <h2>Let's work together</h2>
-  <p>You can contact me through at:</p>
+  <p>You can contact with me at:</p>
   <div class="contacts">
-    <div>
-      <a class="more-button" href="mailto:m.nadeem.22976@khi.iba.edu.pk">
-        💌 Leave a mail
-      </a>
-    </div>
-    <div>
-      <a class="more-button" href={`https://www.github.com/Rasib0`}>
-        <i class="devicon-github-plain"></i> Github</a
-      >
-    </div>
-    <div>
-      <a
-        class="more-button"
-        href={`https://www.linkedin.com/in/muhammad-rasib-nadeem`}
-      >
-        <i class="devicon-linkedin-plain"></i> LinkedIn
-      </a>
-    </div>
+    <a class="more-button" href="mailto:m.nadeem.22976@khi.iba.edu.pk">
+      💌 Leave a mail
+    </a>
+    <a class="more-button" href={`https://www.github.com/Rasib0`}>
+      <i class="devicon-github-plain"></i> Github</a
+    >
+    <a
+      class="more-button"
+      href={`https://www.linkedin.com/in/muhammad-rasib-nadeem`}
+    >
+      <i class="devicon-linkedin-plain"></i> LinkedIn
+    </a>
   </div>
 
   <style>
@@ -41,14 +35,14 @@
     .contacts {
       display: flex;
       gap: 16px;
-      margin-inline: 10vw;
-      item-align: center;
       flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
 
     .contacts a {
+      max-width: 360px;
       text-align: center;
-      display: block;
       width: 100%;
     }
 

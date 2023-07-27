@@ -24,14 +24,15 @@ const allProjects = await getCollection("projects");
             </a>
           </div>
         </div>
-        <p class="date font-mono" />
-        <p class="project-card-desc">
-          {project.data.description}
-          {/* <a href={"/projects/" + project.slug}>Learn more</a>*/}
-        </p>
-        <br />
-        <div class="tags">
-          <Tags tags={project.data.tags} nolink={true} />
+        <div class="px-4">
+          <p class="project-card-desc">
+            {project.data.description}
+            {/* <a href={"/projects/" + project.slug}>Learn more</a>*/}
+          </p>
+          <br />
+          <div class="tags">
+            <Tags tags={project.data.tags} nolink={true} />
+          </div>
         </div>
       </div>
     ))
@@ -75,7 +76,7 @@ const allProjects = await getCollection("projects");
     color: var(--ui-color-dark);
     border-radius: 4px;
     text-decoration: none;
-    transition: background-color 200ms ease-in-out;
+    transition: background-color 300ms ease-in-out;
   }
 
   .title {
@@ -87,13 +88,13 @@ const allProjects = await getCollection("projects");
   .link-button:hover,
   .repo-button:hover {
     text-decoration: none;
-    background-color: var(--red-300);
+    background-color: var(--red-200);
   }
 
   :global(.dark) .title:hover,
   :global(.dark) .link-button:hover,
   :global(.dark) .repo-button:hover {
-    background-color: var(--red-700);
+    background-color: var(--red-600);
   }
 
   .date {

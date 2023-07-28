@@ -92,8 +92,8 @@
 
 /* one off colors */
 :root {
-  --button-color: var(--neutral-950);
-  --button-hover: var(--neutral-900);
+  --button-color: var(--blue-700);
+  --button-hover: var(--blue-800);
   --white: var(--neutral-50);
 }
 
@@ -118,7 +118,7 @@
 
 :root.dark {
   --link-color: var(--blue-400);
-  --background-color: var(--neutral-900);
+  --background-color: var(--neutral-950);
   --text-color: var(--neutral-50);
 
   --ui-color: var(--slate-500);

@@ -7,8 +7,8 @@
 }
 
 .more-button {
-  padding: 0.4rem 0.8rem;
-  border-radius: 0.5rem;
+  padding: 0.1rem 0.6rem;
+  border-radius: 0.3rem;
   font-size: 16px;
   margin-top: 1rem;
   background-color: var(--button-color);
@@ -18,7 +18,7 @@
   border: 1px solid var(--ui-color);
   transition: background-color 300ms ease-in-out
   , transform 300ms ease-in-out;
-  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  box-shadow: 0 1px 3px 0 var(--blue-300), 0 1px 2px -1px var(--blue-300);
   transform: scale(1);
 }
 

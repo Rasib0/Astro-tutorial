@@ -110,3 +110,8 @@ li {
 h2 {
   margin: 0 0 4px 0;
 }
+
+
+section p {
+  font-size: 16px;
+}

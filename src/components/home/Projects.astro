@@ -6,7 +6,7 @@ const allProjects = await getCollection("projects");
 const { number } = Astro.props;
 ---
 
-<div class="grid">
+<div class="grid font-mono">
   {
     allProjects
       .map((project) => (
@@ -64,7 +64,7 @@ allProjects.map((project) => {
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 15px;
+    gap: 40px;
     align-items: stretch;
     margin-top: 36px;
     padding-bottom: 6px;
@@ -77,8 +77,8 @@ allProjects.map((project) => {
   }
 
   .project-card-desc {
-    padding: 4px 12px;
-    font-size: 18px;
+    padding: 8px 12px;
+    font-size: 14px;
     margin-bottom: auto;
   }
 
@@ -96,13 +96,12 @@ allProjects.map((project) => {
   .link-button,
   .repo-button {
     text-align: center;
-    padding: 4px 8px;
+    padding: 0px 8px;
     text-transform: uppercase;
-    font-size: 16px;
     color: var(--ui-color-dark);
     border-radius: 4px;
     text-decoration: none;
-    transition: background-color 300ms ease-in-out;
+    transition: background-color 200ms ease-in-out;
   }
 
   .title {
@@ -112,12 +111,12 @@ allProjects.map((project) => {
   .link-button:hover,
   .repo-button:hover {
     text-decoration: none;
-    background-color: var(--red-200);
+    background-color: var(--blue-200);
   }
 
   :global(.dark) .link-button:hover,
   :global(.dark) .repo-button:hover {
-    background-color: var(--red-600);
+    background-color: var(--blue-600);
   }
 
   .date {
@@ -127,55 +126,60 @@ allProjects.map((project) => {
     left: 0;
   }
   .project-card-header {
-    background-color: var(--red-200);
+    background-color: var(--blue-200);
     display: flex;
     justify-content: space-between;
     padding: 4px 12px;
+    font-size: 14px;
     transition: inherit;
+    font-weight: bold;
     position: relative;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
   }
 
   :global(.dark) .project-card-header {
-    background-color: var(--red-950);
+    background-color: var(--blue-800);
   }
 
   .project-card {
-    box-shadow: 0 1px 2px var(--red-300);
+    box-shadow: 0 1px 2px var(--blue-300);
     display: flex;
     cursor: pointer;
     margin-bottom: 18px;
-    background-color: var(--red-100);
+    background-color: var(--blue-50);
     flex-direction: column;
     transform: scale(1);
     transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out,
       background-color 200ms ease-in-out;
+    border-radius: 8px;
   }
 
   .project-card:hover {
-    box-shadow: 0 1px 5px var(--red-500);
-    background-color: var(--red-200);
+    box-shadow: 0 1px 5px var(--blue-500);
+    background-color: var(--blue-100);
     transform: scale(1.01) perspective(1px);
   }
 
   .project-card:hover .project-card-header {
-    background-color: var(--red-300);
+    background-color: var(--blue-200);
   }
 
   :global(.dark) .project-card {
-    box-shadow: 0 1px 2px var(--red-700);
-    background-color: var(--background-color);
+    box-shadow: 0 1px 2px var(--blue-600);
+    background-color: var(--blue-950);
   }
 
   :global(.dark) .project-card:hover {
-    box-shadow: 0 1px 5px var(--red-500);
-    background-color: var(--red-900);
+    box-shadow: 0 1px 5px var(--blue-500);
+    background-color: var(--blue-800);
   }
 
   :global(.dark) .project-card:hover .project-card-header {
-    background-color: var(--red-700);
+    background-color: var(--blue-700);
   }
 
   section > h2 {
-    color: var(--red-700);
+    color: var(--blue-700);
   }
 </style>

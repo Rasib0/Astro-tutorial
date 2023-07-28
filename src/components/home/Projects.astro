@@ -45,7 +45,8 @@ allProjects.map((project) => {
   if (projectCard == null) return;
 
   projectCard.onclick = function (e) {
-    window.location.href = "/projects/" + project.slug;
+    /* window.location.href = "/projects/" + project.slug; */
+    window.location.href = project.data.link;
   };
 
   const linkButton = document.querySelector(".link-button");

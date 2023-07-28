@@ -6,15 +6,14 @@ import BaseLayout from "./BaseLayout.astro";
 
 <BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col items-center h-screen">
-    <main class="mb-auto flex flex-col items-center">
+    <main class="custom-max-width mb-auto flex flex-col items-center">
       <slot />
     </main>
   </div>
 </BaseLayout>
 
 <style>
-  main {
-    /* hmmm */
+  .custom-max-width {
     max-width: 768px;
   }
 </style>

@@ -2,30 +2,30 @@
 import { getCollection } from "astro:content";
 import Tags from "../Tags.astro";
 const allProjects = await getCollection("projects");
+
+const { number } = Astro.props;
 ---
 
 <div class="grid">
   {
-    allProjects.map((project) => (
-      <div class="project-card">
-        <div class="project-card-header">
-          <a href={"/projects/" + project.slug} class="title">
-            {project.data.title}
-            <span class="date">
-              {project.data.pubDate.toLocaleDateString()}
+    allProjects
+      .map((project) => (
+        <div class="project-card" id={project.slug}>
+          <div class="project-card-header">
+            <span class="title">
+              {project.data.title}
+              <span class="date">{project.data.pubDate.toDateString()}</span>
             </span>
-          </a>
-          <div class="links">
-            <a class="link-button" href={project.data.link}>
-              Live
-            </a>
-            <a class="repo-button" href={project.data.repo}>
-              Github
-            </a>
+            <div class="links">
+              <a class="link-button" href={project.data.link}>
+                Live
+              </a>
+              <a class="repo-button" href={project.data.repo}>
+                Github
+              </a>
+            </div>
           </div>
-        </div>
-        <div class="px-4">
-          <p class="project-card-desc">
+          <p class="project-card-desc mb-auto">
             {project.data.description}
             {/* <a href={"/projects/" + project.slug}>Learn more</a>*/}
           </p>
@@ -34,29 +34,56 @@ const allProjects = await getCollection("projects");
             <Tags tags={project.data.tags} nolink={true} />
           </div>
         </div>
-      </div>
-    ))
+      ))
+      .slice(0, number)
   }
 </div>
+<script define:vars={{ allProjects }}>
+allProjects.map((project) => {
+  const projectCard = document.getElementById(project.slug);
+
+  if (projectCard == null) return;
+
+  projectCard.onclick = function (e) {
+    window.location.href = "/projects/" + project.slug;
+  };
+
+  const linkButton = document.querySelector(".link-button");
+  const repoButton = document.querySelector(".repo-button");
+
+  linkButton.onclick = function (e) {
+    e.stopPropagation();
+  };
+
+  repoButton.onclick = function (e) {
+    e.stopPropagation();
+  };
+});
+</script>
 <style>
   .grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 12px;
+    gap: 15px;
     align-items: stretch;
+    margin-top: 36px;
     padding-bottom: 6px;
   }
 
   @media screen and (min-width: 1024px) {
     .grid {
-      margin: 0 36px;
+      margin-top: 36px;
     }
   }
 
   .project-card-desc {
-    padding: 4px 8px;
+    padding: 4px 12px;
     font-size: 18px;
     margin-bottom: auto;
+  }
+
+  .tags {
+    padding: 10px 12px;
   }
 
   .links {
@@ -66,7 +93,6 @@ const allProjects = await getCollection("projects");
     flex-wrap: wrap;
   }
 
-  .title,
   .link-button,
   .repo-button {
     text-align: center;
@@ -81,25 +107,24 @@ const allProjects = await getCollection("projects");
 
   .title {
     text-transform: none;
-    font-weight: 600;
   }
 
-  .title:hover,
   .link-button:hover,
   .repo-button:hover {
     text-decoration: none;
     background-color: var(--red-200);
   }
 
-  :global(.dark) .title:hover,
   :global(.dark) .link-button:hover,
   :global(.dark) .repo-button:hover {
     background-color: var(--red-600);
   }
 
   .date {
-    margin-left: 4px;
     font-size: 12px;
+    position: absolute;
+    top: -25px;
+    left: 0;
   }
   .project-card-header {
     background-color: var(--red-200);
@@ -107,6 +132,7 @@ const allProjects = await getCollection("projects");
     justify-content: space-between;
     padding: 4px 12px;
     transition: inherit;
+    position: relative;
   }
 
   :global(.dark) .project-card-header {
@@ -116,6 +142,7 @@ const allProjects = await getCollection("projects");
   .project-card {
     box-shadow: 0 1px 2px var(--red-300);
     display: flex;
+    cursor: pointer;
     margin-bottom: 18px;
     background-color: var(--red-100);
     flex-direction: column;
@@ -146,16 +173,6 @@ const allProjects = await getCollection("projects");
 
   :global(.dark) .project-card:hover .project-card-header {
     background-color: var(--red-700);
-  }
-  )
-
-  .tags {
-    margin: 0.5rem 0.3rem 0 0.3rem;
-    display: flex;
-  }
-
-  p {
-    margin: 0.3rem 0.6rem;
   }
 
   section > h2 {

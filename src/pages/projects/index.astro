@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import StandardLayout from "../../layouts/StandardLayout.astro";
-
+import Projects from "../../components/home/Projects.astro";
 const pageTitle = "Projects index";
 const allProjects = await getCollection("projects");
 ---
@@ -10,14 +10,12 @@ const allProjects = await getCollection("projects");
   <section>
     <h1>My Work 💻</h1>
     <p>Here are my projects:</p>
-    <ul>
-      {
-        allProjects.map((project) => (
-          <li>
-            <a href={"/projects/" + project.slug}> {project.data.title}</a>
-          </li>
-        ))
-      }
-    </ul>
+    <Projects number={100} />
   </section>
 </StandardLayout>
+
+<style>
+  section {
+    margin-inline: 20px;
+  }
+</style>

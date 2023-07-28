@@ -7,17 +7,13 @@ import BaseLayout from "./BaseLayout.astro";
 <BaseLayout pageTitle={pageTitle}>
   <div class="flex flex-col items-center h-screen">
     <main class="mb-auto flex flex-col items-center">
-      <div class="px-4">
-        <slot />
-      </div>
+      <slot />
     </main>
   </div>
 </BaseLayout>
 
 <style>
-  @media screen and (min-width: 640px) {
-    main {
-      padding: 0 120px;
-    }
+  main {
+    max-width: 768px;
   }
 </style>

@@ -6,28 +6,74 @@ const tags = frontmatter.tags;
 ---
 
 <StandardLayout pageTitle={frontmatter.title}>
-  <p>Published on: {frontmatter.pubDate.toDateString()}</p>
-  <p>Written by {frontmatter.author}</p>
-  <p>{frontmatter.description}</p>
-  <img src={frontmatter.image.url} width="300" alt={frontmatter.image.alt} />
-  <Tags tags={tags}/>
-  <slot />
-  <style>
-    img:empty {
-      background: linear-gradient(0.25turn, transparent, #fff, transparent),
-        linear-gradient(#eee, #eee),
-        radial-gradient(38px circle at 19px 19px, #eee 50%, transparent 51%),
-        linear-gradient(#eee, #eee);
-      background-repeat: no-repeat;
-      background-size: 315px 250px, 315px 180px, 100px 100px, 225px 30px;
-      background-position: -315px 0, 0 0, 0px 190px, 50px 195px;
-      animation: loading 1.5s infinite;
-    }
-
-    @keyframes loading {
-      to {
-        background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+  <section>
+    <div class="header">
+      <p>Published on: {frontmatter.pubDate.toDateString()}</p>
+      {frontmatter.auto && <p>Written by {frontmatter.author}</p>}
+      <p>{frontmatter.description}</p>
+      <img
+        src={frontmatter.image.url}
+        width="300"
+        alt={frontmatter.image.alt}
+      />
+      <Tags tags={tags} />
+    </div>
+    <slot />
+    <style>
+      img:empty {
+        background: linear-gradient(0.25turn, transparent, #fff, transparent),
+          linear-gradient(#eee, #eee),
+          radial-gradient(38px circle at 19px 19px, #eee 50%, transparent 51%),
+          linear-gradient(#eee, #eee);
+        background-repeat: no-repeat;
+        background-size: 315px 250px, 315px 180px, 100px 100px, 225px 30px;
+        background-position: -315px 0, 0 0, 0px 190px, 50px 195px;
+        animation: loading 1.5s infinite;
       }
-    }
-  </style>
+
+      @keyframes loading {
+        to {
+          background-position: 315px 0, 0 0, 0 190px, 50px 195px;
+        }
+      }
+
+      /* Apply general styles to the header container */
+      .header {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+      }
+
+      /* Style the paragraph containing the publication date */
+      .header p:nth-child(1) {
+        font-size: 14px;
+        color: #555;
+      }
+
+      /* Style the paragraph containing the author name */
+      .header p:nth-child(2) {
+        font-size: 16px;
+        font-weight: bold;
+        color: #333;
+      }
+
+      /* Style the paragraph containing the article description */
+      .header p:nth-child(3) {
+        font-size: 18px;
+        line-height: 1.4;
+        color: #444;
+        margin-bottom: 10px;
+      }
+
+      /* Style the image inside the header */
+      .header img {
+        display: block;
+        max-width: 100%;
+        margin-bottom: 10px;
+        border-radius: 4px;
+      }
+    </style>
+  </section>
 </StandardLayout>

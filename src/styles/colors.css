@@ -108,7 +108,7 @@
 /* theme colors swap */
 :root {
   --link-color: black;
-  --background-color: var(--sepia-100);
+  --background-color: var(--sepia-50);
   --text-color: black;
 
   --ui-color: var(--slate-400);

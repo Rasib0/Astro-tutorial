@@ -38,29 +38,7 @@ const { number } = Astro.props;
       .slice(0, number)
   }
 </div>
-<script define:vars={{ allProjects }}>
-allProjects.map((project) => {
-  const projectCard = document.getElementById(project.slug);
 
-  if (projectCard == null) return;
-
-  projectCard.onclick = function (e) {
-    /* window.location.href = "/projects/" + project.slug; */
-    window.location.href = project.data.link;
-  };
-
-  const linkButton = document.querySelector(".link-button");
-  const repoButton = document.querySelector(".repo-button");
-
-  linkButton.onclick = function (e) {
-    e.stopPropagation();
-  };
-
-  repoButton.onclick = function (e) {
-    e.stopPropagation();
-  };
-});
-</script>
 <style>
   .grid {
     display: grid;
@@ -184,3 +162,27 @@ allProjects.map((project) => {
     color: var(--blue-700);
   }
 </style>
+<!-- this script will take the link on link tech -->
+<script define:vars={{ allProjects }}>
+allProjects.map((project) => {
+  const projectCard = document.getElementById(project.slug);
+
+  if (projectCard == null) return;
+
+  projectCard.onclick = function (e) {
+    /* window.location.href = "/projects/" + project.slug; */
+    window.location.href = project.data.link;
+  };
+
+  const linkButton = document.querySelector(".link-button");
+  const repoButton = document.querySelector(".repo-button");
+
+  linkButton.onclick = function (e) {
+    e.stopPropagation();
+  };
+
+  repoButton.onclick = function (e) {
+    e.stopPropagation();
+  };
+});
+</script>

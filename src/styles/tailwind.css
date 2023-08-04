@@ -3,11 +3,14 @@
 }
 
 .font-sans {
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 .font-mono {
-  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 }
 .flex-col {
   flex-direction: column;
@@ -44,7 +47,7 @@
 }
 
 .ml-neg {
-  margin-left: -2.0rem;
+  margin-left: -2rem;
 }
 
 .px-2 {
@@ -52,7 +55,9 @@
   padding-right: 0.5rem;
 }
 
-
+.p-2 {
+  padding: 0.5rem;
+}
 
 .h-screen {
   min-height: 90vh;

@@ -1,22 +1,24 @@
 ---
+import GithubIcon from "../Icons/github.astro";
 ---
 
 <section id="contact">
   <h1 class="section-label">CONTACT</h1>
   <h2>Let's work together</h2>
-  <p>You can contact with me at:</p>
+  <!-- <p>You can contact with me at:</p> -->
   <div class="contacts">
     <a class="more-button" href="mailto:m.nadeem.22976@khi.iba.edu.pk">
       💌 Leave a mail
     </a>
     <a class="more-button" href={`https://www.github.com/Rasib0`}>
-      <i class="devicon-github-plain"></i> Github</a
+      <GithubIcon />Github</a
     >
     <a
       class="more-button"
       href={`https://www.linkedin.com/in/muhammad-rasib-nadeem`}
     >
-      <i class="devicon-linkedin-plain"></i> LinkedIn
+      <i class="devicon-linkedin-plain"></i>
+      LinkedIn
     </a>
   </div>
 
@@ -25,11 +27,11 @@
       margin-bottom: 16px;
     }
     section > h2 {
-      color: var(--blue-600);
+      color: var(--red-600);
     }
 
     :global(.dark) section > h2 {
-      color: var(--blue-300);
+      color: var(--red-300);
     }
 
     .contacts {
@@ -47,10 +49,10 @@
     }
     /*
     .more-button {
-      border-color: var(--blue-950);
+      border-color: var(--red-950);
     }
     .more-button:hover {
-      background-color: var(--blue-950);
+      background-color: var(--red-950);
     }
      */
   </style>

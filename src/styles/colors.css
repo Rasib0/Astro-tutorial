@@ -41,7 +41,6 @@
   --amber-900: #78350f;
   --amber-950: #451a03;
 
-
   --blue-50: #eff6ff;
   --blue-100: #dbeafe;
   --blue-200: #bfdbfe;
@@ -88,6 +87,15 @@
   --red-800: #991b1b;
   --red-900: #7f1d1d;
   --red-950: #450a0a;
+
+  --sepia-50: #fffaf3;
+  --sepia-100: #feebc8;
+  --sepia-200: #fbd38d;
+  --sepia-300: #f6ad55;
+  --sepia-400: #ed8936;
+  --sepia-500: #dd6b20;
+  --sepia-600: #c05621;
+  --sepia-700: #9c4221;
 }
 
 /* one off colors */
@@ -99,8 +107,8 @@
 
 /* theme colors swap */
 :root {
-  --link-color: var(--blue-500);
-  --background-color: var(--neutral-100);
+  --link-color: black;
+  --background-color: var(--sepia-100);
   --text-color: black;
 
   --ui-color: var(--slate-400);
@@ -117,7 +125,7 @@
 }
 
 :root.dark {
-  --link-color: var(--blue-400);
+  --link-color: var(--neutral-50);
   --background-color: var(--neutral-950);
   --text-color: var(--neutral-50);
 
@@ -128,7 +136,7 @@
 
   --secondary-color: var(--blue-200);
   --secondary-color-dark: var(--blue-300);
- 
+
   --tertiary-color: var(--slate-400);
   --tertiary-color-dark: var(--slate-300);
 }

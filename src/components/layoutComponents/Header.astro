@@ -1,5 +1,10 @@
 ---
 import ThemeIcon from "./ThemeIcon.astro";
+import ResumeIcon from "../../components/Icons/resume.astro";
+import GithubIcon from "../../components/Icons/github.astro";
+import LinkedinIcon from "../../components/Icons/linkedin.astro";
+import ExternalIcon from "../../components/Icons/external.astro";
+import MailIcon from "../../components/Icons/mail.astro";
 ---
 
 <header>
@@ -30,14 +35,14 @@ import ThemeIcon from "./ThemeIcon.astro";
           <a
             class="hover-underline-animation nav-link"
             draggable="false"
-            href="/#about">About</a
+            href="/#about">Home</a
           >
         </div>
         <div class="nav-link-wrapper">
           <a
             class="hover-underline-animation nav-link"
             draggable="false"
-            href="/#projects">Projects</a
+            href="/projects">Projects</a
           >
         </div>
         <!--
@@ -54,14 +59,14 @@ import ThemeIcon from "./ThemeIcon.astro";
             class="hover-underline-animation nav-link"
             aria-label="Open Resume P D F"
             draggable="false"
-            href="/resume.pdf">Resume</a
+            href="/resume.pdf"><ResumeIcon />Resume</a
           >
         </div>
         <div class="nav-link-wrapper">
           <a
             class="hover-underline-animation nav-link"
             draggable="false"
-            href="/#contact">Contact me</a
+            href="">Contact</a
           >
         </div>
         <!-- <div>

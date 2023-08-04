@@ -5,15 +5,13 @@ import Projects from "./Projects.astro";
 <section id="projects">
   <h1 class="section-label">Projects</h1>
   <h2>Some of my work</h2>
-  <p>Here are some of my projects:</p>
+  <!-- <p>Here are some of my projects:</p> -->
   <div class="flex justify-center">
     <div class="projects">
-      <Projects number={4} />
-      <div class="flex justify-center items-center">
-        <a role="button" class="more-button" href="/projects"
-          >More projects 📚 ></a
-        >
-      </div>
+      <Projects number={2} />
+      <p>
+        <a role="button" href="/projects">More projects 📚 →</a>
+      </p>
     </div>
   </div>
 </section>
@@ -25,16 +23,6 @@ import Projects from "./Projects.astro";
   :global(.dark) section > h2 {
     color: var(--blue-400);
   }
-
-  /*.more-button {
-    border-color: var(--blue-950);
-  }
-
-  .more-button:hover {
-    background-color: var(--blue-950);
-  }
-
-  */
 
   .projects {
     width: 100%;

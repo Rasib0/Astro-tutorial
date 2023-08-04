@@ -16,8 +16,7 @@
   text-decoration: none;
   font-weight: 600;
   border: 1px solid var(--ui-color);
-  transition: background-color 300ms ease-in-out
-  , transform 300ms ease-in-out;
+  transition: background-color 300ms ease-in-out, transform 300ms ease-in-out;
   box-shadow: 0 1px 3px 0 var(--blue-300), 0 1px 2px -1px var(--blue-300);
   transform: scale(1);
 }
@@ -27,6 +26,5 @@
 .more-button:hover {
   text-decoration: none;
   background-color: var(--button-hover);
-  transform: scale(1.10) perspective(1px);
+  transform: scale(1.1) perspective(1px);
 }
-

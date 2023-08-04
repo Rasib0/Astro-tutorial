@@ -16,7 +16,7 @@ const whoami = [
   "AI hater 🤖",
 ];
 
-const interests = ["web development", "learning languages (👨 and 💻)"];
+const interests = ["web development", "learning languages"];
 
 const lastInterest = interests.pop();
 ---
@@ -44,18 +44,22 @@ const lastInterest = interests.pop();
           ))
         } and <span class="interests">{lastInterest}</span>.
       </p>
-      <div class="flex justify-center items-center">
-        <a role="button" class="ml-neg more-button" href="/about"
-          >More about me 👀 ></a
-        >
-      </div>
+      <div class="p-2"></div>
+
+      <p>
+        <a role="button" href="/about">More about me 👀 →</a>
+      </p>
     </div>
     <figure>
-      <img
-        alt="a picture of a cat coding using a laptop"
-        class="codingcat-img"
-        src="codingcat.gif"
-      />
+      <div class="flex justify-center">
+        <img
+          alt="a picture of a cat coding using a laptop"
+          class="codingcat-img"
+          width="400"
+          height="270"
+          src="codingcat.gif"
+        />
+      </div>
       <figcaption class="font-mono codingcat-caption">
         Here's a cat picture to make you feel cozy
         <span id="codingcat-caption-emoji">😇</span>
@@ -99,11 +103,15 @@ setInterval(updateText, 3600);
     gap: 8px;
     align-items: center;
   }
+
+  figure {
+    overflow: hidden;
+    justify-content: center;
+  }
   .codingcat-img {
     box-shadow: 0px 0px 10px 0px var(--blue-200);
     border-radius: 0.5rem;
     margin-top: 2rem;
-    width: 100%;
     overflow: hidden;
   }
 
@@ -116,8 +124,9 @@ setInterval(updateText, 3600);
   }
 
   .codingcat-caption {
-    text-align: center;
+    padding: 0.5rem;
     font-size: 16px;
+    text-align: center;
     font-weight: 300;
     color: var(--tertiary-color-dark);
   }

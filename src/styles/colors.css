@@ -100,8 +100,8 @@
 
 /* one off colors */
 :root {
-  --button-color: var(--blue-700);
-  --button-hover: var(--blue-800);
+  --button-color: var(--red-700);
+  --button-hover: var(--red-800);
   --white: var(--neutral-50);
 }
 

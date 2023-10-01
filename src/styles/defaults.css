@@ -111,6 +111,6 @@ h2 {
   margin: 0 0 4px 0;
 }
 
-section p {
+section p, section li {
   font-size: 16px;
 }

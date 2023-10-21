@@ -121,11 +121,12 @@ const { number } = Astro.props;
     border-top-right-radius: 8px;
   }
 
-  :global(.dark) .project-card-header {
-    background-color: var(--blue-900);
-  }
 
+  :global(.dark) .project-card-header {
+    background-color: #2F354B;
+  }
   .project-card {
+
     box-shadow: 0 1px 2px var(--blue-300);
     display: flex;
     cursor: pointer;
@@ -139,27 +140,28 @@ const { number } = Astro.props;
   }
 
   .project-card:hover {
-    box-shadow: 0 1px 5px var(--blue-500);
+    box-shadow: 0 1px 5px #343C5C;
     background-color: var(--blue-100);
     transform: scale(1.01) perspective(1px);
   }
 
   .project-card:hover .project-card-header {
-    background-color: var(--blue-700);
+    background-color: var(--blue-800);
   }
 
   :global(.dark) .project-card {
     box-shadow: 0 1px 2px var(--blue-600);
     background-color: var(--slate-950);
+
   }
 
   :global(.dark) .project-card:hover {
     box-shadow: 0 1px 5px var(--blue-500);
-    background-color: var(--blue-800);
+    background-color: #343C5C;
   }
 
   :global(.dark) .project-card:hover .project-card-header {
-    background-color: var(--blue-950);
+    background-color: #20222E;
   }
 
   section > h2 {

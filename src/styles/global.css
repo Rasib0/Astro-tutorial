@@ -11,7 +11,7 @@
   border-radius: 0.3rem;
   font-size: 16px;
   margin-top: 1rem;
-  background-color: var(--button-color);
+  background-color: #6e3128;
   color: var(--white);
   text-decoration: none;
   font-weight: 600;
@@ -24,6 +24,11 @@
 .more-button:focus,
 .more-button:hover {
   text-decoration: none;
-  background-color: var(--button-hover);
+  background-color: #5d2c24;
   transform: scale(1.1) perspective(1px);
+}
+
+::selection {
+    background-color: #324f6f;
+    color: #ffffdd;
 }

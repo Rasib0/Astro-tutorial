@@ -79,7 +79,7 @@
   --red-50: #fef2f2;
   --red-100: #fee2e2;
   --red-200: #fecaca;
-  --red-300: #fca5a5;
+  --red-300: ##6e3128;
   --red-400: #f87171;
   --red-500: #ef4444;
   --red-600: #dc2626;
@@ -96,6 +96,10 @@
   --sepia-500: #dd6b20;
   --sepia-600: #c05621;
   --sepia-700: #9c4221;
+
+--darkreader-text--pink-300: #f8bbb4;
+--darkreader-text--pink-600: #CFAD8F;
+--darkreader-text--pink-700: #ca7983;
 }
 
 /* one off colors */
@@ -127,6 +131,7 @@
 :root.dark {
   --link-color: var(--neutral-50);
   --background-color: var(--neutral-950);
+  --background-color: var(--neutral-900);
   --text-color: var(--neutral-50);
 
   --ui-color: var(--slate-500);

@@ -121,12 +121,10 @@ const { number } = Astro.props;
     border-top-right-radius: 8px;
   }
 
-
   :global(.dark) .project-card-header {
-    background-color: #2F354B;
+    background-color: #2f354b;
   }
   .project-card {
-
     box-shadow: 0 1px 2px var(--blue-300);
     display: flex;
     cursor: pointer;
@@ -134,13 +132,15 @@ const { number } = Astro.props;
     background-color: var(--blue-50);
     flex-direction: column;
     transform: scale(1);
-    transition: transform 200ms ease-in-out, box-shadow 200ms ease-in-out,
+    transition:
+      transform 200ms ease-in-out,
+      box-shadow 200ms ease-in-out,
       background-color 200ms ease-in-out;
     border-radius: 8px;
   }
 
   .project-card:hover {
-    box-shadow: 0 1px 5px #343C5C;
+    box-shadow: 0 1px 5px #343c5c;
     background-color: var(--blue-100);
     transform: scale(1.01) perspective(1px);
   }
@@ -152,16 +152,15 @@ const { number } = Astro.props;
   :global(.dark) .project-card {
     box-shadow: 0 1px 2px var(--blue-600);
     background-color: var(--slate-950);
-
   }
 
   :global(.dark) .project-card:hover {
     box-shadow: 0 1px 5px var(--blue-500);
-    background-color: #343C5C;
+    background-color: #343c5c;
   }
 
   :global(.dark) .project-card:hover .project-card-header {
-    background-color: #20222E;
+    background-color: #20222e;
   }
 
   section > h2 {
@@ -170,25 +169,25 @@ const { number } = Astro.props;
 </style>
 <!-- this script will take the link on link tech -->
 <script define:vars={{ allProjects }}>
-allProjects.map((project) => {
-  const projectCard = document.getElementById(project.slug);
+  allProjects.map((project) => {
+    const projectCard = document.getElementById(project.slug);
 
-  if (projectCard == null) return;
+    if (projectCard == null) return;
 
-  projectCard.onclick = function (e) {
-    /* window.location.href = "/projects/" + project.slug; */
-    window.location.href = project.data.link;
-  };
+    projectCard.onclick = function (e) {
+      /* window.location.href = "/projects/" + project.slug; */
+      window.location.href = project.data.link;
+    };
 
-  const linkButton = document.querySelector(".link-button");
-  const repoButton = document.querySelector(".repo-button");
+    const linkButton = document.querySelector(".link-button");
+    const repoButton = document.querySelector(".repo-button");
 
-  linkButton.onclick = function (e) {
-    e.stopPropagation();
-  };
+    linkButton.onclick = function (e) {
+      e.stopPropagation();
+    };
 
-  repoButton.onclick = function (e) {
-    e.stopPropagation();
-  };
-});
+    repoButton.onclick = function (e) {
+      e.stopPropagation();
+    };
+  });
 </script>

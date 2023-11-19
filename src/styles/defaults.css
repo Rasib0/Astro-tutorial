@@ -6,9 +6,21 @@
 
 :root {
   /*font-family: rubik, sans-serif; */
-  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
-    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
   width: 100%;
   height: 100%;
   /*margin: 0;
@@ -111,6 +123,7 @@ h2 {
   margin: 0 0 4px 0;
 }
 
-section p, section li {
+section p,
+section li {
   font-size: 16px;
 }

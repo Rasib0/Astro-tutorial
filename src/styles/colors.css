@@ -97,9 +97,9 @@
   --sepia-600: #c05621;
   --sepia-700: #9c4221;
 
---darkreader-text--pink-300: #f8bbb4;
---darkreader-text--pink-600: #CFAD8F;
---darkreader-text--pink-700: #ca7983;
+  --darkreader-text--pink-300: #f8bbb4;
+  --darkreader-text--pink-600: #cfad8f;
+  --darkreader-text--pink-700: #ca7983;
 }
 
 /* one off colors */

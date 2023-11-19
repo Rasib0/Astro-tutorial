@@ -36,8 +36,8 @@ const lastInterest = interests.pop();
         <span id="other-occupation">{whoami[0]}</span>
       </h2>
       <p>
-        I am a CS student from <strong>IBA</strong> who is passionate about making
-        performant and accessible software. I am also into
+        I am a CS student from <strong>IBA</strong> who is passionate about
+        making performant and accessible software. I am also into
         {
           interests.map((interest) => (
             <span class="interests">
@@ -75,25 +75,25 @@ const lastInterest = interests.pop();
 
 <!-- h2 animation -->
 <script define:vars={{ whoami }}>
-const other_occupation = document.querySelector("#other-occupation");
+  const other_occupation = document.querySelector("#other-occupation");
 
-let i = 1;
+  let i = 1;
 
-function updateText() {
-  if (i > whoami.length - 1) {
-    i = 0;
+  function updateText() {
+    if (i > whoami.length - 1) {
+      i = 0;
+    }
+
+    other_occupation.style.opacity = 0;
+
+    setTimeout(() => {
+      other_occupation.textContent = whoami[i];
+      other_occupation.style.opacity = 1;
+      i++;
+    }, 600);
   }
 
-  other_occupation.style.opacity = 0;
-
-  setTimeout(() => {
-    other_occupation.textContent = whoami[i];
-    other_occupation.style.opacity = 1;
-    i++;
-  }, 600);
-}
-
-setInterval(updateText, 3600);
+  setInterval(updateText, 3600);
 </script>
 
 <style>

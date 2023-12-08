@@ -8,4 +8,4 @@ repo: "https://github.com/Rasib0/chirp"
 tags: ["React", "Next", "TypeScript", "TailwindCSS", "Clerk", "MySQL", "Prisma"]
 ---
 
-Description coming soon!
+- I used Next.js 13 for the frontend and the backend, but soon after Next.js 14 was released so I have to update that.

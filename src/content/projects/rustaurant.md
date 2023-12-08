@@ -8,5 +8,7 @@ repo: "https://github.com/Rasib0/Rustaurant"
 tags: ["Rust", "WebAssembly", "Axum", "Yew"]
 ---
 
-A website I made for my rust course project.
-
+- A restaurant reviewing website built using only Rust and web technology
+- I used Yew for the frontend and Axum for the backend
+- I used the WebAssembly target for the frontend
+- I used the native target for the backend

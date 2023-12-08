@@ -10,7 +10,7 @@ const { number } = Astro.props;
   {
     allProjects
       .sort((a, b) => {
-        return b.data.pubDate - a.data.pubDate;
+        return b.data.pubDate.getTime() - a.data.pubDate.getTime();
       })
       .slice(0, number)
       .map((project) => (

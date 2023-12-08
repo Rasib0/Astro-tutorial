@@ -8,4 +8,5 @@ repo: "https://github.com/Rasib0/chirp"
 tags: ["html", "css", "javascript", "astro"]
 ---
 
-I made this portfolio website using the Astro framework without any external libraries.
+- I made this portfolio website using the Astro framework without any external libraries.
+- Updated to use the latest Astro version and added a few new features; like the content directory

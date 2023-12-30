@@ -20,4 +20,4 @@ Welcome to my GitHub repository for my portfolio website! This project showcases
 
 ## Visit My Portfolio
 
-To explore the complete collection of projects and learn more about my work, visit my portfolio website at [rasib.me](https://rasib.me).
+To explore the complete collection of projects and learn more about my work, visit my portfolio website at [rasib.me](https://old.rasib.me).

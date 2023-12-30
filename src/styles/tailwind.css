@@ -1,0 +1,77 @@
+.flex {
+  display: flex;
+}
+
+.font-sans {
+  font-family:
+    ui-sans-serif,
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial,
+    "Noto Sans",
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol",
+    "Noto Color Emoji";
+}
+
+.font-mono {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+}
+.flex-col {
+  flex-direction: column;
+}
+.items-center {
+  align-items: center;
+}
+
+.mb-auto {
+  margin-bottom: auto;
+}
+
+.box-shadow {
+  box-shadow:
+    rgba(0, 0, 0, 0.12) 0px 0.325926px 0.733333px 0px,
+    rgba(0, 0, 0, 0.07) 0px 1.54074px 2.86667px 0px,
+    rgba(0, 0, 0, 0.05) 0px 4px 9px 0px;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.h-screen {
+  min-height: 90vh;
+}
+
+.px-4 {
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.ml-neg {
+  margin-left: -2rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+.p-2 {
+  padding: 0.5rem;
+}
+
+.h-screen {
+  min-height: 90vh;
+}

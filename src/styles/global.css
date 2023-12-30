@@ -1,0 +1,38 @@
+.section-label {
+  font-size: 19px;
+  text-transform: uppercase;
+  margin: 0 0 0 0;
+  font-weight: 300;
+  color: var(--tertiary-color-dark);
+}
+
+.more-button {
+  padding: 0.1rem 0.6rem;
+  border-radius: 0.3rem;
+  font-size: 16px;
+  margin-top: 1rem;
+  background-color: #6e3128;
+  color: var(--white);
+  text-decoration: none;
+  font-weight: 600;
+  transition:
+    background-color 300ms ease-in-out,
+    transform 300ms ease-in-out;
+  box-shadow:
+    0 1px 3px 0 var(--red-300),
+    0 1px 2px -1px var(--red-300);
+  transform: scale(1);
+}
+
+.more-button:active,
+.more-button:focus,
+.more-button:hover {
+  text-decoration: none;
+  background-color: #5d2c24;
+  transform: scale(1.1) perspective(1px);
+}
+
+::selection {
+  background-color: #324f6f;
+  color: #ffffdd;
+}

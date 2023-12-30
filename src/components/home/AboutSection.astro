@@ -55,6 +55,21 @@ const lastInterest = interests.pop();
         <a role="button" href="/about">More about me 👀 →</a>
       </p>
     </div>
+    <figure>
+      <div class="flex justify-center">
+        <img
+          alt="a picture of a cat coding using a laptop"
+          class="codingcat-img"
+          width="400"
+          height="270"
+          src="codingcat.gif"
+        />
+      </div>
+      <figcaption class="font-mono codingcat-caption">
+        Here's a cat picture to make you feel cozy
+        <span id="codingcat-caption-emoji">😇</span>
+      </figcaption>
+    </figure>
   </div>
 </section>
 
@@ -92,6 +107,33 @@ const lastInterest = interests.pop();
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 8px;
     align-items: center;
+  }
+
+  figure {
+    overflow: hidden;
+    justify-content: center;
+  }
+  .codingcat-img {
+    box-shadow: 0px 0px 10px 0px var(--blue-200);
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    overflow: hidden;
+  }
+
+  #codingcat-caption-emoji {
+    font-style: normal;
+  }
+
+  :global(.dark) .codingcat-img {
+    box-shadow: 0 1px 10px 0 var(--blue-500);
+  }
+
+  .codingcat-caption {
+    padding: 0.5rem;
+    font-size: 16px;
+    text-align: center;
+    font-weight: 300;
+    color: var(--tertiary-color-dark);
   }
 
   .name::after {
